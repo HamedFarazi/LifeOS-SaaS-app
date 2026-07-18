@@ -1,0 +1,25 @@
+.row {
+  /* Force LTR so the carousel scrolls left→right even inside an RTL page.
+     Cards and their text still render correctly in their own direction. */
+  direction: ltr;
+  /* Break fully out of the .inner 16px side padding */
+  margin-inline: -16px;
+  /* Re-apply 16px so first card starts flush, last card peeks at the right */
+  padding: 6px 16px 18px;
+  scroll-padding-left: 16px;
+  display: flex;
+  gap: 14px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.row::-webkit-scrollbar {
+  display: none;
+}
+.row > * {
+  /* RTL cards inside an LTR scroller: snap to left edge */
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  direction: rtl;
+}

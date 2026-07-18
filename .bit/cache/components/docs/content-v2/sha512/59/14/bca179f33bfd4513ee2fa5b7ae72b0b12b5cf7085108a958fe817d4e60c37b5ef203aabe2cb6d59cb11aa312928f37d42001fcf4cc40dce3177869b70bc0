@@ -1,0 +1,1 @@
+[{"name":"","description":"The large purple gradient hero card. Shows monthly or yearly cost\n(toggled by a switch), active service count, upcoming renewals count,\nand today's Shamsi date.","args":[],"returns":{"description":"The hero summary card.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/components/hero-card.tsx"}]

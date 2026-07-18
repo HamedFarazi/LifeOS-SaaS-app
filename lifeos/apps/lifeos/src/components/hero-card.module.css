@@ -1,0 +1,86 @@
+.card {
+  position: relative;
+  margin-top: 14px;
+  padding: 22px 20px 18px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: linear-gradient(140deg, #a855f7 0%, #7c3aed 48%, #4f46e5 100%);
+  box-shadow: 0 26px 50px rgba(79, 70, 229, 0.45);
+  color: #fff;
+  isolation: isolate;
+}
+.blob1, .blob2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(8px);
+  z-index: -1;
+}
+.blob1 { width: 180px; height: 180px; top: -70px; left: -40px; background: radial-gradient(circle, rgba(255,255,255,0.35), transparent 70%); }
+.blob2 { width: 150px; height: 150px; bottom: -60px; right: -30px; background: radial-gradient(circle, rgba(99,232,255,0.45), transparent 70%); }
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.labelWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+.switcher {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 3px;
+  cursor: pointer;
+  gap: 2px;
+}
+.switchOpt {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.65);
+  transition: background 0.2s, color 0.2s;
+}
+.switchActive {
+  background: #fff;
+  color: #7c3aed;
+}
+.wallet {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.amount {
+  margin: 12px 0 4px;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.date {
+  margin: 0 0 14px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.stat { display: flex; flex-direction: column; gap: 4px; }
+.statValue { font-size: 16px; font-weight: 800; }
+.statLabel { font-size: 11px; color: rgba(255, 255, 255, 0.75); }
+.divider { width: 1px; height: 34px; background: rgba(255, 255, 255, 0.25); }

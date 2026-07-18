@@ -1,0 +1,1 @@
+[{"filePath":"src/components/mobile-shell.tsx","name":"MobileShell","description":"Centers the app inside a 390×844 phone frame on larger screens and renders\nthe persistent bottom navigation. On mobile it fills the viewport.","properties":[{"name":"children","description":"","required":true,"type":"ReactReactNode"}],"access":"public","methods":[],"args":[],"examples":[]}]

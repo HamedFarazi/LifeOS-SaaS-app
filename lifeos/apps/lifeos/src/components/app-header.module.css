@@ -1,0 +1,84 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 4px 8px;
+}
+.menu {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.menu span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+}
+.menu span:nth-child(2) {
+  width: 12px;
+}
+.greeting {
+  flex: 1;
+  text-align: right;
+}
+.hi {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+.wave {
+  display: inline-block;
+}
+.sub {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+.avatarWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+.avatar {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(145deg, #a855f7, #4f46e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  font-size: 18px;
+  flex-shrink: 0;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.5);
+  transition: transform 0.18s;
+}
+.avatar:active {
+  transform: scale(0.92);
+}
+.dot {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #63e8ff;
+  border: 2px solid #020b38;
+}

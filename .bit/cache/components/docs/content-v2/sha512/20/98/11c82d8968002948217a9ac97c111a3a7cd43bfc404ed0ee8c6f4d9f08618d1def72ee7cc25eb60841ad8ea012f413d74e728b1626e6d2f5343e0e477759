@@ -1,0 +1,1 @@
+[{"name":"","description":"Analytics screen with monthly spending trend, category breakdown, most\nexpensive services, and upcoming cost — all powered by Recharts.","args":[],"returns":{"description":"The analytics page.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/pages/analytics-page.tsx"}]

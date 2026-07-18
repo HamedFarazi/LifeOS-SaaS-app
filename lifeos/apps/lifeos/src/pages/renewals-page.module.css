@@ -1,0 +1,9 @@
+.group {
+  margin-top: 18px;
+}
+.groupTitle {
+  margin: 0 4px 12px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--accent, #63e8ff);
+}

@@ -1,0 +1,18 @@
+/* Global app shell styles (margin reset + base theme). */
+.app {
+  --bg: #020b38;
+  --bg-soft: #0a154f;
+  --accent: #63e8ff;
+  --accent-2: #2fd0ff;
+  --card: #ffffff;
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.6);
+  --radius: 28px;
+  min-height: 100vh;
+  background:
+    radial-gradient(120% 60% at 80% -10%, rgba(124, 58, 237, 0.35), transparent 60%),
+    radial-gradient(90% 50% at -10% 10%, rgba(99, 232, 255, 0.12), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+}

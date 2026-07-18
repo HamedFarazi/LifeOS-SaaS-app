@@ -1,0 +1,1 @@
+[{"name":"","description":"Groups upcoming renewals into time buckets (this week, this month, later).","args":[],"returns":{"description":"The renewals page.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/pages/renewals-page.tsx"}]

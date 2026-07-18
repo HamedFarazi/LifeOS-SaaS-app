@@ -1,0 +1,1 @@
+[{"name":"","description":"Form to edit an existing managed service. Loads the current values from the\nstore and persists changes back to it.","args":[],"returns":{"description":"The edit-service page.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/pages/edit-service-page.tsx"}]

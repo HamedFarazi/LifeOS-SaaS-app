@@ -1,0 +1,1 @@
+[{"filePath":"src/components/days-badge.tsx","name":"DaysBadge","description":"A small pill showing days remaining until a renewal, colored by urgency.","properties":[{"name":"date","description":"ISO date the badge counts down to.","required":true,"type":"string"}],"access":"public","methods":[],"args":[],"examples":[]}]

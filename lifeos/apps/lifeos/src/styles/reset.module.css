@@ -1,0 +1,10 @@
+/* Global body margin reset, applied via :global. */
+:global(body) {
+  margin: 0;
+  background: #020b38;
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+:global(*) {
+  box-sizing: border-box;
+}

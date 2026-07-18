@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-07-18T06:25:02.052Z",
+  "rippleJobs": [
+    "hamedfronthere-main-lifeos-v1-0-0-persian-subscription-and-expense-manager"
+  ],
+  "exportedComponents": [
+    "hamedfronthere.lifeos/apps/lifeos"
+  ]
+}

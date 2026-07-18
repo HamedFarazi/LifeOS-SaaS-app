@@ -1,0 +1,90 @@
+.root {
+  position: absolute;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0);
+  transition: background 0.35s ease;
+}
+.sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 18px 28px;
+  border-radius: 30px 30px 0 0;
+  background: rgba(10, 18, 45, 0.78);
+  backdrop-filter: blur(26px);
+  -webkit-backdrop-filter: blur(26px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.45);
+  transform: translateY(105%);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.open {
+  pointer-events: auto;
+}
+.open .overlay {
+  background: rgba(2, 6, 23, 0.5);
+}
+.open .sheet {
+  transform: translateY(0);
+}
+.handle {
+  width: 42px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 0 auto 16px;
+}
+.title {
+  margin: 0 4px 16px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+  text-align: right;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 8px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.18s, background 0.18s;
+}
+.tile:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+.tile:active {
+  transform: scale(0.95);
+}
+.tileIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.tileLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+  text-align: center;
+}

@@ -1,0 +1,1 @@
+[{"name":"","description":"The large purple gradient hero card summarizing monthly cost, active\nservices, and upcoming renewals — the focal point of the home screen.","args":[],"returns":{"description":"The hero summary card.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/components/hero-card.tsx"}]

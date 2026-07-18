@@ -1,0 +1,16 @@
+git init
+git add .
+git commit -m "Initial commit - LifeOS SaaS app"
+git remote add origin https://github.com/HamedFarazi/LifeOS-SaaS-app.git
+git branch -M main
+git push -u origin main
+git config --global user.name "Hamed Farazi"
+git config --global user.email "hamedfa2001ka@gmail.com
+git config --global user.email "hamedfa2001ka@gmail.com"
+git config --global user.name "Hamed Farazi"
+git remote add origin https://github.com/HamedFarazi/LifeOS-SaaS-app.git
+git push -u origin main
+git config --global user.name
+git config --global user.email
+git config --global user.email "hamedfa2001ka@gmail.com"
+git config --global user.email

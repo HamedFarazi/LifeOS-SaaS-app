@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 12px;
+  backdrop-filter: blur(8px);
+}
+.icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+.warning {
+  background: rgba(251, 191, 36, 0.18);
+}
+.info {
+  background: rgba(99, 232, 255, 0.18);
+}
+.success {
+  background: rgba(52, 211, 153, 0.18);
+}
+.danger {
+  background: rgba(244, 63, 94, 0.18);
+}
+.text {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "react-env"
+    },
+    "head": "6295465ae7dee8634e033692ce3a8bb3a177afb4"
+  },
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "app-types/vite-react"
+    },
+    "head": "0f5cacc0b0e0ed236eeeed42c8d9fd3a30f45447"
+  },
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "webpack/refresh-overlay"
+    },
+    "head": "b19800872b4384e8efff623764a63cac1141efa3"
+  },
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "generators/react-starters"
+    },
+    "head": "4c97376061c6b244666a63ff03d0ef200d38b197"
+  },
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "generators/react-templates"
+    },
+    "head": "ac22b063c1fa26827b5d6823ba20ea8b855283f0"
+  },
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "live-controls"
+    },
+    "head": "bf1bedcc330ff3c909be667f19d90d3283be5914"
+  },
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "eslint/eslint-config-bit-react"
+    },
+    "head": "4e93b812bd813db7767402b36879dd74b12af9f1"
+  },
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "preview/react-docs-app"
+    },
+    "head": "794962a048607c5a4ccfd40b7e76b019d16808e4"
+  },
+  {
+    "id": {
+      "scope": "bitdev.react",
+      "name": "preview/react-docs-template"
+    },
+    "head": "4a99fe8c9ad2f838b218471afbdc38a5d526ee34"
+  }
+]

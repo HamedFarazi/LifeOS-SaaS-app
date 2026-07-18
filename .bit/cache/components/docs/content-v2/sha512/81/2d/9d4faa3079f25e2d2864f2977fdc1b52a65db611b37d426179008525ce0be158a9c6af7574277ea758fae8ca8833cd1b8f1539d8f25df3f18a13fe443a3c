@@ -1,0 +1,1 @@
+[{"name":"","description":"Top header with a hamburger menu that opens the sidebar drawer, a Persian\ngreeting, and a user avatar that opens the Quick Actions bottom sheet.","args":[],"returns":{"description":"The home screen header.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/components/app-header.tsx"}]

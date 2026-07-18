@@ -1,0 +1,240 @@
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popover {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 260px;
+  padding: 16px;
+  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  z-index: 100;
+  transform-origin: top left;
+  animation: popIn 180ms ease-out;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: right;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #a855f7, #4f46e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 19px;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.5);
+}
+.identity {
+  flex: 1;
+  min-width: 0;
+}
+.editBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: background 0.18s;
+}
+.editBtn:hover {
+  background: rgba(99, 232, 255, 0.14);
+}
+.editProfile {
+  width: 100%;
+  margin-top: 14px;
+  padding: 11px;
+  border-radius: 14px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  background: rgba(168, 85, 247, 0.12);
+  color: #d8b4fe;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.editProfile:hover {
+  background: rgba(168, 85, 247, 0.2);
+}
+.editPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+.editInput {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-family: inherit;
+  font-size: 13.5px;
+  outline: none;
+}
+.editInput:focus {
+  border-color: #63e8ff;
+}
+.editActions {
+  display: flex;
+  gap: 10px;
+}
+.cancelBtn,
+.saveBtn {
+  flex: 1;
+  padding: 11px;
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+.cancelBtn {
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.saveBtn {
+  background: linear-gradient(145deg, #2fd0ff, #63e8ff);
+  color: #020b38;
+}
+.name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+}
+.subtitle {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.changePhoto {
+  width: 100%;
+  margin-top: 14px;
+  padding: 11px;
+  border-radius: 14px;
+  border: 1px solid rgba(99, 232, 255, 0.25);
+  background: rgba(99, 232, 255, 0.1);
+  color: #63e8ff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.changePhoto:hover {
+  background: rgba(99, 232, 255, 0.18);
+}
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 10px 6px;
+  border-radius: 14px;
+  background: rgba(99, 232, 255, 0.07);
+}
+.statValue {
+  font-size: 18px;
+  font-weight: 800;
+  color: #63e8ff;
+}
+.statLabel {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.statDivider {
+  width: 1px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 14px 0;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 48px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 14px;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: right;
+  transition: background 0.18s, transform 0.18s;
+}
+.row:hover {
+  background: rgba(99, 232, 255, 0.12);
+  transform: translateX(-2px);
+}
+.rowIcon {
+  font-size: 17px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.rowLabel {
+  flex: 1;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+.chevron {
+  display: flex;
+  color: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+}
+
+.footer {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+}

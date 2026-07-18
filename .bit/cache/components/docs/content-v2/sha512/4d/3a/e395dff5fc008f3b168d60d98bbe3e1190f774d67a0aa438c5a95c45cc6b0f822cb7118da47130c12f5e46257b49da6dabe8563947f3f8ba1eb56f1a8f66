@@ -1,0 +1,1 @@
+[{"name":"","description":"Lists recurring expenses (expense-category services) with a total summary.","args":[],"returns":{"description":"The expenses page.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/pages/expenses-page.tsx"}]

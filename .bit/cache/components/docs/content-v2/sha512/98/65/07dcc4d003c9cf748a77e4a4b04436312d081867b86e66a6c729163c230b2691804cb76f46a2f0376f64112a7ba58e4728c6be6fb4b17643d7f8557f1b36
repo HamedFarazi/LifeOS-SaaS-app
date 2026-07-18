@@ -1,0 +1,1 @@
+[{"filePath":"src/components/carousel.tsx","name":"Carousel","description":"A horizontally scrolling, snap-aligned row used for card carousels.","properties":[{"name":"children","description":"","required":true,"type":"ReactReactNode"}],"access":"public","methods":[],"args":[],"examples":[]}]

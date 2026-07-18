@@ -1,0 +1,21 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.normal {
+  background: rgba(99, 232, 255, 0.14);
+  color: #0a8bb0;
+}
+.soon {
+  background: rgba(251, 191, 36, 0.18);
+  color: #b45309;
+}
+.urgent {
+  background: rgba(244, 63, 94, 0.16);
+  color: #e11d48;
+}

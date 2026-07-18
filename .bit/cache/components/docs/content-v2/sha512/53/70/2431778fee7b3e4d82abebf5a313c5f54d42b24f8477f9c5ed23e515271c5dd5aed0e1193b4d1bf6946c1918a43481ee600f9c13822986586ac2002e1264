@@ -1,0 +1,1 @@
+[{"filePath":"src/components/insight-card.tsx","name":"InsightCard","description":"A single Command Center insight row with a tone-colored icon chip.","properties":[{"name":"insight","description":"","required":true,"type":"Insight"}],"access":"public","methods":[],"args":[],"examples":[]}]

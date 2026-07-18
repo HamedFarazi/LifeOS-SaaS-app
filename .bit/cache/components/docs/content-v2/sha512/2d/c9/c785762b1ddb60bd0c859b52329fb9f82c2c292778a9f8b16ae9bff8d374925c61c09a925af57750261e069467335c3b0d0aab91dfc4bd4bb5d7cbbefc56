@@ -1,0 +1,1 @@
+[{"name":"","description":"The home screen: header, hero summary, upcoming renewals, all services,\nand the local Command Center insights.","args":[],"returns":{"description":"The dashboard page.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/pages/dashboard-page.tsx"}]

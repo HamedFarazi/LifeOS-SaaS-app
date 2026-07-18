@@ -1,0 +1,1 @@
+[{"name":"","description":"Settings screen: currency, language, data export/import, and reset. Profile\nmanagement lives in the avatar popover, not here.","args":[],"returns":{"description":"The settings page.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/pages/settings-page.tsx"}]

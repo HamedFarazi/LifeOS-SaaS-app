@@ -1,0 +1,1 @@
+[{"name":"","description":"Top header with a hamburger menu, Persian greeting, and an interactive user\navatar that opens a profile popover.","args":[],"returns":{"description":"The home screen header.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/components/app-header.tsx"}]

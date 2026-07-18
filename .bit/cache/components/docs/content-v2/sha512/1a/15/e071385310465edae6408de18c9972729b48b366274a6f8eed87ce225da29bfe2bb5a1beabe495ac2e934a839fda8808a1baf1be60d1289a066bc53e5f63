@@ -1,0 +1,1 @@
+[{"name":"","description":"Computes Command Center insights purely from local service data.","args":[{"description":"All managed services.","type":null,"name":"services"}],"returns":{"description":"Ordered list of actionable insights.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/lib/insights.ts"}]

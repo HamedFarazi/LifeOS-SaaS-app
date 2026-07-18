@@ -1,0 +1,1 @@
+[{"name":"","description":"Floating bottom navigation with a single curved cyan bar and a central FAB.\nUses `position: absolute` so it stays inside the mobile frame boundary.","args":[],"returns":{"description":"The bottom navigation bar.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/components/bottom-nav.tsx"}]

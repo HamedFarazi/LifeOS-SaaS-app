@@ -1,0 +1,1 @@
+[{"name":"","description":"Settings screen: currency, language, name, data export/import, and reset.","args":[],"returns":{"description":"The settings page.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/pages/settings-page.tsx"}]

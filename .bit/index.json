@@ -1,0 +1,2485 @@
+{
+  "components": [
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "react-env"
+      },
+      "isSymlink": false,
+      "hash": "332d61722e10572fbaef5995407ebdce773c6a7e"
+    },
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "app-types/vite-react"
+      },
+      "isSymlink": false,
+      "hash": "7c7b0e8b950507675eb26a304d7d26defab275a7"
+    },
+    {
+      "id": {
+        "scope": "teambit.toolbox",
+        "name": "network/get-port"
+      },
+      "isSymlink": false,
+      "hash": "d81290a9c8c94bc105728c103c1ab9d14ad3c7ed"
+    },
+    {
+      "id": {
+        "scope": "teambit.node",
+        "name": "envs/node-typescript-mocha"
+      },
+      "isSymlink": false,
+      "hash": "fd91bc668b6f2b235436713c42e59f2f0d2e5908"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "eslint-linter"
+      },
+      "isSymlink": false,
+      "hash": "47fd535800ebb45e8537f96bd15f20eb699e1529"
+    },
+    {
+      "id": {
+        "scope": "teambit.typescript",
+        "name": "typescript-compiler"
+      },
+      "isSymlink": false,
+      "hash": "f637a7813e3a7357f8c27873babc9c085cf9d5f6"
+    },
+    {
+      "id": {
+        "scope": "teambit.harmony",
+        "name": "bit-error"
+      },
+      "isSymlink": false,
+      "hash": "3c7acff5cb0c8de33ae2fb058ee1130407ccd090"
+    },
+    {
+      "id": {
+        "scope": "teambit.compilation",
+        "name": "compiler-task"
+      },
+      "isSymlink": false,
+      "hash": "8256f806e8f41d6caa2f43649c99f22e650afd1f"
+    },
+    {
+      "id": {
+        "scope": "teambit.toolbox",
+        "name": "fs/hard-link-directory"
+      },
+      "isSymlink": false,
+      "hash": "3c6c0ea13b59949e2212b069a6f02c8451f8037d"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "fs/global-bit-temp-dir"
+      },
+      "isSymlink": false,
+      "hash": "1ce21b17587a3fd2d0ef986638b386219be68711"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "linter-task"
+      },
+      "isSymlink": false,
+      "hash": "08fff9162961eb6bdb46de1fcd43dc992c86e876"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/content-tabs"
+      },
+      "isSymlink": false,
+      "hash": "7811db56571a84ab430b81e3d70b96b29abb551e"
+    },
+    {
+      "id": {
+        "scope": "teambit.ui-foundation",
+        "name": "ui/use-box/tab"
+      },
+      "isSymlink": false,
+      "hash": "c54bda43a3bbb582393c8ee47dd233e716b730be"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "envs/community-react"
+      },
+      "isSymlink": false,
+      "hash": "d26f3086230a764944315d3c1bc1de9ea8e45a9d"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-react",
+        "name": "navigation/link"
+      },
+      "isSymlink": false,
+      "hash": "43a3c6aae3660ae3e5844f89614c953a3db94089"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "routing/compare-url"
+      },
+      "isSymlink": false,
+      "hash": "08d002ee0a23d9e8892fb901f60111d5f260da40"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/layouts/sections/left-right"
+      },
+      "isSymlink": false,
+      "hash": "395fc1b438d3d42e22719be4fc516583c413c52e"
+    },
+    {
+      "id": {
+        "scope": "teambit.cloud",
+        "name": "cloud-provider"
+      },
+      "isSymlink": false,
+      "hash": "5d8d4313096f2bfb7a3d99336fd7909345c7cb94"
+    },
+    {
+      "id": {
+        "scope": "teambit.graphql",
+        "name": "contexts/graphql-provider"
+      },
+      "isSymlink": false,
+      "hash": "876b449676895246393c814664c9b66c93b4ed3b"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "themes/theme-toggler"
+      },
+      "isSymlink": false,
+      "hash": "d6446f81720716bd0ea75fae579611922b6b098e"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "themes/base-theme"
+      },
+      "isSymlink": false,
+      "hash": "5ec551aa4bcef33a7abc5a3c38122d1a5d412d6c"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-react",
+        "name": "theme/theme-provider"
+      },
+      "isSymlink": false,
+      "hash": "4f98802a1e0583ab30148c034312791badb4c1c1"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/text-tooltip"
+      },
+      "isSymlink": false,
+      "hash": "be61ccf244a2a9609fcb98ff5a9c3af9fd7239dd"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/code-snippet"
+      },
+      "isSymlink": false,
+      "hash": "213fd1fc46fd424822217e192efc6666d24d8249"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/copied-message"
+      },
+      "isSymlink": false,
+      "hash": "8d08f8e45276e5cc8eb402c246e2e319d2933b37"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/heading"
+      },
+      "isSymlink": false,
+      "hash": "0f0493266221fc6f1dbf0e6d07c87930a7af1455"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "text/heading"
+      },
+      "isSymlink": false,
+      "hash": "8057282f5eaf3957649de5229386b960ba1d7a36"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/theme-provider"
+      },
+      "isSymlink": false,
+      "hash": "aff8003b3c05f168eb40aa6f78c0829bb3184252"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/brand-definition"
+      },
+      "isSymlink": false,
+      "hash": "1a0cb18dbcb916d6839a91980f31b35f472181ee"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/color-definition"
+      },
+      "isSymlink": false,
+      "hash": "888298325c8520010f7745707a28ac2df1060942"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/colors"
+      },
+      "isSymlink": false,
+      "hash": "5eb7693eef67515fb861c9e6efa8479c23d70927"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/fonts/book"
+      },
+      "isSymlink": false,
+      "hash": "cbc6e0435bcac6c3d3d20923558754f6cfdbb835"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/heading-margin-definition"
+      },
+      "isSymlink": false,
+      "hash": "07f8e144f4e0af989867ea55a3b3cb310f709ad6"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/shadow-definition"
+      },
+      "isSymlink": false,
+      "hash": "c73028476d3295e69d73576f76ebf3ba33f62840"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/size-definition"
+      },
+      "isSymlink": false,
+      "hash": "cbbc2be4c3b9d29fe312b9caff4a349acaeb343e"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "envs/documenter-react"
+      },
+      "isSymlink": false,
+      "hash": "d1efe2f663b422db726b1e10e100bfe2c8cb1946"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "theme/theme-compositions"
+      },
+      "isSymlink": false,
+      "hash": "9b465f6d9f605240d7353c519bff395150a79e77"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "theme/icons-font"
+      },
+      "isSymlink": false,
+      "hash": "090a25e990dafa9b2cbe5a8a7dd5fd8b67ab2daf"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "theme/theme-context"
+      },
+      "isSymlink": false,
+      "hash": "f2eb682b13e32dfaf7a8c4b3132339f57526ae24"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/fonts/roboto"
+      },
+      "isSymlink": false,
+      "hash": "919e9446b28eb9c67f1c1589f74fd0080c242a44"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/label"
+      },
+      "isSymlink": false,
+      "hash": "31bf61ae8d6733d393312996d93850601adc796b"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/paragraph"
+      },
+      "isSymlink": false,
+      "hash": "49281f7a79c0a24a02b8f1db580c9737eea8a5e7"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "text/paragraph"
+      },
+      "isSymlink": false,
+      "hash": "f050ffae25607a81752cfbe7b0e96fe548376a24"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "text/text-sizes"
+      },
+      "isSymlink": false,
+      "hash": "b6ecd194f36729c7dcd12db23741185fb6c74bf6"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/sizes"
+      },
+      "isSymlink": false,
+      "hash": "68fa2bfa8937c5abd38a10de9a3d2871e92f785b"
+    },
+    {
+      "id": {
+        "scope": "teambit.dependencies",
+        "name": "modules/packages-excluder"
+      },
+      "isSymlink": false,
+      "hash": "65945214f931fb689f2dbfc5065f516b02adebbe"
+    },
+    {
+      "id": {
+        "scope": "teambit.evangelist",
+        "name": "elements/icon"
+      },
+      "isSymlink": false,
+      "hash": "73546762c86a8a9e123c037e13194841f969fda4"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "elements/icon"
+      },
+      "isSymlink": false,
+      "hash": "0428b347c4eda2ecbda345ef8610d94028181f26"
+    },
+    {
+      "id": {
+        "scope": "teambit.evangelist",
+        "name": "theme/evangelist-theme"
+      },
+      "isSymlink": false,
+      "hash": "80c01e763932b42e30a070d4e5bb5c58ce7212e2"
+    },
+    {
+      "id": {
+        "scope": "teambit.evangelist",
+        "name": "theme/brands"
+      },
+      "isSymlink": false,
+      "hash": "dca2b6fc1e2f9e8ec99beb593d94ad4c8dead2e6"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/tooltip"
+      },
+      "isSymlink": false,
+      "hash": "66587b761df8291eba82bbecd74c08c290d8aab9"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/dark-theme"
+      },
+      "isSymlink": false,
+      "hash": "0ffb0e1b692979b0c430358f458caa5cce0181e8"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "code/react-playground"
+      },
+      "isSymlink": false,
+      "hash": "79a05e3ab3929483a12d916724b10f1981f00891"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "input/error"
+      },
+      "isSymlink": false,
+      "hash": "f99dbb34b347b2076e489fe99bd210794277e53e"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "surfaces/split-pane/hover-splitter"
+      },
+      "isSymlink": false,
+      "hash": "f88365862a813d0160257657baf8387f7a9045c6"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "surfaces/split-pane/splitter"
+      },
+      "isSymlink": false,
+      "hash": "d6b5ae31c840312d7366da2c1bee8d8a1ddc7c1c"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "surfaces/split-pane/split-pane"
+      },
+      "isSymlink": false,
+      "hash": "a69e1305b67ee4fd276fcceb263fabe6c669e3b7"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "surfaces/split-pane/layout"
+      },
+      "isSymlink": false,
+      "hash": "89f9bc5da510dd851743d5d73136a27037ac9be6"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "surfaces/split-pane/pane"
+      },
+      "isSymlink": false,
+      "hash": "336aa4ef4234ce9e160bab53f34a7d6becda8f93"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "surfaces/split-pane/fat-splitter"
+      },
+      "isSymlink": false,
+      "hash": "bbb0344cb23ba4237b71eb4ae9137eda62d33312"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/usage-example"
+      },
+      "isSymlink": false,
+      "hash": "43f11e32a3a8f756e0a2b131aa29ea394f13c37e"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/cards/bubble-card"
+      },
+      "isSymlink": false,
+      "hash": "0360ac9330aad159cd3f0119ebc57c5bf0885532"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/cards/card"
+      },
+      "isSymlink": false,
+      "hash": "9e43efd2c22c1a5ac1f885e99fed04179bb89057"
+    },
+    {
+      "id": {
+        "scope": "learnbit.base-react",
+        "name": "navigation/my-router-adapter"
+      },
+      "isSymlink": false,
+      "hash": "8094bca8cb5c731c95a5300a20f861af9cb0a031"
+    },
+    {
+      "id": {
+        "scope": "learnbit.base-react",
+        "name": "navigation/my-router"
+      },
+      "isSymlink": false,
+      "hash": "e5975c4b1699df709f39c887b98603e93fbfcbac"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "themes/dark-theme"
+      },
+      "isSymlink": false,
+      "hash": "b34a7622acd756606cb07010f98c14a685afe3e4"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "themes/color-schema"
+      },
+      "isSymlink": false,
+      "hash": "c2acd1e9e4461abd294fc4cd5cd01b0857effd96"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "themes/light-theme"
+      },
+      "isSymlink": false,
+      "hash": "1eb78ec29217cdc67cf7838bab20d3dfc65b8425"
+    },
+    {
+      "id": {
+        "scope": "teambit.ui-foundation",
+        "name": "ui/navigation/react-router-adapter"
+      },
+      "isSymlink": false,
+      "hash": "6a67faa1a10c88daaef9c9ecbe59506fc1533f0a"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "embeds/figma"
+      },
+      "isSymlink": false,
+      "hash": "50a0915889774278cd7d1f63f4b243841b064c1c"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "envs/react"
+      },
+      "isSymlink": false,
+      "hash": "5849f24d3fea944f65bb266d8339e0872163cc61"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "theme/theme-context"
+      },
+      "isSymlink": false,
+      "hash": "87b3f47298cce61c812fa733b20b25fefaae334e"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/buttons/button"
+      },
+      "isSymlink": false,
+      "hash": "f54cf2199ebea77aeff811b3d03c3b9f89e040ad"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-react",
+        "name": "buttons/button"
+      },
+      "isSymlink": false,
+      "hash": "e603d90cf7c889b7ab9a9726a17123a27a167b8f"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-react",
+        "name": "content/image"
+      },
+      "isSymlink": false,
+      "hash": "ed0b933b3f51b7c5403f5a75e41c67e3f453ea3b"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/copy-box"
+      },
+      "isSymlink": false,
+      "hash": "e9c696fd745a6d28d8dff813986da1142e8801bb"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "layout/grid-component"
+      },
+      "isSymlink": false,
+      "hash": "31c1eb202412676fc224bd257a959a636654d9ac"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "layout/breakpoints"
+      },
+      "isSymlink": false,
+      "hash": "32202335790421888e7b64eb0554b99d5c610324"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/features/features-card"
+      },
+      "isSymlink": false,
+      "hash": "09adc695d18c86539037a203fb81783fc3dac106"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/heading"
+      },
+      "isSymlink": false,
+      "hash": "b545caa6b5a8240434ec1b76a52a0adab5f04c48"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/pages/homepage"
+      },
+      "isSymlink": false,
+      "hash": "58366bb2fabd70f655bbb5a3b8162849d9e5a812"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-react",
+        "name": "pages/page"
+      },
+      "isSymlink": false,
+      "hash": "050abedb77de3a3deefe7634b13af4d23638d891"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "entity/compnent-distribution-graph"
+      },
+      "isSymlink": false,
+      "hash": "eda10e661617336b4ce775c508bf8687ec6f9111"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "entity/graph/grid-graph"
+      },
+      "isSymlink": false,
+      "hash": "0e3f593266d65db44945d99872e8920ae8d81a8a"
+    },
+    {
+      "id": {
+        "scope": "teambit.component",
+        "name": "component-id"
+      },
+      "isSymlink": false,
+      "hash": "f7a05fc02f0af5ddeee46aec7c912a68bc7ba3e1"
+    },
+    {
+      "id": {
+        "scope": "teambit.component",
+        "name": "legacy-bit-id"
+      },
+      "isSymlink": false,
+      "hash": "cfa4f6ea38999a12696f09136c391b477f314f5f"
+    },
+    {
+      "id": {
+        "scope": "teambit.component",
+        "name": "component-version"
+      },
+      "isSymlink": false,
+      "hash": "8a2b2593e57e6250c5022b0bb45c6ab0643f095f"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/graph/edge"
+      },
+      "isSymlink": false,
+      "hash": "42d406a7f0797c920537e5bf0ef2a7a33c49f1b8"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/graph/component-bubble"
+      },
+      "isSymlink": false,
+      "hash": "1373e6ef9bfbe21171b707651cc78803f50917b4"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/content/caption"
+      },
+      "isSymlink": false,
+      "hash": "a25dab95559d0e32196dd88f9f374ec860b728b7"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/styles/ellipsis"
+      },
+      "isSymlink": false,
+      "hash": "8ccd3eae140a48ec6c27c1bd79241056fd1c0a83"
+    },
+    {
+      "id": {
+        "scope": "teambit.evangelist",
+        "name": "theme/icon-font"
+      },
+      "isSymlink": false,
+      "hash": "9b6de9dea31d37dc5b6e6793d414ae11a9d0c843"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "entity/features"
+      },
+      "isSymlink": false,
+      "hash": "50932bfbcb456af446a04f03d76565f791da91ce"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "entity/graph/bubble-graph"
+      },
+      "isSymlink": false,
+      "hash": "cf723c967c5598903f43ed923cded189bb767130"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "entity/images"
+      },
+      "isSymlink": false,
+      "hash": "236e704276d64ecb6a71882b5bfee6cd49e256af"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "entity/use-cases"
+      },
+      "isSymlink": false,
+      "hash": "f80af1055565d47203b4ea9c2248df1506eb1e6d"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/use-cases/use-cases-card-grid"
+      },
+      "isSymlink": false,
+      "hash": "71cc5a0f709ce78f3f0c67f3ec37da44d9cdc218"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/use-cases/use-cases-card"
+      },
+      "isSymlink": false,
+      "hash": "465da1a009c24be48535cff8d171579c27913366"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "surfaces/card"
+      },
+      "isSymlink": false,
+      "hash": "5eae7c0851f62fe145d52b9d012a471aca4b32c5"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "css-components/elevation"
+      },
+      "isSymlink": false,
+      "hash": "a8d3c3b873545860b69d8c0172061dfb897c1c8e"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "css-components/roundness"
+      },
+      "isSymlink": false,
+      "hash": "85a9fba34ef4ceaa452b75fbd462e0257e934d60"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "surfaces/background"
+      },
+      "isSymlink": false,
+      "hash": "411dfe3cea2fb9c5bc0af15bf387ac5f1e4b3802"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "elements/icon"
+      },
+      "isSymlink": false,
+      "hash": "b300ab6c3edbf6f926041c1e6ed1f850815f8112"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/features/features-section"
+      },
+      "isSymlink": false,
+      "hash": "95af5617e4654f2cf0f6ec7a7b911cdd5ccfa65d"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/features/features-card-grid"
+      },
+      "isSymlink": false,
+      "hash": "f537581a20b29ec9740b2baa4767f8e447e68c24"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/heading"
+      },
+      "isSymlink": false,
+      "hash": "e027b76806041d562339382bc40bb00e711089cb"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/content/heading"
+      },
+      "isSymlink": false,
+      "hash": "826a0e4ef65c836c4f9ba52ebc59998b6b5e941b"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/hero"
+      },
+      "isSymlink": false,
+      "hash": "9eb05fef2fce75e9d4a83eb0c92bb4a18d3b38bb"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "layout/page-frame"
+      },
+      "isSymlink": false,
+      "hash": "ab011886e9cd7ef3cff12c689b6d4a897437f94e"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/bubble-highlighter"
+      },
+      "isSymlink": false,
+      "hash": "387bc52f62b7388cc6b684e9c49434a039607dac"
+    },
+    {
+      "id": {
+        "scope": "teambit.component",
+        "name": "modules/component-url"
+      },
+      "isSymlink": false,
+      "hash": "b0ec8ba61060ab621cecf5052110430cab054189"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "utils/string/affix"
+      },
+      "isSymlink": false,
+      "hash": "7d1f0e9d3ec6d9d987f98cb83ca68166eeff1951"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/navigation/link"
+      },
+      "isSymlink": false,
+      "hash": "09472ec0d0eb6149d510270e2cf659b270fdd2c5"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/graph/bubble-graph"
+      },
+      "isSymlink": false,
+      "hash": "aed26e2da2f3bace9de6c8fed7d750a1c78dd258"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/graph/grid-graph"
+      },
+      "isSymlink": false,
+      "hash": "5bc39992ff902cadfe2c391a7ef20e9d30f52ec5"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-react",
+        "name": "ui/layout/graph-node"
+      },
+      "isSymlink": false,
+      "hash": "5a8c333976fffc7673dc1ae889c0d0f6e26575cb"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/content/subtitle"
+      },
+      "isSymlink": false,
+      "hash": "8aee34a56a1e8cfc6df6e16ce8f76527fdbc0cb0"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/logo-showcase"
+      },
+      "isSymlink": false,
+      "hash": "d901243a9d398129fb6a58b366216c159801f224"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/sections/component-distribution"
+      },
+      "isSymlink": false,
+      "hash": "345eb5fd5acd9d2e485b32c7deefa73f4a78eb51"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/graph/component-card-graph"
+      },
+      "isSymlink": false,
+      "hash": "7f8d023152e1ab96e1407e5fc53b35aa6b42f4ce"
+    },
+    {
+      "id": {
+        "scope": "teambit.explorer",
+        "name": "ui/gallery/component-card"
+      },
+      "isSymlink": false,
+      "hash": "45ad6066d6e8114b48f3581d23f590446f6d5c27"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "routing/link"
+      },
+      "isSymlink": false,
+      "hash": "c8bb1a6018ab1b22d6f6881df3b243fec719a197"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "routing/native-link"
+      },
+      "isSymlink": false,
+      "hash": "74f6cf6765fcd43a89ca08227834b0e343ab6cd7"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "routing/routing-provider"
+      },
+      "isSymlink": false,
+      "hash": "c8b8bffeba30ee451d05c4f041680d4b7de9173c"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "routing/native-nav-link"
+      },
+      "isSymlink": false,
+      "hash": "f4e46c640c98521c7e08b7dbdcd6231250ded934"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "utils/is-browser"
+      },
+      "isSymlink": false,
+      "hash": "75bb0999500ec8b879f0fd97d712263959b61fea"
+    },
+    {
+      "id": {
+        "scope": "teambit.explorer",
+        "name": "ui/gallery/base-component-card"
+      },
+      "isSymlink": false,
+      "hash": "b7284b50304c2ee05935ced55be3dfe648d8feb4"
+    },
+    {
+      "id": {
+        "scope": "teambit.toolbox",
+        "name": "string/ellipsis"
+      },
+      "isSymlink": false,
+      "hash": "e61fc810bad952c8f5aecf628795ea0a0f8bc6df"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/use-cases/use-cases-section"
+      },
+      "isSymlink": false,
+      "hash": "30ab7a708057bdbe0d8c176f0d24d6bda061d9a7"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "ui/component-highlighter"
+      },
+      "isSymlink": false,
+      "hash": "5a877cd5a822907acd79612e4b76f88a18808fe5"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "ui/highlighter/component-metadata/bit-component-meta"
+      },
+      "isSymlink": false,
+      "hash": "7c3ea84915d41841cb1766edc97e709531cac0d7"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "modules/dom-to-react"
+      },
+      "isSymlink": false,
+      "hash": "6388a7e8c942478f2a7a8d9c12d5d42b86f286c9"
+    },
+    {
+      "id": {
+        "scope": "teambit.ui-foundation",
+        "name": "ui/constants/z-indexes"
+      },
+      "isSymlink": false,
+      "hash": "26c9e8c301d1482bc81f10956ce6e463135a7fdb"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "ui/hover-selector"
+      },
+      "isSymlink": false,
+      "hash": "6a952f874fb184372ef547bbf33f9079b5638738"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "utils/popper-js/ignore-popper-size"
+      },
+      "isSymlink": false,
+      "hash": "09d9fe859123d6a49c946f1180b22bea6e9f67ac"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "utils/popper-js/resize-to-match-reference"
+      },
+      "isSymlink": false,
+      "hash": "34dafbf332d52ef84d59408f9b634589810aa6f2"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/icon-button"
+      },
+      "isSymlink": false,
+      "hash": "0a137b729e286051fe18b17e3e4fde00f400afc5"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "input/button"
+      },
+      "isSymlink": false,
+      "hash": "009bc670fec996e4f464d14215b8a220d241ef81"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "elements/dots-loader"
+      },
+      "isSymlink": false,
+      "hash": "e8e067063f355d12be2af049d058f153abed7d41"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "theme/accent-color"
+      },
+      "isSymlink": false,
+      "hash": "6c1910949b280e6b3aae7a87a33a34cc9a5bc447"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-react",
+        "name": "themes/theme-switcher"
+      },
+      "isSymlink": false,
+      "hash": "8d5c14b44ee94e8e06d49f06e97d7848371ec369"
+    },
+    {
+      "id": {
+        "scope": "teambit.harmony",
+        "name": "harmony"
+      },
+      "isSymlink": false,
+      "hash": "c83e2880bfc31ee69bcbe80fa2d8856a6cf1a618"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "mocha-tester"
+      },
+      "isSymlink": false,
+      "hash": "039cd73fd90281cd14948086503b0195de83a061"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "tester-task"
+      },
+      "isSymlink": false,
+      "hash": "58f089962a4d331792eea7021f0f6aa1eb4c5005"
+    },
+    {
+      "id": {
+        "scope": "teambit.compilation",
+        "name": "babel-compiler"
+      },
+      "isSymlink": false,
+      "hash": "6b70b7ee69e8791b4a008f56ca0ff59ac0928c9f"
+    },
+    {
+      "id": {
+        "scope": "teambit.compilation",
+        "name": "modules/babel-file-transpiler"
+      },
+      "isSymlink": false,
+      "hash": "6519b16aaf2dd863c74cae2df9e36b4851bbb660"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "tests-results"
+      },
+      "isSymlink": false,
+      "hash": "6051a5121bc8fadcb6e9437265b49976d143ccb1"
+    },
+    {
+      "id": {
+        "scope": "teambit.node",
+        "name": "node"
+      },
+      "isSymlink": false,
+      "hash": "afbebb82b1e61b6a3376e8833cc04e5c2d0f9324"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "jest-tester"
+      },
+      "isSymlink": false,
+      "hash": "3c0390c0f1350d8a1697f4b245bba8cc8b387417"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "coverage-report"
+      },
+      "isSymlink": false,
+      "hash": "ac06b07dacebbeb627cf46a1abeafa2e35905c2c"
+    },
+    {
+      "id": {
+        "scope": "teambit.node",
+        "name": "generator/node-starters"
+      },
+      "isSymlink": false,
+      "hash": "8641eab2d7a0e0153770786d5a396e080fe4798a"
+    },
+    {
+      "id": {
+        "scope": "teambit.node",
+        "name": "generator/node-templates"
+      },
+      "isSymlink": false,
+      "hash": "3f03048f8af041ae21b5303acc24f8e457c8c77f"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "react-env"
+      },
+      "isSymlink": false,
+      "hash": "b2ee4ccd9145c2c8be734d43c29d97bb54a99c0e"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "generator/react-starters"
+      },
+      "isSymlink": false,
+      "hash": "77bcb8220ff3b88a0d9cd31d8c27e78a0bc7638d"
+    },
+    {
+      "id": {
+        "scope": "teambit.git",
+        "name": "modules/git-ignore"
+      },
+      "isSymlink": false,
+      "hash": "8a396e53147fa5a2ab233c826858c8b30fc59c3d"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "docs/eslint-docs"
+      },
+      "isSymlink": false,
+      "hash": "34c0fdb6ada297be253b099f0f681f470ad95ff3"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/bit-cli/command-example"
+      },
+      "isSymlink": false,
+      "hash": "1744efa2e48ec99f21cc84a603e2c8122b9e8dae"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/bit-cli/commands-explorer"
+      },
+      "isSymlink": false,
+      "hash": "550647df3dc44227be923df95b367e27200a6fbd"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/bit-cli/terminal"
+      },
+      "isSymlink": false,
+      "hash": "ae97aa9f14d813db235d854fe52e1d86bbc92f20"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/scrollbar"
+      },
+      "isSymlink": false,
+      "hash": "793c9e2d6b16d34383fb6bb9f3085e951cef76d3"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "prettier-formatter"
+      },
+      "isSymlink": false,
+      "hash": "3d0a1af141227492b09a7a074df6c6eaf509c22f"
+    },
+    {
+      "id": {
+        "scope": "teambit.docs",
+        "name": "docs-template"
+      },
+      "isSymlink": false,
+      "hash": "11bd9e376c59bf104f9a9c37f482244176ca7423"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "ui/docs-app"
+      },
+      "isSymlink": false,
+      "hash": "c98bb11228be3662d64823d61e39ecc6db22ff06"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/linked-heading"
+      },
+      "isSymlink": false,
+      "hash": "a4a27e03a803bd7d335fe72a6666cb27a7370198"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/anchor"
+      },
+      "isSymlink": false,
+      "hash": "58ecb5d5dcd36be912c5473ea72402e88911a87a"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/section"
+      },
+      "isSymlink": false,
+      "hash": "ff4a5d0ec94e0cec5450a394f380fc25297fc494"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "ui/docs/compositions-carousel"
+      },
+      "isSymlink": false,
+      "hash": "0e16f07424c9959982d89e1d816c2797478d000e"
+    },
+    {
+      "id": {
+        "scope": "teambit.compositions",
+        "name": "ui/compositions-overview"
+      },
+      "isSymlink": false,
+      "hash": "8879e7878a982dc9a6159268fdda367c4dcf7cfe"
+    },
+    {
+      "id": {
+        "scope": "teambit.compositions",
+        "name": "model/composition-type"
+      },
+      "isSymlink": false,
+      "hash": "f2f8bf39e00bfae9cf6126ff9596ee74c036067b"
+    },
+    {
+      "id": {
+        "scope": "teambit.compositions",
+        "name": "ui/composition-card"
+      },
+      "isSymlink": false,
+      "hash": "e95757ef0ea5cb150798f820afcc3833682c131e"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "text/themed-text"
+      },
+      "isSymlink": false,
+      "hash": "f118d137c60f0869ee6e5a1b636508e9685ba4a3"
+    },
+    {
+      "id": {
+        "scope": "teambit.compositions",
+        "name": "model/composition-id"
+      },
+      "isSymlink": false,
+      "hash": "59fc4ed2c3d178f739a4328d66b41ca18377ff89"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "ui/error-fallback"
+      },
+      "isSymlink": false,
+      "hash": "b104490d481cb4287aa87a24b173faa599215c09"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "styles/flex-center"
+      },
+      "isSymlink": false,
+      "hash": "92c0e0167c3b5889d8c27b03289337c4e438b160"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "ui/docs/apply-providers"
+      },
+      "isSymlink": false,
+      "hash": "d60444c47d022a867671b2d2a011bd88a19c8404"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "utils/composer"
+      },
+      "isSymlink": false,
+      "hash": "b9ea973516d87592ad78a91b688ef2416adfc890"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "ui/docs/docs-content"
+      },
+      "isSymlink": false,
+      "hash": "282333fcb1c98649b1e21dcf12fd01b0a984feb0"
+    },
+    {
+      "id": {
+        "scope": "teambit.mdx",
+        "name": "ui/mdx-layout"
+      },
+      "isSymlink": false,
+      "hash": "a0c2bccb6e14a28286dbb254deab2eaa082d7ad9"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "markdown/mdx"
+      },
+      "isSymlink": false,
+      "hash": "462a1d6f656c7fa4b763f1d69f7f0968ed423b2e"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "markdown/heading"
+      },
+      "isSymlink": false,
+      "hash": "aa7b7a712d64eb3420edff59bd2202789f0db47d"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "markdown/hybrid-live-code-snippet"
+      },
+      "isSymlink": false,
+      "hash": "aafe09976a9d8e562984f1d29d833a5ef9eff8ea"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "routing/external-link"
+      },
+      "isSymlink": false,
+      "hash": "de11fb79a08b39ebfbe9167d1b28e93fa8ac1532"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/block-quote"
+      },
+      "isSymlink": false,
+      "hash": "a37994899bc6ff94a3542a882e103762badb6c8a"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/bold"
+      },
+      "isSymlink": false,
+      "hash": "a71cc7e8421c0115f15e0edfade3335d561b8861"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/image"
+      },
+      "isSymlink": false,
+      "hash": "703f9e6cc3c820f450570e73aefd0bdbc6ddea4d"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/inline-code"
+      },
+      "isSymlink": false,
+      "hash": "6770866fc100ddb4c4110cf37c1cfbb47327b1f1"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/italic"
+      },
+      "isSymlink": false,
+      "hash": "8a90245349910913f509f6336bbd6aff973ded6d"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/ol"
+      },
+      "isSymlink": false,
+      "hash": "315ad45bcaa7aa99aa7c4be021cdf4c68f815991"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/separator"
+      },
+      "isSymlink": false,
+      "hash": "340c32cb9c7482f2cc147afd58908b254bc1b9ee"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/sup"
+      },
+      "isSymlink": false,
+      "hash": "03df824c8361c8a1d392ee52b41f62e039292f68"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/table/base-table"
+      },
+      "isSymlink": false,
+      "hash": "545088095cbbc20fdf503424548224766b3f9678"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/table/td"
+      },
+      "isSymlink": false,
+      "hash": "f50a00dc09397a1ddd73a5f9bb02824f9b70b36c"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/table/tr"
+      },
+      "isSymlink": false,
+      "hash": "5eb830cce3d7db9252d73199a7655aa62f6989fb"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/ul"
+      },
+      "isSymlink": false,
+      "hash": "3c5d46f72a30ef6c3ed6edeafff884e3558b01df"
+    },
+    {
+      "id": {
+        "scope": "teambit.mdx",
+        "name": "ui/docs/link"
+      },
+      "isSymlink": false,
+      "hash": "4f11fbc79f0daa7ef916dabb99ddac944b31425c"
+    },
+    {
+      "id": {
+        "scope": "teambit.mdx",
+        "name": "ui/docs/snippet"
+      },
+      "isSymlink": false,
+      "hash": "efdc640527818bd19faacb259712d56095c886e0"
+    },
+    {
+      "id": {
+        "scope": "teambit.mdx",
+        "name": "ui/mdx-scope-context"
+      },
+      "isSymlink": false,
+      "hash": "cc7cd9acc608063b4575e5462aa054e31a39311a"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "ui/docs/properties-table"
+      },
+      "isSymlink": false,
+      "hash": "e911081bf26b4ffe1333d59704a4daa5406ed1a4"
+    },
+    {
+      "id": {
+        "scope": "teambit.component",
+        "name": "ui/hooks/use-fetch-docs"
+      },
+      "isSymlink": false,
+      "hash": "2b727a60d6df5485abbe86a01aa9907d58eba231"
+    },
+    {
+      "id": {
+        "scope": "teambit.graphql",
+        "name": "hooks/use-query-light"
+      },
+      "isSymlink": false,
+      "hash": "431d3c37270dbf3210c72d6fad958c13ac61ce80"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/property-table"
+      },
+      "isSymlink": false,
+      "hash": "831ffdecba06f340c73aebffae2d1c07e7fe7a31"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/table-row"
+      },
+      "isSymlink": false,
+      "hash": "fe91a0c370f99b448d96171e1eb194659fa0f953"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/table-column"
+      },
+      "isSymlink": false,
+      "hash": "8de36c9734070c9f03155ffbb4182d08b3c7628b"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "envs/documenter-react-env"
+      },
+      "isSymlink": false,
+      "hash": "8dd5e118680532594ca158a503b02faa61427908"
+    },
+    {
+      "id": {
+        "scope": "teambit.preview",
+        "name": "react-preview"
+      },
+      "isSymlink": false,
+      "hash": "ce5c12606caf75f48f9ac053f7e6e6d4e002b30b"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/table"
+      },
+      "isSymlink": false,
+      "hash": "d465656ac1e21bd02b85396da3a98f8a90fbb20c"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/table-heading-row"
+      },
+      "isSymlink": false,
+      "hash": "7421a53b4e63865a2ba503cf56bf78351bc81b62"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/table-heading-column"
+      },
+      "isSymlink": false,
+      "hash": "47d93f3020585239f15369d2245b2ec7e96dee39"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/list"
+      },
+      "isSymlink": false,
+      "hash": "219f382c2da600dd7642f192454e36adb61138cc"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "ui/highlighted-text"
+      },
+      "isSymlink": false,
+      "hash": "3597c9e8f35145f3fcdc47a95efbe564059d5883"
+    },
+    {
+      "id": {
+        "scope": "teambit.documenter",
+        "name": "types/docs-file"
+      },
+      "isSymlink": false,
+      "hash": "434d0e79e743c0dd0971d23ee8de9d138abda717"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "mounter"
+      },
+      "isSymlink": false,
+      "hash": "586a20562a9166bc7ed2f2e95fc02604ce281408"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "webpack/react-webpack"
+      },
+      "isSymlink": false,
+      "hash": "731a8ae48001630c2e948f88a432fad05879439c"
+    },
+    {
+      "id": {
+        "scope": "teambit.mdx",
+        "name": "modules/mdx-loader"
+      },
+      "isSymlink": false,
+      "hash": "e64d11f495ec493842627619644c29ee17c9f826"
+    },
+    {
+      "id": {
+        "scope": "teambit.mdx",
+        "name": "modules/mdx-compiler"
+      },
+      "isSymlink": false,
+      "hash": "deb77e48616830d420af1e94f06e7cc40ae2a719"
+    },
+    {
+      "id": {
+        "scope": "teambit.node",
+        "name": "deps-detectors/detective-es6"
+      },
+      "isSymlink": false,
+      "hash": "464e1549bcd0dc205fafb72b02347e2c5af42fc5"
+    },
+    {
+      "id": {
+        "scope": "teambit.node",
+        "name": "deps-detectors/parser-helper"
+      },
+      "isSymlink": false,
+      "hash": "e5764deda8baa91d8d7f23dcf04b79f1219fd73a"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "babel/bit-react-transformer"
+      },
+      "isSymlink": false,
+      "hash": "a30c1e464c1878003e18c5e40051fb123cd361d1"
+    },
+    {
+      "id": {
+        "scope": "teambit.webpack",
+        "name": "modules/generate-style-loaders"
+      },
+      "isSymlink": false,
+      "hash": "3e033b4ffdd9a2a1755a8e2de505458a240e54d3"
+    },
+    {
+      "id": {
+        "scope": "teambit.webpack",
+        "name": "modules/style-regexps"
+      },
+      "isSymlink": false,
+      "hash": "86cbe6e6581c6fe7333556edb0d83c78fc04dc87"
+    },
+    {
+      "id": {
+        "scope": "teambit.webpack",
+        "name": "webpack-dev-server"
+      },
+      "isSymlink": false,
+      "hash": "70bf0d79801442e34f83bca028fc811f4c8c810f"
+    },
+    {
+      "id": {
+        "scope": "teambit.webpack",
+        "name": "webpack-bundler"
+      },
+      "isSymlink": false,
+      "hash": "9d32b438d944a303720b7c761c3a4518af31f38c"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "apps/react-app-types"
+      },
+      "isSymlink": false,
+      "hash": "67550c6367f625f6e1a7e5d7364cb7bc8b96327f"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "rendering/ssr"
+      },
+      "isSymlink": false,
+      "hash": "867c711e5e6b4c5db2079a7faa49338f1b595a27"
+    },
+    {
+      "id": {
+        "scope": "teambit.ui-foundation",
+        "name": "ui/rendering/html"
+      },
+      "isSymlink": false,
+      "hash": "c52fe1231edeef42c0bb9ee5edfe7ff93e1c32e7"
+    },
+    {
+      "id": {
+        "scope": "teambit.ui-foundation",
+        "name": "ui/pages/static-error"
+      },
+      "isSymlink": false,
+      "hash": "dcadbde39d2b2eed7b926b27e0be284875972242"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/pages/not-found"
+      },
+      "isSymlink": false,
+      "hash": "606f62b37c37456b2775c5c0656bc10f4c8ffe3a"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/error-page"
+      },
+      "isSymlink": false,
+      "hash": "48f7770a1a2f4c8e7ec644322303fdbf9e1fc316"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "constants/links"
+      },
+      "isSymlink": false,
+      "hash": "f1a57072232c573ed8c9e71bb790aead46073cfa"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/pages/server-error"
+      },
+      "isSymlink": false,
+      "hash": "639cd6f9c3f47b6178567d3890c39a37e622ebe1"
+    },
+    {
+      "id": {
+        "scope": "teambit.ui-foundation",
+        "name": "ui/pages/preview-not-found"
+      },
+      "isSymlink": false,
+      "hash": "b212278801fee7b299472ae6b809eb631d0654d5"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "eslint-config-bit-react"
+      },
+      "isSymlink": false,
+      "hash": "3519258cf955a1b260beea81ce5e860fc7e274b5"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "generator/react-templates"
+      },
+      "isSymlink": false,
+      "hash": "e2817c3908a8fef9066c0793ac8cd573a04fc89a"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "jest/react-jest"
+      },
+      "isSymlink": false,
+      "hash": "8e8f39572807a168829e9b6baab5531c13d91e2f"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "v17/docs-template"
+      },
+      "isSymlink": false,
+      "hash": "32d6983fa530d81cd0c116f4a615b3cba2da014e"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "v17/mounter"
+      },
+      "isSymlink": false,
+      "hash": "10d798ad9ebed2db4e536f4c0683cff4da547222"
+    },
+    {
+      "id": {
+        "scope": "teambit.webpack",
+        "name": "transformers/favicon-reload"
+      },
+      "isSymlink": false,
+      "hash": "04b4b246eaf593737255ef2d3d873755ef45f6c8"
+    },
+    {
+      "id": {
+        "scope": "teambit.envs",
+        "name": "docs/env-overview-template"
+      },
+      "isSymlink": false,
+      "hash": "9239def7e7cbe48a18863fbb0ba995ae539c6802"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "internal/base-react-env"
+      },
+      "isSymlink": false,
+      "hash": "093ab5a716090afacd646f34d95606052bff7db2"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/bit-cli/commands-provider"
+      },
+      "isSymlink": false,
+      "hash": "459dd64156034b14d97536b9748f738f4b78c502"
+    },
+    {
+      "id": {
+        "scope": "teambit.harmony",
+        "name": "content/cli-reference"
+      },
+      "isSymlink": false,
+      "hash": "263d6893d560d2f3592d6658bd4f88d7659a837a"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/expand-code"
+      },
+      "isSymlink": false,
+      "hash": "b2f23adb94b80e6d2c8d697a3ee74f9e8c616b5a"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "content/collapsible-content"
+      },
+      "isSymlink": false,
+      "hash": "5928d384f67dddad7bb66796f42bb73802b5e2e7"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "typography/text"
+      },
+      "isSymlink": false,
+      "hash": "ff6dce87420e5289a30a3071347bc0844b3781d7"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/separator"
+      },
+      "isSymlink": false,
+      "hash": "4d58ac28ea44d61f1ab1f1fe87aace2091b0657b"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "responsive/breakpoints"
+      },
+      "isSymlink": false,
+      "hash": "e9b28d575c1bce53ae4a8f4febc8ec7c10639c1f"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "docs/using-linters"
+      },
+      "isSymlink": false,
+      "hash": "63b3a27f7b9853364388666a81f235a397d96a2e"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "envs/community-mdx"
+      },
+      "isSymlink": false,
+      "hash": "be67d3bd22bf1f50606de2fbecc5e8182ce2f2e0"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "docs/jest-docs"
+      },
+      "isSymlink": false,
+      "hash": "6100b483099814288dff6e137915e9a8dbdc2f28"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "docs/using-testers"
+      },
+      "isSymlink": false,
+      "hash": "ea793128a63b90de169e19dc8a8458453ca0873f"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "docs/prettier-docs"
+      },
+      "isSymlink": false,
+      "hash": "6d1565246b91f3705444de1a3dc27bc5d2eea501"
+    },
+    {
+      "id": {
+        "scope": "teambit.defender",
+        "name": "docs/using-formatters"
+      },
+      "isSymlink": false,
+      "hash": "451cfc62e6b88e907c12d2174cea228f991e1dbd"
+    },
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "webpack/refresh-overlay"
+      },
+      "isSymlink": false,
+      "hash": "f91f66a8c55ed68d49bf903f86deb4311ee5f698"
+    },
+    {
+      "id": {
+        "scope": "teambit.mdx",
+        "name": "compilers/mdx-transpiler"
+      },
+      "isSymlink": false,
+      "hash": "8dd8702264bc5437b552321bc5c8f4160807bbcd"
+    },
+    {
+      "id": {
+        "scope": "teambit.node",
+        "name": "envs/node-babel-mocha"
+      },
+      "isSymlink": false,
+      "hash": "932418ff5a1aff9664d5c252ab8fe39488c04768"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "v17/react-env"
+      },
+      "isSymlink": false,
+      "hash": "30be1a5c0835a4990ad5c8bfa2c79e4f87189b71"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "ui/highlighter-provider"
+      },
+      "isSymlink": false,
+      "hash": "6b41f12c2692e87baf91ea4eac4ffa06b7be9657"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/community-highlighter"
+      },
+      "isSymlink": false,
+      "hash": "eb8f5c48a6526c01f16278a330c1c2a1a738f3b1"
+    },
+    {
+      "id": {
+        "scope": "teambit.community",
+        "name": "ui/hooks/use-local-storage"
+      },
+      "isSymlink": false,
+      "hash": "7650459083cafe719cee5bb4c1b1e62ec6179af0"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "ui/input/toggle"
+      },
+      "isSymlink": false,
+      "hash": "07477cdae195306ededd9e6e8e6179b66a4838ea"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "input/checkbox/label"
+      },
+      "isSymlink": false,
+      "hash": "47364bc3ebb23cb5ad04d65962ed7ff7d9fe966e"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "input/checkbox/hidden"
+      },
+      "isSymlink": false,
+      "hash": "f9cf55947e0c89b23ccf73bf26137243c960f242"
+    },
+    {
+      "id": {
+        "scope": "teambit.base-ui",
+        "name": "input/checkbox/indicator"
+      },
+      "isSymlink": false,
+      "hash": "6bf0f21201ef6b64b1659e13d49ee9109e9982a4"
+    },
+    {
+      "id": {
+        "scope": "teambit.webpack",
+        "name": "modules/config-mutator"
+      },
+      "isSymlink": false,
+      "hash": "9df60a915064f498323ed2106a7f46e7c1c6e453"
+    },
+    {
+      "id": {
+        "scope": "teambit.html",
+        "name": "modules/inject-html-element"
+      },
+      "isSymlink": false,
+      "hash": "9a321368cfe227eb76a088907eddf48763d25f33"
+    },
+    {
+      "id": {
+        "scope": "teambit.toolbox",
+        "name": "path/path"
+      },
+      "isSymlink": false,
+      "hash": "5adb35c622f8eed32a644c6746db50e54ed00ace"
+    },
+    {
+      "id": {
+        "scope": "teambit.compositions",
+        "name": "ui/composition-live-controls-react"
+      },
+      "isSymlink": false,
+      "hash": "e732590121c8aa2f546f0a5f7e9991e5bd868b73"
+    },
+    {
+      "id": {
+        "scope": "teambit.compositions",
+        "name": "ui/composition-live-controls"
+      },
+      "isSymlink": false,
+      "hash": "f44a71f7531adf7e72d20b84b647d99902276087"
+    },
+    {
+      "id": {
+        "scope": "teambit.mdx",
+        "name": "modules/mdx-pre-loader"
+      },
+      "isSymlink": false,
+      "hash": "966cef21aa93da69764850a6f945b23888eb7c80"
+    },
+    {
+      "id": {
+        "scope": "teambit.mdx",
+        "name": "modules/mdx-admonitions-adapter"
+      },
+      "isSymlink": false,
+      "hash": "17d52cb3fa59598267b50d34e1a5f7d3756afb5a"
+    },
+    {
+      "id": {
+        "scope": "bitdev.node",
+        "name": "node-env"
+      },
+      "isSymlink": false,
+      "hash": "ca06bbbbe1eefa9afb10aeb40fd66d33d9477d7e"
+    },
+    {
+      "id": {
+        "scope": "bitdev.node",
+        "name": "generators/node-starters"
+      },
+      "isSymlink": false,
+      "hash": "de6052f45ef6267e9a6ebd7f1744adc77c764473"
+    },
+    {
+      "id": {
+        "scope": "bitdev.node",
+        "name": "generators/node-templates"
+      },
+      "isSymlink": false,
+      "hash": "3cad9720305c8f249d6932b372361aacb8056a28"
+    },
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "generators/react-starters"
+      },
+      "isSymlink": false,
+      "hash": "01435e665bab3b9a98d9e39f272c34e20708dc88"
+    },
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "generators/react-templates"
+      },
+      "isSymlink": false,
+      "hash": "2600295dadd1098dcd190766639d8980d7db19b2"
+    },
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "live-controls"
+      },
+      "isSymlink": false,
+      "hash": "e838b45fbe87a2f7b4d2ca3d86218b6307068adf"
+    },
+    {
+      "id": {
+        "scope": "teambit.vite",
+        "name": "vitest-tester"
+      },
+      "isSymlink": false,
+      "hash": "dff09a20204dfceeb94a7861a2115fd071806aed"
+    },
+    {
+      "id": {
+        "scope": "bitdev.node",
+        "name": "envs/basic-env"
+      },
+      "isSymlink": false,
+      "hash": "01ae5fe32d1bfbb699176fe7a026f2a228a7df25"
+    },
+    {
+      "id": {
+        "scope": "bitdev.general",
+        "name": "envs/bit-env"
+      },
+      "isSymlink": false,
+      "hash": "689a54288ee6bcbfe1bab66173e3e1cd2acef266"
+    },
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "eslint/eslint-config-bit-react"
+      },
+      "isSymlink": false,
+      "hash": "d962f8103c4ff038f4174d2a24cd1d8a99352832"
+    },
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "preview/react-docs-app"
+      },
+      "isSymlink": false,
+      "hash": "63f2d431965ef46560c6c3b18908fd38ef28337f"
+    },
+    {
+      "id": {
+        "scope": "teambit.pre-bundle",
+        "name": "pre-bundle-env"
+      },
+      "isSymlink": false,
+      "hash": "e00ebe2c64800bf7abecb641e2061c0cb9a3edf3"
+    },
+    {
+      "id": {
+        "scope": "teambit.toolbox",
+        "name": "performance/v8-cache"
+      },
+      "isSymlink": false,
+      "hash": "b1727ee945b64193ec9981bf8736561ee66015ba"
+    },
+    {
+      "id": {
+        "scope": "bitdev.node",
+        "name": "modules/load-esm-module"
+      },
+      "isSymlink": false,
+      "hash": "bd9bd6fe0ac7fa60470172687c034c5686baf213"
+    },
+    {
+      "id": {
+        "scope": "bitdev.general",
+        "name": "envs/bit-aspect-env"
+      },
+      "isSymlink": false,
+      "hash": "39e10291e2ddba03ba60e162fefb5c7391ce5009"
+    },
+    {
+      "id": {
+        "scope": "teambit.vite",
+        "name": "esm-packages/vite"
+      },
+      "isSymlink": false,
+      "hash": "932465eb0f214895240e9de377fdfc28af107602"
+    },
+    {
+      "id": {
+        "scope": "teambit.node",
+        "name": "node-async-esm"
+      },
+      "isSymlink": false,
+      "hash": "2828e97cb9d0240a12b3cf794301a2293a32b29c"
+    },
+    {
+      "id": {
+        "scope": "teambit.vite",
+        "name": "esm-packages/vitest"
+      },
+      "isSymlink": false,
+      "hash": "603e1cfcb248477e22ffdea58ee0a8c5ca35e326"
+    },
+    {
+      "id": {
+        "scope": "teambit.pre-bundle",
+        "name": "dev-services/compiler/pre-bundle-compiler"
+      },
+      "isSymlink": false,
+      "hash": "c4b8f0d34d683d0c9db1d4f838bdffb968a998fa"
+    },
+    {
+      "id": {
+        "scope": "teambit.pre-bundle",
+        "name": "dev-services/preview/pre-bundle-preview"
+      },
+      "isSymlink": false,
+      "hash": "1d06ba54e5641fee3063888cd617a0df0a5ac4ef"
+    },
+    {
+      "id": {
+        "scope": "teambit.node",
+        "name": "utils/esm-loader"
+      },
+      "isSymlink": false,
+      "hash": "d08378098eff868d9a61516e1080627b3f198969"
+    },
+    {
+      "id": {
+        "scope": "teambit.mdx",
+        "name": "modules/mdx-v3-options"
+      },
+      "isSymlink": false,
+      "hash": "7388f03431a3eea739d5a97deea4fa87ff7309c4"
+    },
+    {
+      "id": {
+        "scope": "teambit.design",
+        "name": "loaders/circle-loader"
+      },
+      "isSymlink": false,
+      "hash": "e208ebac3be1f256e9e1e3c70791013bc2ccad7d"
+    },
+    {
+      "id": {
+        "scope": "teambit.cloud",
+        "name": "envs/cloud-react"
+      },
+      "isSymlink": false,
+      "hash": "3dc4908a53f0a7e3ed1ef1e8f61ff4055a4122d6"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "modules/react-live-controls-from-schema"
+      },
+      "isSymlink": false,
+      "hash": "37f2c166f6372b30abf1f20c8ed678b8bc6c4121"
+    },
+    {
+      "id": {
+        "scope": "teambit.react",
+        "name": "ui/mounter/use-default-controls"
+      },
+      "isSymlink": false,
+      "hash": "a59df60aa05d8ef9c3cfa269cbe8b0cb99312ca1"
+    },
+    {
+      "id": {
+        "scope": "teambit.oxc",
+        "name": "linter/oxlint-linter"
+      },
+      "isSymlink": false,
+      "hash": "8d24c5e6213b3c3861ba295f64c397782cd70231"
+    },
+    {
+      "id": {
+        "scope": "teambit.oxc",
+        "name": "linter/oxlint-node"
+      },
+      "isSymlink": false,
+      "hash": "18a30cd4c90a288d8e1eac8ff239d7ffbf243e72"
+    },
+    {
+      "id": {
+        "scope": "teambit.rspack",
+        "name": "app-types/react-rspack"
+      },
+      "isSymlink": false,
+      "hash": "dd5f0145c1665486dc74af62e72df70872d5eb10"
+    },
+    {
+      "id": {
+        "scope": "teambit.rspack",
+        "name": "modules/rspack-config-mutator"
+      },
+      "isSymlink": false,
+      "hash": "097aff92c29af8671832c40bd1d4084845079119"
+    },
+    {
+      "id": {
+        "scope": "teambit.webpack",
+        "name": "modules/generate-externals"
+      },
+      "isSymlink": false,
+      "hash": "ef3fb339da11e3dbe2d266ebd3c21d6cb7ec0209"
+    },
+    {
+      "id": {
+        "scope": "teambit.rspack",
+        "name": "envs/rspack-app-type-env"
+      },
+      "isSymlink": false,
+      "hash": "a0f5999e8b94f6e203bf04dabb266ccf586370a2"
+    },
+    {
+      "id": {
+        "scope": "teambit.rspack",
+        "name": "dev-services/preview/react-preview"
+      },
+      "isSymlink": false,
+      "hash": "4865c67c45ae7a0a54a30f08b327912cd6f29544"
+    },
+    {
+      "id": {
+        "scope": "teambit.rspack",
+        "name": "rspack-bundler"
+      },
+      "isSymlink": false,
+      "hash": "449ca6e02d22665a26fb6e61404c065ca3fae76e"
+    },
+    {
+      "id": {
+        "scope": "teambit.rspack",
+        "name": "rspack-dev-server"
+      },
+      "isSymlink": false,
+      "hash": "9442ff8d2449a95283cf4dca182b59b5d512a829"
+    },
+    {
+      "id": {
+        "scope": "teambit.rspack",
+        "name": "envs/bit-env"
+      },
+      "isSymlink": false,
+      "hash": "287cb05e0f0652300146aacbda3a9647317dcdd1"
+    },
+    {
+      "id": {
+        "scope": "teambit.styling",
+        "name": "build-tasks/css-modules-transform"
+      },
+      "isSymlink": false,
+      "hash": "3999469106f77de72bed07c5c0eaa3c7b9c920c7"
+    },
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "preview/react-docs-template"
+      },
+      "isSymlink": false,
+      "hash": "38bbe94d162cae189d3b2f67d8b32b91e916ef26"
+    },
+    {
+      "id": {
+        "scope": "teambit.pkg",
+        "name": "package-json/mutator-task"
+      },
+      "isSymlink": false,
+      "hash": "280bf371080ec24277ef8fed923b98c71b465389"
+    },
+    {
+      "id": {
+        "scope": "hamedfronthere.lifeos",
+        "name": "apps/lifeos"
+      },
+      "isSymlink": false,
+      "hash": "cf7727f2871cc8aa112c6636c898e1f3c09a8d1b"
+    }
+  ],
+  "lanes": []
+}

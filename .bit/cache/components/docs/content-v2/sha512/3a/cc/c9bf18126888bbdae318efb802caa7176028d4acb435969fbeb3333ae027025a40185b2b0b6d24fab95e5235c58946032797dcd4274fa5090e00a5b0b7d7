@@ -1,0 +1,1 @@
+[{"name":"","description":"Detail screen for a single service with key facts and management actions\n(toggle active, delete).","args":[],"returns":{"description":"The service detail page.","type":null},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/pages/service-detail-page.tsx"}]

@@ -1,0 +1,349 @@
+2026-06-10T07:00:11.052Z 287 start -p 3000 --use-source, started
+2026-06-10T07:00:15.472Z 404 templates, started
+2026-06-10T07:00:15.564Z 404 templates, succeeded
+2026-06-10T07:00:15.778Z 434 status --json, started
+2026-06-10T07:00:15.804Z 434 status --json, succeeded
+2026-06-10T07:00:18.992Z 469 create react-app apps/lifeos --scope hamedfronthere.lifeos, started
+2026-06-10T07:00:22.333Z 510 mini-status --json, started
+2026-06-10T07:00:22.359Z 492 ls --json, started
+2026-06-10T07:00:22.389Z 510 mini-status --json, succeeded
+2026-06-10T07:00:22.423Z 492 ls --json, succeeded
+2026-06-10T07:00:41.253Z 605 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-10T07:00:42.210Z 605 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-10T07:01:07.684Z 469 create react-app apps/lifeos --scope hamedfronthere.lifeos, succeeded
+2026-06-10T07:01:30.223Z 816 install zustand recharts, started
+2026-06-10T07:01:32.863Z 849 mini-status --json, started
+2026-06-10T07:01:32.888Z 851 ls --json, started
+2026-06-10T07:01:32.917Z 849 mini-status --json, succeeded
+2026-06-10T07:01:32.955Z 851 ls --json, succeeded
+2026-06-10T07:01:40.544Z 816 install zustand recharts, succeeded
+2026-06-10T07:04:18.946Z 1493 status --json, started
+2026-06-10T07:04:22.148Z 1493 status --json, succeeded
+2026-06-10T07:04:41.762Z 1597 status --json, started
+2026-06-10T07:04:42.653Z 1627 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-10T07:04:44.476Z 1597 status --json, succeeded
+2026-06-10T07:04:45.221Z 1627 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-10T07:05:53.490Z 2029 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-10T07:05:56.503Z 2029 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-10T07:10:40.959Z 3305 app list, started
+2026-06-10T07:10:44.399Z 3305 app list, succeeded
+2026-06-10T07:10:52.399Z 3404 check-types, started
+2026-06-10T07:10:55.180Z 3404 check-types, succeeded
+2026-06-10T07:11:03.427Z 3513 run lifeos -p 3001, started
+2026-06-10T07:18:51.086Z 4014 status --json, started
+2026-06-10T07:18:54.345Z 4014 status --json, succeeded
+2026-06-10T07:29:39.698Z 4420 status --json, started
+2026-06-10T07:29:43.179Z 4420 status --json, succeeded
+2026-06-10T07:30:33.345Z 4770 check-types, started
+2026-06-10T07:30:36.785Z 4770 check-types, succeeded
+2026-06-10T07:32:03.028Z 5012 status --json, started
+2026-06-10T07:32:03.236Z 5035 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-10T07:32:05.940Z 5012 status --json, succeeded
+2026-06-10T07:32:06.051Z 5035 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-10T07:33:29.457Z 5145 status --json, started
+2026-06-10T07:33:32.240Z 5145 status --json, succeeded
+2026-06-10T07:34:21.536Z 5405 check-types, started
+2026-06-10T07:34:25.082Z 5405 check-types, succeeded
+2026-06-10T07:36:23.408Z 5634 status --json, started
+2026-06-10T07:36:26.111Z 5634 status --json, succeeded
+2026-06-10T07:37:42.677Z 6019 check-types, started
+2026-06-10T07:37:46.312Z 6019 check-types, succeeded
+2026-06-10T07:38:26.890Z 6314 status --json, started
+2026-06-10T07:38:30.230Z 6314 status --json, succeeded
+2026-06-10T07:39:23.503Z 6635 check-types, started
+2026-06-10T07:39:26.979Z 6635 check-types, succeeded
+2026-06-10T07:40:07.980Z 6866 status --json, started
+2026-06-10T07:40:10.677Z 6866 status --json, succeeded
+2026-06-10T07:42:04.273Z 7169 check-types, started
+2026-06-10T07:42:07.715Z 7169 check-types, succeeded
+2026-06-10T07:43:29.837Z 7403 check-types, started
+2026-06-10T07:43:33.381Z 7403 check-types, succeeded
+2026-06-10T08:41:05.161Z 7742 ls --json, started
+2026-06-10T08:41:05.481Z 7742 ls --json, succeeded
+2026-06-10T08:41:06.373Z 7765 mini-status --json, started
+2026-06-10T08:41:06.427Z 7765 mini-status --json, succeeded
+2026-06-10T08:42:23.209Z 189 install --skip-unavailable, started
+2026-06-10T08:42:55.724Z 189 install --skip-unavailable, succeeded
+2026-06-10T09:28:11.061Z 625 ls --json, started
+2026-06-10T09:28:11.395Z 625 ls --json, succeeded
+2026-06-10T09:28:12.351Z 648 mini-status --json, started
+2026-06-10T09:28:12.402Z 648 mini-status --json, succeeded
+2026-06-10T09:30:30.600Z 186 install --skip-unavailable, started
+2026-06-10T09:30:56.715Z 186 install --skip-unavailable, succeeded
+2026-06-10T10:16:27.199Z 665 ls --json, started
+2026-06-10T10:16:27.530Z 665 ls --json, succeeded
+2026-06-10T10:16:36.100Z 707 mini-status --json, started
+2026-06-10T10:16:36.159Z 707 mini-status --json, succeeded
+2026-06-13T06:49:04.874Z 186 install --skip-unavailable, started
+2026-06-13T06:49:30.034Z 186 install --skip-unavailable, succeeded
+2026-06-13T06:49:46.913Z 417 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-13T06:49:49.311Z 452 status --json, started
+2026-06-13T06:49:50.071Z 417 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-13T06:49:52.151Z 557 start -p 3000 --use-source, started
+2026-06-13T06:49:52.224Z 452 status --json, succeeded
+2026-06-13T06:49:53.429Z 649 start -p 3000 --use-source, started
+2026-06-13T06:49:54.455Z 735 start -p 3000 --use-source, started
+2026-06-13T06:49:57.836Z 849 run lifeos -p 3001, started
+2026-06-13T06:49:59.413Z 946 run lifeos -p 3001, started
+2026-06-13T06:50:00.726Z 1081 run lifeos -p 3001, started
+2026-06-13T07:41:59.102Z 1355 ls --json, started
+2026-06-13T07:41:59.441Z 1355 ls --json, succeeded
+2026-06-13T07:42:00.736Z 1378 mini-status --json, started
+2026-06-13T07:42:00.789Z 1378 mini-status --json, succeeded
+2026-06-13T07:49:14.527Z 187 install --skip-unavailable, started
+2026-06-13T07:49:40.169Z 187 install --skip-unavailable, succeeded
+2026-06-13T07:49:50.934Z 433 start -p 3000 --use-source, started
+2026-06-13T07:49:56.920Z 606 run lifeos -p 3001, started
+2026-06-13T07:50:00.146Z 749 start -p 3000 --use-source, started
+2026-06-13T07:50:02.367Z 874 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-13T07:50:05.607Z 874 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-13T07:50:06.461Z 1073 run lifeos -p 3001, started
+2026-06-13T07:50:06.831Z 1123 start -p 3000 --use-source, started
+2026-06-13T07:50:15.138Z 1413 run lifeos -p 3001, started
+2026-06-13T07:55:08.478Z 1655 status --json, started
+2026-06-13T07:55:08.820Z 1678 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-13T07:55:11.343Z 1655 status --json, succeeded
+2026-06-13T07:55:11.428Z 1678 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-13T07:56:38.005Z 1774 status --json, started
+2026-06-13T07:56:40.657Z 1774 status --json, succeeded
+2026-06-13T07:57:45.615Z 2352 mini-status --json, started
+2026-06-13T07:57:45.677Z 2335 ls --json, started
+2026-06-13T07:57:45.682Z 2352 mini-status --json, succeeded
+2026-06-13T07:57:46.065Z 2335 ls --json, succeeded
+2026-06-13T07:58:00.846Z 2575 mini-status --json, started
+2026-06-13T07:58:00.935Z 2574 ls --json, started
+2026-06-13T07:58:00.978Z 2575 mini-status --json, succeeded
+2026-06-13T07:58:01.383Z 2574 ls --json, succeeded
+2026-06-13T07:59:20.619Z 2811 status --json, started
+2026-06-13T07:59:20.920Z 2834 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-13T07:59:23.433Z 2811 status --json, succeeded
+2026-06-13T07:59:23.526Z 2834 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-13T08:00:10.570Z 2936 status --json, started
+2026-06-13T08:00:13.222Z 2936 status --json, succeeded
+2026-06-13T08:00:59.547Z 3206 mini-status --json, started
+2026-06-13T08:00:59.590Z 3205 ls --json, started
+2026-06-13T08:00:59.600Z 3206 mini-status --json, succeeded
+2026-06-13T08:00:59.950Z 3205 ls --json, succeeded
+2026-06-13T08:01:54.593Z 3510 mini-status --json, started
+2026-06-13T08:01:54.630Z 3511 ls --json, started
+2026-06-13T08:01:54.647Z 3510 mini-status --json, succeeded
+2026-06-13T08:01:55.057Z 3511 ls --json, succeeded
+2026-06-13T08:02:08.874Z 3720 mini-status --json, started
+2026-06-13T08:02:08.936Z 3720 mini-status --json, succeeded
+2026-06-13T08:02:08.939Z 3701 ls --json, started
+2026-06-13T08:02:09.324Z 3701 ls --json, succeeded
+2026-06-13T08:02:20.338Z 3913 ls --json, started
+2026-06-13T08:02:20.424Z 3936 mini-status --json, started
+2026-06-13T08:02:20.515Z 3936 mini-status --json, succeeded
+2026-06-13T08:02:20.808Z 3913 ls --json, succeeded
+2026-06-13T08:03:13.598Z 4193 ls --json, started
+2026-06-13T08:03:13.811Z 4230 mini-status --json, started
+2026-06-13T08:03:13.874Z 4230 mini-status --json, succeeded
+2026-06-13T08:03:13.987Z 4193 ls --json, succeeded
+2026-06-13T08:03:53.258Z 4503 mini-status --json, started
+2026-06-13T08:03:53.301Z 4502 ls --json, started
+2026-06-13T08:03:53.312Z 4503 mini-status --json, succeeded
+2026-06-13T08:03:53.768Z 4502 ls --json, succeeded
+2026-06-13T08:04:43.807Z 4758 status --json, started
+2026-06-13T08:04:43.853Z 4785 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-13T08:04:46.508Z 4785 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-13T08:04:46.693Z 4758 status --json, succeeded
+2026-06-13T08:05:07.568Z 5007 mini-status --json, started
+2026-06-13T08:05:07.621Z 5008 ls --json, started
+2026-06-13T08:05:07.633Z 5007 mini-status --json, succeeded
+2026-06-13T08:05:08.009Z 5008 ls --json, succeeded
+2026-06-13T09:02:30.984Z 5174 ls --json, started
+2026-06-13T09:02:31.299Z 5174 ls --json, succeeded
+2026-06-13T09:02:32.173Z 5197 mini-status --json, started
+2026-06-13T09:02:32.225Z 5197 mini-status --json, succeeded
+2026-06-20T06:00:16.259Z 189 install --skip-unavailable, started
+2026-06-20T06:00:41.925Z 189 install --skip-unavailable, succeeded
+2026-06-20T06:00:54.339Z 410 status --json, started
+2026-06-20T06:00:55.538Z 454 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-20T06:00:58.115Z 410 status --json, succeeded
+2026-06-20T06:00:58.327Z 454 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-20T06:01:00.486Z 589 start -p 3000 --use-source, started
+2026-06-20T06:01:02.132Z 644 status --json, started
+2026-06-20T06:01:05.270Z 644 status --json, succeeded
+2026-06-20T06:01:06.223Z 782 run lifeos -p 3001, started
+2026-06-20T06:01:07.652Z 889 start -p 3000 --use-source, started
+2026-06-20T06:01:13.698Z 1163 run lifeos -p 3001, started
+2026-06-20T06:01:29.665Z 1429 start -p 3000 --use-source, started
+2026-06-20T06:02:24.332Z 1664 run lifeos -p 3001, started
+2026-06-20T06:15:25.040Z 2018 status --json, started
+2026-06-20T06:15:27.831Z 2018 status --json, succeeded
+2026-06-20T06:16:00.746Z 2226 mini-status --json, started
+2026-06-20T06:16:00.811Z 2226 mini-status --json, succeeded
+2026-06-20T06:16:00.816Z 2224 ls --json, started
+2026-06-20T06:16:01.282Z 2224 ls --json, succeeded
+2026-06-20T06:16:51.887Z 2468 mini-status --json, started
+2026-06-20T06:16:51.943Z 2468 mini-status --json, succeeded
+2026-06-20T06:16:51.946Z 2493 ls --json, started
+2026-06-20T06:16:52.288Z 2493 ls --json, succeeded
+2026-06-20T06:18:18.005Z 2792 mini-status --json, started
+2026-06-20T06:18:18.055Z 2804 ls --json, started
+2026-06-20T06:18:18.074Z 2792 mini-status --json, succeeded
+2026-06-20T06:18:18.590Z 2804 ls --json, succeeded
+2026-06-20T06:18:21.248Z 2971 mini-status --json, started
+2026-06-20T06:18:21.284Z 2978 ls --json, started
+2026-06-20T06:18:21.306Z 2971 mini-status --json, succeeded
+2026-06-20T06:18:21.653Z 2978 ls --json, succeeded
+2026-06-20T06:18:35.984Z 3135 mini-status --json, started
+2026-06-20T06:18:36.037Z 3133 ls --json, started
+2026-06-20T06:18:36.042Z 3135 mini-status --json, succeeded
+2026-06-20T06:18:36.489Z 3133 ls --json, succeeded
+2026-06-20T06:19:45.923Z 3430 mini-status --json, started
+2026-06-20T06:19:45.991Z 3430 mini-status --json, succeeded
+2026-06-20T06:19:46.006Z 3428 ls --json, started
+2026-06-20T06:19:46.574Z 3428 ls --json, succeeded
+2026-06-20T06:19:49.569Z 3591 mini-status --json, started
+2026-06-20T06:19:49.609Z 3590 ls --json, started
+2026-06-20T06:19:49.625Z 3591 mini-status --json, succeeded
+2026-06-20T06:19:49.971Z 3590 ls --json, succeeded
+2026-06-20T06:19:56.498Z 3705 ls --json, started
+2026-06-20T06:19:56.605Z 3728 mini-status --json, started
+2026-06-20T06:19:56.663Z 3728 mini-status --json, succeeded
+2026-06-20T06:19:56.923Z 3705 ls --json, succeeded
+2026-06-20T06:20:16.815Z 3982 mini-status --json, started
+2026-06-20T06:20:16.866Z 3981 ls --json, started
+2026-06-20T06:20:16.886Z 3982 mini-status --json, succeeded
+2026-06-20T06:20:17.238Z 3981 ls --json, succeeded
+2026-06-20T06:20:19.823Z 4212 mini-status --json, started
+2026-06-20T06:20:19.887Z 4212 mini-status --json, succeeded
+2026-06-20T06:20:19.921Z 4210 ls --json, started
+2026-06-20T06:20:20.375Z 4210 ls --json, succeeded
+2026-06-20T06:20:30.457Z 4399 mini-status --json, started
+2026-06-20T06:20:30.534Z 4411 ls --json, started
+2026-06-20T06:20:30.541Z 4399 mini-status --json, succeeded
+2026-06-20T06:20:30.936Z 4411 ls --json, succeeded
+2026-06-20T06:20:48.433Z 4591 mini-status --json, started
+2026-06-20T06:20:48.446Z 4603 ls --json, started
+2026-06-20T06:20:48.507Z 4591 mini-status --json, succeeded
+2026-06-20T06:20:48.905Z 4603 ls --json, succeeded
+2026-06-20T06:21:02.944Z 4816 mini-status --json, started
+2026-06-20T06:21:02.992Z 4817 ls --json, started
+2026-06-20T06:21:03.001Z 4816 mini-status --json, succeeded
+2026-06-20T06:21:03.342Z 4817 ls --json, succeeded
+2026-06-20T06:21:14.410Z 4996 mini-status --json, started
+2026-06-20T06:21:14.484Z 4996 mini-status --json, succeeded
+2026-06-20T06:21:14.486Z 4994 ls --json, started
+2026-06-20T06:21:14.924Z 4994 ls --json, succeeded
+2026-06-20T06:21:33.222Z 5178 mini-status --json, started
+2026-06-20T06:21:33.260Z 5179 ls --json, started
+2026-06-20T06:21:33.278Z 5178 mini-status --json, succeeded
+2026-06-20T06:21:33.627Z 5179 ls --json, succeeded
+2026-06-20T06:21:40.800Z 5317 mini-status --json, started
+2026-06-20T06:21:40.839Z 5323 ls --json, started
+2026-06-20T06:21:40.859Z 5317 mini-status --json, succeeded
+2026-06-20T06:21:41.347Z 5323 ls --json, succeeded
+2026-06-20T06:21:51.275Z 5484 check-types, started
+2026-06-20T06:21:53.431Z 5525 ls --json, started
+2026-06-20T06:21:53.432Z 5537 mini-status --json, started
+2026-06-20T06:21:53.501Z 5537 mini-status --json, succeeded
+2026-06-20T06:21:53.859Z 5525 ls --json, succeeded
+2026-06-20T06:21:54.256Z 5484 check-types, succeeded
+2026-06-20T06:35:54.575Z 6022 status --json, started
+2026-06-20T06:35:55.693Z 6052 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-20T06:35:57.443Z 6022 status --json, succeeded
+2026-06-20T06:35:58.502Z 6052 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-20T07:21:19.863Z 6171 ls --json, started
+2026-06-20T07:21:20.199Z 6171 ls --json, succeeded
+2026-06-20T07:21:22.287Z 6194 mini-status --json, started
+2026-06-20T07:21:22.357Z 6194 mini-status --json, succeeded
+2026-06-23T06:06:07.593Z 189 install --skip-unavailable, started
+2026-06-23T06:06:33.485Z 189 install --skip-unavailable, succeeded
+2026-06-23T06:06:40.527Z 440 status --json, started
+2026-06-23T06:06:41.098Z 470 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-23T06:06:44.056Z 440 status --json, succeeded
+2026-06-23T06:06:44.364Z 470 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-23T06:06:45.325Z 586 start -p 3000 --use-source, started
+2026-06-23T06:06:51.021Z 740 run lifeos -p 3001, started
+2026-06-23T06:06:53.755Z 824 status --json, started
+2026-06-23T06:06:57.518Z 824 status --json, succeeded
+2026-06-23T06:06:58.765Z 1049 start -p 3000 --use-source, started
+2026-06-23T06:07:04.756Z 1221 run lifeos -p 3001, started
+2026-06-23T06:07:08.460Z 1386 start -p 3000 --use-source, started
+2026-06-23T06:11:08.596Z 1678 status --json, started
+2026-06-23T06:11:08.637Z 1697 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-23T06:11:11.225Z 1697 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-23T06:11:11.521Z 1678 status --json, succeeded
+2026-06-23T06:12:59.443Z 1859 status --json, started
+2026-06-23T06:12:59.809Z 1882 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-06-23T06:13:02.285Z 1859 status --json, succeeded
+2026-06-23T06:13:02.418Z 1882 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-06-23T09:34:01.948Z 2110 ls --json, started
+2026-06-23T09:34:02.292Z 2110 ls --json, succeeded
+2026-06-23T09:34:03.186Z 2133 mini-status --json, started
+2026-06-23T09:34:03.240Z 2133 mini-status --json, succeeded
+2026-07-18T06:14:04.752Z 188 install --skip-unavailable, started
+2026-07-18T06:14:31.368Z 188 install --skip-unavailable, succeeded
+2026-07-18T06:14:47.395Z 409 status --json, started
+2026-07-18T06:14:50.958Z 409 status --json, succeeded
+2026-07-18T06:14:50.991Z 490 start -p 3000 --use-source, started
+2026-07-18T06:14:56.658Z 666 run lifeos -p 3001, started
+2026-07-18T06:15:06.457Z 860 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-07-18T06:15:09.749Z 860 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-07-18T06:22:14.257Z 1080 status --json, started
+2026-07-18T06:22:17.154Z 1080 status --json, succeeded
+2026-07-18T06:22:45.746Z 1193 status --json, started
+2026-07-18T06:22:45.981Z 1216 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-07-18T06:22:48.722Z 1193 status --json, succeeded
+2026-07-18T06:22:48.805Z 1216 get-deps hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-07-18T06:23:01.121Z 1309 status --json, started
+2026-07-18T06:23:03.954Z 1309 status --json, succeeded
+2026-07-18T06:23:16.210Z 1394 lane, started
+2026-07-18T06:23:16.248Z 1394 lane, succeeded
+2026-07-18T06:23:17.261Z 1417 validate, started
+2026-07-18T06:23:27.830Z 1417 validate, failed
+2026-07-18T06:24:10.180Z 1622 validate, started
+2026-07-18T06:24:19.300Z 1741 validate, started
+2026-07-18T06:24:22.364Z 1622 validate, failed
+2026-07-18T06:24:22.916Z 1904 ls --json, started
+2026-07-18T06:24:22.940Z 1924 mini-status --json, started
+2026-07-18T06:24:23.027Z 1924 mini-status --json, succeeded
+2026-07-18T06:24:23.309Z 1904 ls --json, succeeded
+2026-07-18T06:24:23.599Z 1992 lane, started
+2026-07-18T06:24:23.635Z 1992 lane, succeeded
+2026-07-18T06:24:31.688Z 1741 validate, succeeded
+2026-07-18T06:24:36.180Z 2200 check-types, started
+2026-07-18T06:24:38.979Z 2200 check-types, succeeded
+2026-07-18T06:24:40.955Z 2295 status --json, started
+2026-07-18T06:24:43.839Z 2295 status --json, succeeded
+2026-07-18T06:24:44.764Z 2370 tag -m LifeOS v1.0.0 — persian subscription & expense manager, started
+2026-07-18T06:24:49.255Z 2370 tag -m LifeOS v1.0.0 — persian subscription & expense manager, succeeded
+2026-07-18T06:24:50.344Z 2544 mini-status --json, started
+2026-07-18T06:24:50.381Z 2538 ls --json, started
+2026-07-18T06:24:50.429Z 2544 mini-status --json, succeeded
+2026-07-18T06:24:50.895Z 2538 ls --json, succeeded
+2026-07-18T06:24:52.896Z 3141 show hamedfronthere.lifeos/apps/lifeos --json -c, started
+2026-07-18T06:24:53.131Z 3177 status --json, started
+2026-07-18T06:24:56.403Z 3141 show hamedfronthere.lifeos/apps/lifeos --json -c, succeeded
+2026-07-18T06:24:56.875Z 3177 status --json, succeeded
+2026-07-18T06:24:58.080Z 3295 export, started
+2026-07-18T06:25:02.054Z 3295 export, succeeded
+2026-07-18T06:25:03.052Z 3368 mini-status --json, started
+2026-07-18T06:25:03.135Z 3368 mini-status --json, succeeded
+2026-07-18T06:25:03.204Z 3391 ls --json, started
+2026-07-18T06:25:03.662Z 3391 ls --json, succeeded
+2026-07-18T06:25:32.436Z 3470 status --json, started
+2026-07-18T06:25:35.850Z 3470 status --json, succeeded
+2026-07-18T06:25:38.834Z 3558 lane, started
+2026-07-18T06:25:38.900Z 3558 lane, succeeded
+2026-07-18T06:25:39.838Z 3581 status, started
+2026-07-18T06:25:42.746Z 3581 status, succeeded
+2026-07-18T06:25:46.198Z 3676 list, started
+2026-07-18T06:25:46.585Z 3676 list, succeeded
+2026-07-18T06:25:47.507Z 3699 status --lanes, started
+2026-07-18T06:25:50.417Z 3699 status --lanes, succeeded
+2026-07-18T06:25:59.550Z 3820 ripple log, started
+2026-07-18T06:25:59.801Z 3820 ripple log, succeeded
+2026-07-18T06:26:00.711Z 3843 app list --json, started
+2026-07-18T06:26:03.546Z 3843 app list --json, succeeded
+2026-07-18T06:26:54.373Z 3995 ripple log, started
+2026-07-18T06:26:54.626Z 3995 ripple log, succeeded
+2026-07-18T06:26:55.034Z 4058 server --compile, started
+2026-07-18T06:27:57.738Z 4404 ripple log, started
+2026-07-18T06:27:57.989Z 4404 ripple log, succeeded
+2026-07-18T06:28:03.001Z 4558 server --compile, started
+2026-07-18T06:29:30.231Z 4897 ripple log, started
+2026-07-18T06:29:30.473Z 4897 ripple log, succeeded

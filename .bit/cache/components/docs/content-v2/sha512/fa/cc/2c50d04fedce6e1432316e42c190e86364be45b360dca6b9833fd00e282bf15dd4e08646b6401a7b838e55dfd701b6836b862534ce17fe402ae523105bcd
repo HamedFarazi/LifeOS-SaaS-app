@@ -1,0 +1,1 @@
+[{"name":"","description":"Returns an ISO date string offset from today by the given number of days.","args":[],"returns":{},"access":"public","examples":[],"render":"","properties":[],"static":false,"filePath":"src/data/seed.ts"}]
