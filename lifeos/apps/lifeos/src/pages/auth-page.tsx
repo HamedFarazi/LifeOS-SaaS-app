@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Phone, Mail } from 'lucide-react';
 import { useSettings } from '../store/use-settings';
 import styles from './auth-page.module.css';
 
@@ -45,10 +46,10 @@ export function AuthPage(): React.JSX.Element {
             ورود با Google
           </button>
           <button type="button" className={styles.methodBtn} onClick={() => setMode('phone')}>
-            📱 ورود با شماره تلفن
+            <Phone size={17} strokeWidth={1.8} /> ورود با شماره تلفن
           </button>
           <button type="button" className={styles.methodBtn} onClick={() => setMode('email')}>
-            ✉️ ورود با ایمیل
+            <Mail size={17} strokeWidth={1.8} /> ورود با ایمیل
           </button>
         </div>
 

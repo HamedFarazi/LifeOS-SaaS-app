@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Camera } from 'lucide-react';
 import { useServices } from '../store/use-services';
 import { PageHeader } from '../components/page-header';
+import { CategoryIcon } from '../components/category-icon';
 import { CATEGORY_META, CATEGORY_ORDER } from '../data/categories';
 import { resizeImageToDataUrl, ACCEPTED_IMAGE_TYPES } from '../lib/image';
 import type { BillingCycle, Currency, ServiceCategory } from '../types/index';
@@ -64,7 +66,7 @@ export function AddServicePage(): React.JSX.Element {
               : <span>{name.charAt(0).toUpperCase() || '؟'}</span>}
           </div>
           <button type="button" className={styles.uploadBtn} onClick={() => imgRef.current?.click()}>
-            📷 آپلود تصویر
+            <Camera size={15} strokeWidth={1.8} /> آپلود تصویر
           </button>
           {logoImage && (
             <button type="button" className={styles.removeBtn} onClick={() => setLogoImage(undefined)}>✕</button>
@@ -84,7 +86,8 @@ export function AddServicePage(): React.JSX.Element {
             <button key={cat} type="button"
               className={`${styles.chip} ${category === cat ? styles.activeChip : ''}`}
               onClick={() => setCategory(cat)}>
-              {CATEGORY_META[cat].icon} {CATEGORY_META[cat].label}
+              <CategoryIcon icon={CATEGORY_META[cat].icon} size={15} color={CATEGORY_META[cat].color} />
+              {CATEGORY_META[cat].label}
             </button>
           ))}
         </div>

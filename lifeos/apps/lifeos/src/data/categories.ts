@@ -7,13 +7,13 @@ export const CATEGORY_META: Record<
   ServiceCategory,
   { label: string; icon: string; color: string }
 > = {
-  subscription: { label: 'اشتراک', icon: '🎬', color: '#A855F7' },
-  domain: { label: 'دامنه', icon: '🌐', color: '#2FD0FF' },
-  hosting: { label: 'هاستینگ', icon: '🖥️', color: '#63E8FF' },
-  ssl: { label: 'گواهی SSL', icon: '🔒', color: '#34D399' },
-  vpn: { label: 'وی‌پی‌ان', icon: '🛡️', color: '#F472B6' },
-  internet: { label: 'اینترنت', icon: '📶', color: '#FBBF24' },
-  expense: { label: 'هزینه تکراری', icon: '💳', color: '#FB7185' },
+  subscription: { label: 'اشتراک',       icon: 'layers',       color: '#A855F7' },
+  domain:       { label: 'دامنه',          icon: 'globe',        color: '#2FD0FF' },
+  hosting:      { label: 'هاستینگ',        icon: 'server',       color: '#63E8FF' },
+  ssl:          { label: 'گواهی SSL',      icon: 'shield-check', color: '#34D399' },
+  vpn:          { label: 'وی‌پی‌ان',        icon: 'shield',       color: '#F472B6' },
+  internet:     { label: 'اینترنت',        icon: 'wifi',         color: '#FBBF24' },
+  expense:      { label: 'هزینه تکراری',   icon: 'wallet',       color: '#FB7185' },
 };
 
 /**

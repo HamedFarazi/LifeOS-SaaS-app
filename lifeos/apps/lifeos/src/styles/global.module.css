@@ -1,18 +1,38 @@
-/* Global app shell styles (margin reset + base theme). */
+/* LifeOS — clean dark design system */
 .app {
-  --bg: #020b38;
-  --bg-soft: #0a154f;
-  --accent: #63e8ff;
-  --accent-2: #2fd0ff;
-  --card: #ffffff;
-  --text: #ffffff;
-  --muted: rgba(255, 255, 255, 0.6);
-  --radius: 28px;
+  /* Backgrounds — subtle, not pitch black */
+  --bg:        #0E1117;
+  --bg-2:      #141921;
+  --surface:   #1C2333;
+  --surface-2: #222B3A;
+
+  /* Borders — barely visible */
+  --border:    rgba(255,255,255,0.07);
+  --border-2:  rgba(255,255,255,0.05);
+
+  /* Text */
+  --text:      #E6EDF3;
+  --text-2:    rgba(230,237,243,0.62);
+  --text-3:    rgba(230,237,243,0.38);
+
+  /* Accent — used sparingly */
+  --purple:    #7C3AED;
+  --purple-2:  #6D28D9;
+  --cyan:      #06B6D4;
+
+  /* Status */
+  --danger:    #F87171;
+  --warning:   #FBBF24;
+  --success:   #34D399;
+
+  /* Radius */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+
   min-height: 100vh;
-  background:
-    radial-gradient(120% 60% at 80% -10%, rgba(124, 58, 237, 0.35), transparent 60%),
-    radial-gradient(90% 50% at -10% 10%, rgba(99, 232, 255, 0.12), transparent 55%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: 'Vazirmatn', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }

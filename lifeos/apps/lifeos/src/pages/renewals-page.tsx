@@ -33,9 +33,11 @@ export function RenewalsPage(): React.JSX.Element {
     items.length > 0 ? (
       <div className={styles.group}>
         <p className={styles.groupTitle}>{title}</p>
-        {items.map((s) => (
-          <ServiceRow key={s.id} service={s} onClick={() => navigate(`/service/${s.id}`)} />
-        ))}
+        <div className={styles.groupItems}>
+          {items.map((s) => (
+            <ServiceRow key={s.id} service={s} onClick={() => navigate(`/service/${s.id}`)} />
+          ))}
+        </div>
       </div>
     ) : null;
 

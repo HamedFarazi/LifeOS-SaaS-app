@@ -22,7 +22,7 @@ export function computeInsights(services: Service[]): Insight[] {
     insights.push({
       id: 'expiring',
       tone: 'warning',
-      icon: '⚠️',
+      icon: 'alert-triangle',
       text: `${expiring.s.name} تا ${toFaDigits(expiring.d)} روز دیگر منقضی می‌شود`,
     });
   }
@@ -36,7 +36,7 @@ export function computeInsights(services: Service[]): Insight[] {
     insights.push({
       id: 'upcoming-pay',
       tone: 'info',
-      icon: '📅',
+      icon: 'calendar',
       text: `${toFaDigits(soon.length)} پرداخت در ۷ روز آینده دارید`,
     });
   }
@@ -51,7 +51,7 @@ export function computeInsights(services: Service[]): Insight[] {
       insights.push({
         id: 'trend',
         tone: 'danger',
-        icon: '📈',
+        icon: 'trending-up',
         text: `هزینه این ماه ${toFaDigits(Math.min(pct, 99))}٪ بیشتر از ماه قبل است`,
       });
     }
@@ -65,7 +65,7 @@ export function computeInsights(services: Service[]): Insight[] {
   insights.push({
     id: 'renew-week',
     tone: 'success',
-    icon: '✅',
+    icon: 'check-circle',
     text: `${toFaDigits(thisWeek.length)} سرویس این هفته تمدید می‌شوند`,
   });
 

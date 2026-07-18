@@ -1,52 +1,24 @@
 @keyframes avatarFade {
-  from {
-    opacity: 0;
-    transform: scale(1.04);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(1.05); }
+  to   { opacity: 1; transform: scale(1); }
 }
-
 .avatar {
-  position: relative;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  background: linear-gradient(145deg, #a855f7, #4f46e5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 800;
-  flex-shrink: 0;
-  overflow: hidden;
-  padding: 0;
-  cursor: pointer;
-  font-family: inherit;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  transition: transform 0.18s;
+  position: relative; border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  background: linear-gradient(135deg, #7C3AED, #4F46E5);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 800; flex-shrink: 0; overflow: hidden;
+  padding: 0; cursor: pointer; font-family: inherit;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  transition: transform 0.18s, box-shadow 0.18s;
 }
-.avatar:active {
-  transform: scale(0.93);
-}
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  animation: avatarFade 0.3s ease-out;
-}
-.initial {
-  line-height: 1;
-  animation: avatarFade 0.3s ease-out;
-}
+.avatar:hover { box-shadow: 0 6px 20px rgba(124,58,237,0.45); }
+.avatar:active { transform: scale(0.93); }
+.img   { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; animation: avatarFade 0.25s ease-out; }
+.initial { line-height: 1; animation: avatarFade 0.25s ease-out; }
 .dot {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  border-radius: 50%;
-  background: #63e8ff;
-  border: 2px solid #020b38;
-  box-shadow: 0 0 8px rgba(99, 232, 255, 0.7);
+  position: absolute; top: -1px; left: -1px;
+  border-radius: 50%; background: #22D3EE;
+  border: 2px solid #0B1026;
+  box-shadow: 0 0 6px rgba(34,211,238,0.6);
 }

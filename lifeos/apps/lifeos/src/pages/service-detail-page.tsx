@@ -1,9 +1,11 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Pencil, PauseCircle, PlayCircle, Trash2 } from 'lucide-react';
 import { useServices } from '../store/use-services';
 import { useSettings } from '../store/use-settings';
 import { PageHeader } from '../components/page-header';
 import { ServiceLogo } from '../components/service-logo';
+import { CategoryIcon } from '../components/category-icon';
 import { CATEGORY_META } from '../data/categories';
 import { monthlyCost, renewalLabel, formatDate } from '../lib/dates';
 import { formatMoney } from '../lib/format';
@@ -51,7 +53,7 @@ export function ServiceDetailPage(): React.JSX.Element {
         </div>
         <div className={styles.fact}>
           <span className={styles.factLabel}>دسته‌بندی</span>
-          <span className={styles.factValue}>{meta.icon} {meta.label}</span>
+          <span className={styles.factValue}><CategoryIcon icon={meta.icon} size={16} color={meta.color} /> {meta.label}</span>
         </div>
         <div className={styles.fact}>
           <span className={styles.factLabel}>دوره پرداخت</span>
@@ -72,10 +74,12 @@ export function ServiceDetailPage(): React.JSX.Element {
       </div>
 
       <button className={`${styles.action} ${styles.primary}`} type="button" onClick={() => navigate(`/edit/${service.id}`)}>
-        ✏️ ویرایش سرویس
+        <Pencil size={16} strokeWidth={1.8} /> ویرایش سرویس
       </button>
       <button className={styles.action} type="button" onClick={() => toggleActive(service.id)}>
-        {service.active ? '⏸ غیرفعال کردن' : '▶️ فعال کردن'}
+        {service.active
+          ? <><PauseCircle size={16} strokeWidth={1.8} /> غیرفعال کردن</>
+          : <><PlayCircle size={16} strokeWidth={1.8} /> فعال کردن</>}
       </button>
       <button
         className={`${styles.action} ${styles.danger}`}
@@ -87,7 +91,7 @@ export function ServiceDetailPage(): React.JSX.Element {
           }
         }}
       >
-        🗑 حذف سرویس
+        <Trash2 size={16} strokeWidth={1.8} /> حذف سرویس
       </button>
     </div>
   );

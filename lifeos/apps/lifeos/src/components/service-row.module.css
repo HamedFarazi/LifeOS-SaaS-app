@@ -2,43 +2,28 @@
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 14px;
-  margin-bottom: 12px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
   cursor: pointer;
   font-family: inherit;
   text-align: right;
-  transition: background 0.18s;
+  color: #E6EDF3;
+  transition: background 0.12s;
 }
-.row:active {
-  background: rgba(255, 255, 255, 0.12);
-}
-.info {
-  flex: 1;
-  min-width: 0;
-}
+.row:hover { background: rgba(255,255,255,0.04); }
+.row:active { background: rgba(255,255,255,0.02); }
+
+.info { flex: 1; min-width: 0; text-align: right; }
 .name {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 700;
-  color: #fff;
+  font-size: 14px; font-weight: 600; color: #E6EDF3;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.plan {
-  margin: 3px 0 0;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-}
-.right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 7px;
-}
-.price {
-  font-size: 13.5px;
-  font-weight: 800;
-  color: #63e8ff;
-}
+.plan { font-size: 12px; color: rgba(230,237,243,0.38); margin-top: 2px; }
+
+.right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
+.price { font-size: 13px; font-weight: 600; color: rgba(230,237,243,0.65); }
+
+.chevron { color: rgba(230,237,243,0.2); flex-shrink: 0; }

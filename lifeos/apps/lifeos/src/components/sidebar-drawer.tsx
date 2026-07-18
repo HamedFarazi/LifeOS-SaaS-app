@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import {
+  LayoutDashboard, Layers, CalendarClock, ChartPie,
+  Wallet, Settings2, Pencil, Camera, Target, FileBarChart2,
+} from 'lucide-react';
 import { useSettings } from '../store/use-settings';
 import { resizeImageToDataUrl, ACCEPTED_IMAGE_TYPES } from '../lib/image';
 import { UserAvatar } from './user-avatar';
@@ -21,65 +25,14 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  {
-    path: '/',
-    label: 'داشبورد',
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 11.5 12 4l9 7.5" />
-        <path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9" />
-      </svg>
-    ),
-  },
-  {
-    path: '/services',
-    label: 'سرویس‌ها',
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2.5" y="5" width="19" height="14" rx="3" />
-        <path d="M2.5 9.5h19" />
-      </svg>
-    ),
-  },
-  {
-    path: '/renewals',
-    label: 'تمدیدها',
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="4" width="18" height="18" rx="3" />
-        <path d="M3 9h18M8 2v4M16 2v4" />
-      </svg>
-    ),
-  },
-  {
-    path: '/analytics',
-    label: 'تحلیل',
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
-      </svg>
-    ),
-  },
-  {
-    path: '/expenses',
-    label: 'هزینه‌ها',
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="6" width="20" height="13" rx="3" />
-        <path d="M2 10h20M6 15h4" />
-      </svg>
-    ),
-  },
-  {
-    path: '/settings',
-    label: 'تنظیمات',
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="3" />
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-      </svg>
-    ),
-  },
+  { path: '/',          label: 'داشبورد',   icon: <LayoutDashboard size={20} strokeWidth={1.8} /> },
+  { path: '/services',  label: 'سرویس‌ها',  icon: <Layers          size={20} strokeWidth={1.8} /> },
+  { path: '/renewals',  label: 'تمدیدها',   icon: <CalendarClock   size={20} strokeWidth={1.8} /> },
+  { path: '/analytics', label: 'تحلیل',     icon: <ChartPie        size={20} strokeWidth={1.8} /> },
+  { path: '/expenses',  label: 'هزینه‌ها',  icon: <Wallet          size={20} strokeWidth={1.8} /> },
+  { path: '/goals',     label: 'اهداف',     icon: <Target          size={20} strokeWidth={1.8} /> },
+  { path: '/reports',   label: 'گزارش‌ها',  icon: <FileBarChart2   size={20} strokeWidth={1.8} /> },
+  { path: '/settings',  label: 'تنظیمات',   icon: <Settings2       size={20} strokeWidth={1.8} /> },
 ];
 
 /**
@@ -156,7 +109,7 @@ export function SidebarDrawer({ open, onClose }: SidebarDrawerProps): React.JSX.
                   setEditing(true);
                 }}
               >
-                ✏️ ویرایش پروفایل
+                <Pencil size={14} strokeWidth={1.8} /> ویرایش پروفایل
               </button>
             </>
           ) : (
@@ -175,7 +128,7 @@ export function SidebarDrawer({ open, onClose }: SidebarDrawerProps): React.JSX.
                 inputMode="email"
               />
               <button type="button" className={styles.changePhoto} onClick={() => fileRef.current?.click()}>
-                📷 تغییر تصویر پروفایل
+                <Camera size={14} strokeWidth={1.8} /> تغییر تصویر پروفایل
               </button>
               <div className={styles.editActions}>
                 <button type="button" className={styles.cancelBtn} onClick={() => setEditing(false)}>انصراف</button>

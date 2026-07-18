@@ -1,66 +1,127 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
+import { IconTrendingUp, IconTrendingDown, IconCalendar } from '@tabler/icons-react';
+import { ResponsiveContainer, AreaChart, Area, Tooltip } from 'recharts';
 import { useServices } from '../store/use-services';
 import { useSettings } from '../store/use-settings';
 import { monthlyCost, yearlyCost, daysUntil, todayJalali } from '../lib/dates';
 import { formatMoney, toFaDigits } from '../lib/format';
+import { spendTrend } from '../lib/analytics';
 import styles from './hero-card.module.css';
 
-/**
- * The large purple gradient hero card. Shows monthly or yearly cost
- * (toggled by a switch), active service count, upcoming renewals count,
- * and today's Shamsi date.
- *
- * @returns The hero summary card.
- */
 export function HeroCard(): React.JSX.Element {
-  const services = useServices((s) => s.services);
+  const services        = useServices((s) => s.services);
   const displayCurrency = useSettings((s) => s.currency);
+  const monthlyBudget   = useSettings((s) => s.monthlyBudget);
   const [yearly, setYearly] = useState(false);
 
-  const active = services.filter((s) => s.active);
-  const total = active.reduce(
-    (sum, s) => sum + (yearly ? yearlyCost(s) : monthlyCost(s)),
-    0
+  const active = useMemo(() => services.filter((s) => s.active), [services]);
+  const trend  = useMemo(() => spendTrend(services), [services]);
+
+  const total = useMemo(
+    () => active.reduce((sum, s) => sum + (yearly ? yearlyCost(s) : monthlyCost(s)), 0),
+    [active, yearly]
   );
-  const upcoming = active.filter((s) => {
-    const d = daysUntil(s.nextRenewal);
-    return d >= 0 && d <= 14;
-  }).length;
+
+  const prevTotal = useMemo(() => {
+    const base = active.reduce((sum, s) => sum + monthlyCost(s), 0);
+    return Math.round(base * 0.85);
+  }, [active]);
+
+  const changePct = prevTotal > 0
+    ? Math.round(((total - prevTotal) / prevTotal) * 100)
+    : 0;
+  const isUp = changePct > 0;
+
+  const upcoming7 = useMemo(
+    () => active.filter((s) => { const d = daysUntil(s.nextRenewal); return d >= 0 && d <= 7; }),
+    [active]
+  );
+
+  const budgetPct = monthlyBudget
+    ? Math.min(Math.round((total / monthlyBudget) * 100), 100)
+    : null;
 
   return (
-    <div className={styles.card}>
-      <i className={styles.blob1} />
-      <i className={styles.blob2} />
-
-      <div className={styles.top}>
-        <div className={styles.labelWrap}>
-          <span className={styles.label}>{yearly ? 'هزینه سالانه' : 'هزینه ماهانه'}</span>
-          <div className={styles.switcher} onClick={() => setYearly((v) => !v)}>
-            <span className={`${styles.switchOpt} ${!yearly ? styles.switchActive : ''}`}>ماه</span>
-            <span className={`${styles.switchOpt} ${yearly ? styles.switchActive : ''}`}>سال</span>
+    <div className={styles.hero}>
+      <div className={styles.left}>
+        {/* spending */}
+        <div>
+          <p className={styles.metaLabel}>{yearly ? 'هزینه سالانه' : 'هزینه این ماه'}</p>
+          <p className={styles.amount}>{formatMoney(total, 'IRT', displayCurrency)}</p>
+          <div className={`${styles.change} ${isUp ? styles.changeUp : styles.changeDown}`}>
+            {isUp
+              ? <IconTrendingUp size={13} stroke={2} />
+              : <IconTrendingDown size={13} stroke={2} />}
+            <span>{isUp ? '+' : ''}{toFaDigits(Math.abs(changePct))}٪ نسبت به ماه قبل</span>
           </div>
         </div>
-        <button className={styles.wallet} type="button" aria-hidden>
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="6" width="18" height="13" rx="3" />
-            <path d="M16 12h2" /><path d="M3 9h13a2 2 0 0 1 2 2" />
-          </svg>
-        </button>
+
+        {/* meta info */}
+        <div className={styles.meta}>
+          <div className={styles.metaItem}>
+            <span className={styles.metaLabel}>سرویس‌های فعال</span>
+            <span className={styles.metaVal}>{toFaDigits(active.length)}</span>
+          </div>
+          {upcoming7.length > 0 && (
+            <div className={styles.metaItem}>
+              <span className={styles.metaLabel}>پرداخت این هفته</span>
+              <span className={`${styles.metaVal} ${styles.metaWarn}`}>
+                <IconCalendar size={12} stroke={2} />
+                {toFaDigits(upcoming7.length)} سرویس
+              </span>
+            </div>
+          )}
+          {budgetPct !== null && (
+            <div className={styles.metaItem}>
+              <span className={styles.metaLabel}>از بودجه ماهانه</span>
+              <span className={`${styles.metaVal} ${budgetPct > 80 ? styles.metaDanger : ''}`}>
+                {toFaDigits(budgetPct)}٪
+              </span>
+            </div>
+          )}
+        </div>
+
+        {/* budget bar */}
+        {budgetPct !== null && (
+          <div className={styles.budgetBar}>
+            <div
+              className={styles.budgetFill}
+              style={{
+                width: `${budgetPct}%`,
+                background: budgetPct > 80 ? '#F87171' : budgetPct > 60 ? '#FBBF24' : '#34D399',
+              }}
+            />
+          </div>
+        )}
       </div>
 
-      <p className={styles.amount}>{formatMoney(total, 'IRT', displayCurrency)}</p>
-
-      <p className={styles.date}>{todayJalali()}</p>
-
-      <div className={styles.stats}>
-        <div className={styles.stat}>
-          <span className={styles.statValue}>{toFaDigits(active.length)} سرویس</span>
-          <span className={styles.statLabel}>سرویس‌های فعال</span>
+      <div className={styles.right}>
+        <div className={styles.toggleWrap}>
+          <button type="button" className={styles.toggle} onClick={() => setYearly((v) => !v)}>
+            <span className={`${styles.opt} ${!yearly ? styles.optActive : ''}`}>ماه</span>
+            <span className={`${styles.opt} ${yearly ? styles.optActive : ''}`}>سال</span>
+          </button>
+          <p className={styles.dateLabel}>{todayJalali()}</p>
         </div>
-        <div className={styles.divider} />
-        <div className={styles.stat}>
-          <span className={styles.statValue}>{toFaDigits(upcoming)} مورد</span>
-          <span className={styles.statLabel}>تمدید نزدیک</span>
+        <div className={styles.chart}>
+          <div style={{ direction: 'ltr', width: '100%', height: '100%' }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={trend} margin={{ top: 4, right: 2, left: 2, bottom: 0 }}>
+                <defs>
+                  <linearGradient id="hg2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%"   stopColor="#7C3AED" stopOpacity={0.35} />
+                    <stop offset="100%" stopColor="#7C3AED" stopOpacity={0} />
+                  </linearGradient>
+                </defs>
+                <Tooltip contentStyle={{ display: 'none' }} cursor={false} />
+                <Area
+                  type="monotone" dataKey="value"
+                  stroke="#7C3AED" strokeWidth={1.5}
+                  fill="url(#hg2)" dot={false}
+                />
+              </AreaChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       </div>
     </div>

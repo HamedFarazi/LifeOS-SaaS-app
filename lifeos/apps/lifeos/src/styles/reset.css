@@ -1,10 +1,18 @@
-/* Global body margin reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-  margin: 0;
-  background: #020b38;
+  background: #0E1117;
   font-family: 'Vazirmatn', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  color: #E6EDF3;
+  line-height: 1.5;
 }
-* {
-  box-sizing: border-box;
-}
+
+input, button, select, textarea { font-family: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.09); border-radius: 4px; }
