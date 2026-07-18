@@ -1,16 +1,8 @@
 /* Mobile: horizontal scroll */
 .row {
-  direction: ltr;
-  margin-inline: -16px;
-  padding: 6px 16px 20px;
-  scroll-padding-left: 16px;
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  overflow-y: visible;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  direction: ltr; margin-inline: -16px; padding: 4px 16px 16px;
+  display: flex; gap: 10px; overflow-x: auto; overflow-y: visible;
+  scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none;
 }
 .row::-webkit-scrollbar { display: none; }
 .row > * { scroll-snap-align: start; flex-shrink: 0; direction: rtl; }
@@ -18,13 +10,12 @@
 /* Tablet+: grid */
 @media (min-width: 768px) {
   .row {
-    direction: rtl; margin-inline: 0; padding: 6px 0 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
-    overflow-x: visible; scroll-snap-type: none; gap: 12px;
+    direction: rtl; margin-inline: 0; padding: 4px 0 16px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    overflow-x: visible; scroll-snap-type: none; gap: 10px;
   }
   .row > * { scroll-snap-align: none; flex-shrink: unset; direction: rtl; width: 100% !important; }
 }
 @media (min-width: 1024px) {
-  .row { grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)); gap: 14px; }
+  .row { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
 }

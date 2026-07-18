@@ -1,62 +1,52 @@
 .root { position: fixed; inset: 0; z-index: 200; pointer-events: none; }
-.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0); transition: background 0.35s ease; }
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0); transition: background 0.3s; }
 .drawer {
-  position: fixed; top: 0; right: 0; height: 100%; width: 82%; max-width: 300px;
-  padding: 22px 16px; display: flex; flex-direction: column;
-  background: rgba(11,16,38,0.97); backdrop-filter: blur(28px);
-  border-left: 1px solid rgba(255,255,255,0.07);
-  box-shadow: -20px 0 60px rgba(0,0,0,0.5);
-  transform: translateX(105%); transition: transform 0.42s cubic-bezier(0.22,1,0.36,1);
+  position: fixed; top: 0; right: 0; height: 100%; width: 78%; max-width: 280px;
+  padding: 20px 14px; display: flex; flex-direction: column;
+  background: #141921; border-left: 1px solid rgba(255,255,255,0.07);
+  box-shadow: -16px 0 40px rgba(0,0,0,0.4);
+  transform: translateX(105%); transition: transform 0.38s cubic-bezier(0.22,1,0.36,1);
   overflow-y: auto; scrollbar-width: none;
 }
 .drawer::-webkit-scrollbar { display: none; }
 .open { pointer-events: auto; }
-.open .overlay { background: rgba(0,0,0,0.55); }
+.open .overlay { background: rgba(0,0,0,0.5); }
 .open .drawer  { transform: translateX(0); }
 
 .profile {
   display: flex; flex-direction: column; align-items: center; text-align: center;
-  padding: 16px 12px 18px; border-radius: 16px;
-  background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.2);
+  padding: 14px 10px 16px; border-radius: 10px;
+  background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.18);
 }
-.name  { margin: 10px 0 0; font-size: 16px; font-weight: 800; color: #F1F5F9; }
-.email { margin: 3px 0 0; font-size: 12px; color: rgba(241,245,249,0.45); }
+.name  { margin: 8px 0 0; font-size: 15px; font-weight: 700; color: #E6EDF3; }
+.email { margin: 2px 0 0; font-size: 12px; color: rgba(230,237,243,0.4); }
 .editProfile {
-  margin-top: 12px; padding: 8px 18px; border-radius: 999px;
-  border: 1px solid rgba(139,92,246,0.4); background: rgba(139,92,246,0.12);
-  color: #C4B5FD; font-family: inherit; font-size: 12px; font-weight: 700; cursor: pointer;
-  display: flex; align-items: center; gap: 6px; transition: background 0.15s;
+  margin-top: 10px; padding: 6px 16px; border-radius: 6px;
+  border: 1px solid rgba(124,58,237,0.3); background: rgba(124,58,237,0.1);
+  color: #C4B5FD; font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer;
+  display: flex; align-items: center; gap: 5px; transition: background 0.12s;
 }
-.editProfile:hover { background: rgba(139,92,246,0.2); }
+.editProfile:hover { background: rgba(124,58,237,0.18); }
+.editPanel { width: 100%; display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+.editInput { width: 100%; padding: 8px 12px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.04); color: #E6EDF3; font-family: inherit; font-size: 12.5px; outline: none; }
+.editInput:focus { border-color: #7C3AED; }
+.changePhoto { width: 100%; padding: 8px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.03); color: rgba(230,237,243,0.5); font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; }
+.editActions { display: flex; gap: 8px; }
+.cancelBtn, .saveBtn { flex: 1; padding: 8px; border-radius: 7px; font-family: inherit; font-size: 12px; font-weight: 700; cursor: pointer; border: none; }
+.cancelBtn { background: rgba(255,255,255,0.05); color: rgba(230,237,243,0.55); border: 1px solid rgba(255,255,255,0.08); }
+.saveBtn   { background: #7C3AED; color: #fff; }
 
-.editPanel { width: 100%; display: flex; flex-direction: column; gap: 9px; margin-top: 12px; }
-.editInput {
-  width: 100%; padding: 10px 14px; border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.04);
-  color: #F1F5F9; font-family: inherit; font-size: 13px; outline: none;
-}
-.editInput:focus { border-color: #8B5CF6; }
-.changePhoto {
-  width: 100%; padding: 10px; border-radius: 12px;
-  border: 1px solid rgba(34,211,238,0.22); background: rgba(34,211,238,0.07);
-  color: #22D3EE; font-family: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer;
-  display: flex; align-items: center; justify-content: center; gap: 6px;
-}
-.editActions { display: flex; gap: 9px; }
-.cancelBtn, .saveBtn { flex: 1; padding: 10px; border-radius: 12px; font-family: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer; border: none; }
-.cancelBtn { background: rgba(255,255,255,0.06); color: rgba(241,245,249,0.6); border: 1px solid rgba(255,255,255,0.09); }
-.saveBtn   { background: linear-gradient(135deg, #7C3AED, #8B5CF6); color: #fff; }
-
-.nav { display: flex; flex-direction: column; gap: 2px; margin-top: 18px; flex: 1; }
+.nav { display: flex; flex-direction: column; gap: 1px; margin-top: 16px; flex: 1; }
 .navItem {
-  display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 12px;
-  border: 1px solid transparent; background: rgba(255,255,255,0.03);
-  color: rgba(241,245,249,0.7); font-family: inherit; font-size: 14px; font-weight: 500;
-  cursor: pointer; text-align: right; transition: background 0.15s, color 0.15s, border-color 0.15s;
+  display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px;
+  border: 1px solid transparent; background: transparent;
+  color: rgba(230,237,243,0.55); font-family: inherit; font-size: 13.5px; font-weight: 500;
+  cursor: pointer; text-align: right;
+  transition: background 0.12s, color 0.12s;
 }
-.navItem:hover { background: rgba(255,255,255,0.06); color: #F1F5F9; }
-.activeItem { background: rgba(139,92,246,0.14); border-color: rgba(139,92,246,0.3); color: #C4B5FD; font-weight: 600; }
-.navIcon { display: flex; color: rgba(241,245,249,0.4); }
+.navItem:hover { background: rgba(255,255,255,0.05); color: #E6EDF3; }
+.activeItem { background: rgba(124,58,237,0.12); border-color: rgba(124,58,237,0.25); color: #C4B5FD; font-weight: 600; }
+.navIcon { display: flex; color: rgba(230,237,243,0.35); }
 .activeItem .navIcon { color: #A78BFA; }
 .navLabel { flex: 1; }
-.footer { margin: 16px 0 0; text-align: center; font-size: 11px; color: rgba(241,245,249,0.28); }
+.footer { margin: 14px 0 0; text-align: center; font-size: 11px; color: rgba(230,237,243,0.2); }

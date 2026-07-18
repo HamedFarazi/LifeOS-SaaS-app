@@ -1,36 +1,18 @@
 .header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 0 10px;
-  margin-bottom: 4px;
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 0 10px; margin-bottom: 4px;
 }
-.menu {
-  width: 36px; height: 36px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 4px; cursor: pointer; flex-shrink: 0;
-  transition: background 0.15s;
+.icon {
+  width: 34px; height: 34px; border-radius: 8px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+  color: rgba(230,237,243,0.5); display: flex; align-items: center; justify-content: center;
+  cursor: pointer; flex-shrink: 0; transition: background 0.12s, color 0.12s;
 }
-.menu:hover { background: rgba(255,255,255,0.09); }
-.menu span { display: block; width: 14px; height: 1.5px; border-radius: 2px; background: rgba(241,245,249,0.7); }
-.menu span:nth-child(2) { width: 9px; }
+.icon:hover { background: rgba(255,255,255,0.08); color: #E6EDF3; }
 .greeting { flex: 1; text-align: right; }
-.hi  { font-size: 15px; font-weight: 700; color: #F1F5F9; }
-.sub { font-size: 11px; color: rgba(241,245,249,0.38); margin-top: 1px; }
-.searchBtn {
-  width: 36px; height: 36px; flex-shrink: 0;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  color: rgba(241,245,249,0.45);
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; transition: background 0.15s, color 0.15s;
-}
-.searchBtn:hover { background: rgba(255,255,255,0.09); color: #fff; }
+.hi  { font-size: 14px; font-weight: 600; color: #E6EDF3; }
+.sub { font-size: 11px; color: rgba(230,237,243,0.35); margin-top: 1px; }
 @media (min-width: 1024px) {
-  .header { padding: 0 0 16px; margin-bottom: 0; }
-  .hi { font-size: 13px; color: rgba(241,245,249,0.45); font-weight: 500; }
+  .header { padding: 0 0 14px; margin-bottom: 0; }
+  .hi { font-size: 13px; color: rgba(230,237,243,0.4); font-weight: 500; }
 }

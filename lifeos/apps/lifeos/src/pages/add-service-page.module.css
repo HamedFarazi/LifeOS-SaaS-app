@@ -1,86 +1,29 @@
 .form { display: flex; flex-direction: column; margin-top: 4px; padding-bottom: 32px; }
-.label {
-  font-size: 11px; font-weight: 700; color: rgba(241,245,249,0.4);
-  letter-spacing: 0.06em; text-transform: uppercase; margin: 20px 2px 8px;
-}
-.input {
-  background: rgba(19,26,58,0.9); border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 13px; padding: 13px 16px; color: #F1F5F9;
-  font-family: inherit; font-size: 15px; outline: none;
-  transition: border-color 0.15s, background 0.15s;
-}
-.input:focus { border-color: #8B5CF6; background: rgba(19,26,58,1); }
-.input::placeholder { color: rgba(241,245,249,0.25); }
-
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip {
-  display: flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px;
-  background: rgba(19,26,58,0.8); border: 1px solid rgba(255,255,255,0.08);
-  color: rgba(241,245,249,0.6); font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer;
-  transition: all 0.15s;
-}
-.chip:hover { background: rgba(19,26,58,1); color: rgba(241,245,249,0.85); }
-.activeChip { background: rgba(139,92,246,0.18); color: #C4B5FD; border-color: rgba(139,92,246,0.4); }
-
-.segment {
-  display: flex; gap: 5px; background: rgba(255,255,255,0.03); padding: 4px;
-  border-radius: 14px; border: 1px solid rgba(255,255,255,0.07);
-}
-.segBtn {
-  flex: 1; padding: 10px; border-radius: 10px; border: none; background: transparent;
-  color: rgba(241,245,249,0.45); font-family: inherit; font-size: 13px; font-weight: 700;
-  cursor: pointer; transition: background 0.15s, color 0.15s;
-}
-.segBtn:hover { color: rgba(241,245,249,0.8); }
-.segActive { background: rgba(139,92,246,0.22); color: #C4B5FD; }
-
-.colors { display: flex; gap: 10px; flex-wrap: wrap; }
-.swatch {
-  width: 34px; height: 34px; border-radius: 10px; border: 2px solid transparent;
-  cursor: pointer; transition: transform 0.15s, border-color 0.15s;
-}
+.label { font-size: 11px; font-weight: 600; color: rgba(230,237,243,0.38); letter-spacing: 0.05em; text-transform: uppercase; margin: 18px 2px 7px; }
+.input { background: #1C2333; border: 1px solid rgba(255,255,255,0.09); border-radius: 8px; padding: 11px 14px; color: #E6EDF3; font-family: inherit; font-size: 14px; outline: none; transition: border-color 0.12s; }
+.input:focus { border-color: #7C3AED; }
+.input::placeholder { color: rgba(230,237,243,0.22); }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip { display: flex; align-items: center; gap: 5px; padding: 7px 12px; border-radius: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: rgba(230,237,243,0.55); font-size: 12px; font-weight: 600; font-family: inherit; cursor: pointer; transition: all 0.12s; }
+.chip:hover { background: rgba(255,255,255,0.07); color: rgba(230,237,243,0.8); }
+.activeChip { background: rgba(124,58,237,0.15); color: #C4B5FD; border-color: rgba(124,58,237,0.3); }
+.segment { display: flex; gap: 4px; background: rgba(255,255,255,0.03); padding: 3px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.07); }
+.segBtn { flex: 1; padding: 9px; border-radius: 6px; border: none; background: transparent; color: rgba(230,237,243,0.4); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.12s, color 0.12s; }
+.segBtn:hover { color: rgba(230,237,243,0.75); }
+.segActive { background: rgba(124,58,237,0.2); color: #C4B5FD; }
+.colors { display: flex; gap: 9px; flex-wrap: wrap; }
+.swatch { width: 32px; height: 32px; border-radius: 8px; border: 2px solid transparent; cursor: pointer; transition: transform 0.12s; }
 .swatch:hover { transform: scale(1.1); }
-.activeSwatch { border-color: #fff; box-shadow: 0 0 0 3px rgba(255,255,255,0.18); transform: scale(1.08); }
-
-.submit {
-  margin-top: 28px; padding: 15px; border-radius: 14px; border: none;
-  background: linear-gradient(135deg, #7C3AED, #8B5CF6); color: #fff;
-  font-family: inherit; font-size: 15px; font-weight: 800; cursor: pointer;
-  box-shadow: 0 8px 24px rgba(124,58,237,0.45);
-  transition: opacity 0.18s, transform 0.18s;
-}
-.submit:hover { opacity: 0.9; transform: translateY(-1px); }
-.submit:active { transform: translateY(0); }
-
-.logoRow { display: flex; align-items: center; gap: 12px; }
-.logoPreview {
-  width: 54px; height: 54px; border-radius: 16px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px; font-weight: 800; color: #fff; flex-shrink: 0;
-  overflow: hidden; border: 1px solid rgba(255,255,255,0.12);
-}
+.activeSwatch { border-color: #fff; transform: scale(1.08); }
+.submit { margin-top: 24px; padding: 13px; border-radius: 9px; border: none; background: #7C3AED; color: #fff; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: background 0.12s; }
+.submit:hover { background: #6D28D9; }
+.logoRow { display: flex; align-items: center; gap: 11px; }
+.logoPreview { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: #fff; flex-shrink: 0; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
 .logoPreviewImg { width: 100%; height: 100%; object-fit: cover; }
-.uploadBtn {
-  flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
-  padding: 10px 14px; border-radius: 12px;
-  border: 1px solid rgba(34,211,238,0.25); background: rgba(34,211,238,0.07);
-  color: #22D3EE; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
-  transition: background 0.15s;
-}
-.uploadBtn:hover { background: rgba(34,211,238,0.13); }
-.removeBtn {
-  width: 34px; height: 34px; border-radius: 10px;
-  border: 1px solid rgba(251,113,133,0.3); background: rgba(251,113,133,0.08);
-  color: #FB7185; font-size: 14px; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  transition: background 0.15s;
-}
-.removeBtn:hover { background: rgba(251,113,133,0.16); }
-
-.priceRow { display: flex; gap: 10px; align-items: stretch; }
+.uploadBtn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 9px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.04); color: rgba(230,237,243,0.55); font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.12s; }
+.uploadBtn:hover { background: rgba(255,255,255,0.08); }
+.removeBtn { width: 32px; height: 32px; border-radius: 7px; border: 1px solid rgba(248,113,113,0.25); background: rgba(248,113,113,0.07); color: #F87171; font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.priceRow { display: flex; gap: 9px; align-items: stretch; }
 .priceInput { flex: 1; }
-.currencyToggle {
-  display: flex; flex-direction: column; gap: 4px; padding: 4px;
-  background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.07);
-}
-.currencyToggle .segBtn { padding: 6px 12px; font-size: 12px; border-radius: 8px; }
+.currencyToggle { display: flex; flex-direction: column; gap: 3px; padding: 3px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.07); }
+.currencyToggle .segBtn { padding: 5px 10px; font-size: 11px; border-radius: 6px; }

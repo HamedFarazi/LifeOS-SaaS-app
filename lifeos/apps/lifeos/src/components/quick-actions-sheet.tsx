@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Plus, Globe, CalendarClock, CheckSquare, Wallet } from 'lucide-react';
+import {
+  IconPlus, IconWorld, IconCalendarPlus, IconCheckbox, IconCoin,
+} from '@tabler/icons-react';
 import styles from './quick-actions-sheet.module.css';
 
 export interface QuickActionsSheetProps {
@@ -22,11 +24,11 @@ interface QuickAction {
 }
 
 const ACTIONS: QuickAction[] = [
-  { icon: <Plus          size={22} strokeWidth={1.8} />, label: 'افزودن سرویس', to: '/add',      color: '#A855F7' },
-  { icon: <Globe         size={22} strokeWidth={1.8} />, label: 'افزودن دامنه',  to: '/add',      color: '#2FD0FF' },
-  { icon: <CalendarClock size={22} strokeWidth={1.8} />, label: 'تمدید جدید',   to: '/renewals', color: '#63E8FF' },
-  { icon: <CheckSquare   size={22} strokeWidth={1.8} />, label: 'افزودن وظیفه', to: '/add',      color: '#34D399' },
-  { icon: <Wallet        size={22} strokeWidth={1.8} />, label: 'ثبت هزینه',    to: '/add',      color: '#FBBF24' },
+  { icon: <IconPlus         size={20} stroke={1.8} />, label: 'افزودن سرویس', to: '/add',      color: '#7C3AED' },
+  { icon: <IconWorld        size={20} stroke={1.8} />, label: 'افزودن دامنه',  to: '/add',      color: '#06B6D4' },
+  { icon: <IconCalendarPlus size={20} stroke={1.8} />, label: 'تمدید جدید',   to: '/renewals', color: '#34D399' },
+  { icon: <IconCheckbox     size={20} stroke={1.8} />, label: 'افزودن وظیفه', to: '/add',      color: '#FBBF24' },
+  { icon: <IconCoin         size={20} stroke={1.8} />, label: 'ثبت هزینه',    to: '/add',      color: '#F87171' },
 ];
 
 export function QuickActionsSheet({

@@ -1,73 +1,37 @@
-.grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 8px; }
-@media (min-width: 768px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); } }
-
-.goalCard {
-  padding: 18px; border-radius: 16px;
-  background: rgba(19,26,58,0.8); border: 1px solid rgba(255,255,255,0.07);
-  display: flex; flex-direction: column; gap: 12px;
-  transition: background 0.15s, transform 0.18s, border-color 0.15s;
-}
-.goalCard:hover { background: rgba(19,26,58,1); transform: translateY(-2px); border-color: rgba(255,255,255,0.12); }
-
-.goalHeader { display: flex; align-items: center; gap: 12px; }
-.goalIcon { width: 44px; height: 44px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 8px; }
+@media (min-width: 768px)  { .grid { grid-template-columns: repeat(2,1fr); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: repeat(3,1fr); } }
+.goalCard { padding: 16px; border-radius: 10px; background: #1C2333; border: 1px solid rgba(255,255,255,0.07); display: flex; flex-direction: column; gap: 10px; transition: background 0.12s; }
+.goalCard:hover { background: #222B3A; }
+.goalHeader { display: flex; align-items: center; gap: 11px; }
+.goalIcon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .goalTitles { flex: 1; text-align: right; }
-.goalTitle { font-size: 15px; font-weight: 700; color: #F1F5F9; }
-.goalSub   { font-size: 12px; color: rgba(241,245,249,0.4); margin-top: 2px; }
-.deleteBtn {
-  background: none; border: none; cursor: pointer; color: rgba(241,245,249,0.28);
-  padding: 4px; border-radius: 6px; display: flex; align-items: center; justify-content: center;
-  transition: color 0.15s, background 0.15s;
-}
-.deleteBtn:hover { color: #FB7185; background: rgba(251,113,133,0.1); }
-
-.progressTrack { height: 5px; background: rgba(255,255,255,0.07); border-radius: 999px; overflow: hidden; }
+.goalTitle { font-size: 14px; font-weight: 600; color: #E6EDF3; }
+.goalSub   { font-size: 12px; color: rgba(230,237,243,0.38); margin-top: 2px; }
+.deleteBtn { background: none; border: none; cursor: pointer; color: rgba(230,237,243,0.25); padding: 4px; border-radius: 5px; display: flex; align-items: center; justify-content: center; transition: color 0.12s, background 0.12s; }
+.deleteBtn:hover { color: #F87171; background: rgba(248,113,113,0.1); }
+.progressTrack { height: 4px; background: rgba(255,255,255,0.07); border-radius: 999px; overflow: hidden; }
 .progressBar   { height: 100%; border-radius: 999px; transition: width 0.5s ease; min-width: 4px; }
-
 .goalAmounts { display: flex; align-items: center; justify-content: space-between; }
-.saved  { font-size: 14px; font-weight: 800; color: #F1F5F9; }
-.target { font-size: 12px; color: rgba(241,245,249,0.38); }
-
-.depositBtn {
-  display: flex; align-items: center; justify-content: center; gap: 6px;
-  width: 100%; padding: 10px; border-radius: 11px; border: 1px solid;
-  background: rgba(255,255,255,0.03); font-family: inherit; font-size: 13px; font-weight: 600;
-  cursor: pointer; transition: background 0.15s;
-}
+.saved  { font-size: 13px; font-weight: 700; color: #E6EDF3; }
+.target { font-size: 11px; color: rgba(230,237,243,0.35); }
+.depositBtn { display: flex; align-items: center; justify-content: center; gap: 5px; width: 100%; padding: 9px; border-radius: 8px; border: 1px solid; background: rgba(255,255,255,0.03); font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.12s; }
 .depositBtn:hover { background: rgba(255,255,255,0.06); }
 .depositRow { display: flex; gap: 6px; }
-.depositInput {
-  flex: 1; padding: 9px 12px; border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.04);
-  color: #F1F5F9; font-family: inherit; font-size: 13px; outline: none;
-}
-.depositInput:focus { border-color: #8B5CF6; }
-.confirmBtn  { padding: 9px 14px; border-radius: 10px; border: none; color: #fff; font-family: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
-.cancelDepBtn { padding: 9px 10px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: rgba(241,245,249,0.55); font-family: inherit; font-size: 12px; cursor: pointer; }
-.done { text-align: center; font-size: 13px; font-weight: 700; color: #34D399; }
-
-.addForm {
-  display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 16px;
-  background: rgba(19,26,58,0.8); border: 1px solid rgba(255,255,255,0.1); margin-bottom: 16px;
-}
-.addInput {
-  width: 100%; padding: 11px 14px; border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.09); background: rgba(19,26,58,0.9);
-  color: #F1F5F9; font-family: inherit; font-size: 14px; outline: none;
-}
-.addInput:focus { border-color: #8B5CF6; }
-.colorRow { display: flex; gap: 8px; }
-.colorDot { width: 26px; height: 26px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; transition: transform 0.15s; }
-.colorDot:hover { transform: scale(1.15); }
+.depositInput { flex: 1; padding: 8px 10px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.04); color: #E6EDF3; font-family: inherit; font-size: 12px; outline: none; }
+.depositInput:focus { border-color: #7C3AED; }
+.confirmBtn  { padding: 8px 12px; border-radius: 7px; border: none; color: #fff; font-family: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
+.cancelDepBtn { padding: 8px; border-radius: 7px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: rgba(230,237,243,0.5); font-family: inherit; font-size: 12px; cursor: pointer; }
+.done { text-align: center; font-size: 12px; font-weight: 600; color: #34D399; }
+.addForm { display: flex; flex-direction: column; gap: 9px; padding: 14px; border-radius: 10px; background: #1C2333; border: 1px solid rgba(255,255,255,0.09); margin-bottom: 14px; }
+.addInput { width: 100%; padding: 10px 13px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.04); color: #E6EDF3; font-family: inherit; font-size: 13px; outline: none; }
+.addInput:focus { border-color: #7C3AED; }
+.colorRow { display: flex; gap: 7px; }
+.colorDot { width: 24px; height: 24px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; transition: transform 0.12s; }
+.colorDot:hover { transform: scale(1.12); }
 .colorDotActive { border-color: #fff; transform: scale(1.1); }
-.formActions { display: flex; gap: 8px; }
-.cancelAdd { flex: 1; padding: 11px; border-radius: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: rgba(241,245,249,0.65); font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
-.saveAdd   { flex: 2; padding: 11px; border-radius: 12px; border: none; background: linear-gradient(135deg, #7C3AED, #8B5CF6); color: #fff; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
-.addCard {
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
-  padding: 32px; border-radius: 16px; border: 2px dashed rgba(255,255,255,0.09);
-  background: transparent; color: rgba(241,245,249,0.3); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
-  transition: border-color 0.15s, color 0.15s, background 0.15s;
-}
-.addCard:hover { border-color: rgba(139,92,246,0.45); color: #A78BFA; background: rgba(139,92,246,0.05); }
+.formActions { display: flex; gap: 7px; }
+.cancelAdd { flex: 1; padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: rgba(230,237,243,0.6); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.saveAdd   { flex: 2; padding: 10px; border-radius: 8px; border: none; background: #7C3AED; color: #fff; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.addCard { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px; padding: 28px; border-radius: 10px; border: 2px dashed rgba(255,255,255,0.08); background: transparent; color: rgba(230,237,243,0.28); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: border-color 0.12s, color 0.12s; }
+.addCard:hover { border-color: rgba(124,58,237,0.4); color: #C4B5FD; }

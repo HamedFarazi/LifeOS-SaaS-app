@@ -1,61 +1,25 @@
-.page {
-  min-height: 100%; display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  padding: 32px 24px 120px; gap: 14px;
-}
-.logoBox {
-  width: 68px; height: 68px; border-radius: 20px;
-  background: linear-gradient(135deg, #7C3AED, #4F46E5);
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 12px 32px rgba(124,58,237,0.45); margin-bottom: 4px;
-}
-.logoText { font-size: 30px; font-weight: 900; color: #fff; }
-.appName  { font-size: 26px; font-weight: 900; color: #F1F5F9; letter-spacing: -0.5px; }
-.tagline  { font-size: 13px; color: rgba(241,245,249,0.4); text-align: center; }
-.methods  { width: 100%; display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
-.google {
-  width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;
-  padding: 14px; border-radius: 13px; border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.95); color: #1a1a1a;
-  font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: opacity 0.15s;
-}
-.google:hover { opacity: 0.9; }
-.googleIcon {
-  width: 22px; height: 22px; border-radius: 50%;
-  background: linear-gradient(145deg, #ea4335, #fbbc04, #34a853, #4285f4);
-  color: #fff; font-weight: 900; font-size: 12px;
-  display: flex; align-items: center; justify-content: center;
-}
-.methodBtn {
-  width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;
-  padding: 13px; border-radius: 13px; border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(19,26,58,0.8); color: rgba(241,245,249,0.8);
-  font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
-}
-.methodBtn:hover { background: rgba(19,26,58,1); border-color: rgba(255,255,255,0.14); }
-.register { background: none; border: none; color: #8B5CF6; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; opacity: 0.85; transition: opacity 0.15s; }
-.register:hover { opacity: 1; }
-.title { font-size: 19px; font-weight: 800; color: #F1F5F9; align-self: flex-start; }
-.input {
-  width: 100%; padding: 13px 16px; border-radius: 13px;
-  border: 1px solid rgba(255,255,255,0.09); background: rgba(19,26,58,0.9);
-  color: #F1F5F9; font-family: inherit; font-size: 15px; outline: none;
-  transition: border-color 0.15s;
-}
-.input:focus { border-color: #8B5CF6; }
-.input::placeholder { color: rgba(241,245,249,0.25); }
-.otpInput { text-align: center; font-size: 22px; font-weight: 800; letter-spacing: 12px; }
-.primary {
-  width: 100%; padding: 14px; border-radius: 13px; border: none;
-  background: linear-gradient(135deg, #7C3AED, #8B5CF6); color: #fff;
-  font-family: inherit; font-size: 15px; font-weight: 800; cursor: pointer;
-  box-shadow: 0 8px 24px rgba(124,58,237,0.4); transition: opacity 0.15s, transform 0.15s;
-}
-.primary:hover { opacity: 0.9; transform: translateY(-1px); }
-.primary:active { transform: translateY(0); }
-.ghost { background: none; border: none; color: rgba(241,245,249,0.45); font-family: inherit; font-size: 13px; cursor: pointer; transition: color 0.15s; }
-.ghost:hover { color: rgba(241,245,249,0.7); }
-.back { background: none; border: none; color: rgba(241,245,249,0.45); font-family: inherit; font-size: 13px; cursor: pointer; align-self: flex-start; display: flex; align-items: center; gap: 4px; transition: color 0.15s; }
-.back:hover { color: #F1F5F9; }
-.hint { font-size: 13px; color: rgba(241,245,249,0.5); text-align: center; }
+.page { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px 24px 100px; gap: 12px; }
+.logoBox { width: 60px; height: 60px; border-radius: 14px; background: #7C3AED; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(124,58,237,0.4); margin-bottom: 4px; }
+.logoText { font-size: 26px; font-weight: 800; color: #fff; }
+.appName  { font-size: 24px; font-weight: 700; color: #E6EDF3; letter-spacing: -0.3px; }
+.tagline  { font-size: 13px; color: rgba(230,237,243,0.38); text-align: center; }
+.methods  { width: 100%; display: flex; flex-direction: column; gap: 9px; margin-top: 8px; }
+.google   { width: 100%; display: flex; align-items: center; justify-content: center; gap: 9px; padding: 13px; border-radius: 9px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.95); color: #1a1a1a; font-family: inherit; font-size: 13.5px; font-weight: 700; cursor: pointer; transition: opacity 0.12s; }
+.google:hover { opacity: 0.92; }
+.googleIcon { width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(145deg, #ea4335, #fbbc04, #34a853, #4285f4); color: #fff; font-weight: 900; font-size: 11px; display: flex; align-items: center; justify-content: center; }
+.methodBtn { width: 100%; display: flex; align-items: center; justify-content: center; gap: 9px; padding: 12px; border-radius: 9px; border: 1px solid rgba(255,255,255,0.08); background: #1C2333; color: rgba(230,237,243,0.75); font-family: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; transition: background 0.12s; }
+.methodBtn:hover { background: #222B3A; }
+.register { background: none; border: none; color: #7C3AED; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: color 0.12s; }
+.register:hover { color: #9F67FF; }
+.title { font-size: 18px; font-weight: 700; color: #E6EDF3; align-self: flex-start; }
+.input { width: 100%; padding: 12px 14px; border-radius: 9px; border: 1px solid rgba(255,255,255,0.09); background: #1C2333; color: #E6EDF3; font-family: inherit; font-size: 14px; outline: none; transition: border-color 0.12s; }
+.input:focus { border-color: #7C3AED; }
+.input::placeholder { color: rgba(230,237,243,0.22); }
+.otpInput { text-align: center; font-size: 20px; font-weight: 700; letter-spacing: 10px; }
+.primary { width: 100%; padding: 13px; border-radius: 9px; border: none; background: #7C3AED; color: #fff; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: background 0.12s; }
+.primary:hover { background: #6D28D9; }
+.ghost { background: none; border: none; color: rgba(230,237,243,0.4); font-family: inherit; font-size: 13px; cursor: pointer; transition: color 0.12s; }
+.ghost:hover { color: rgba(230,237,243,0.7); }
+.back { background: none; border: none; color: rgba(230,237,243,0.4); font-family: inherit; font-size: 13px; cursor: pointer; align-self: flex-start; display: flex; align-items: center; gap: 4px; transition: color 0.12s; }
+.back:hover { color: #E6EDF3; }
+.hint { font-size: 13px; color: rgba(230,237,243,0.45); text-align: center; }

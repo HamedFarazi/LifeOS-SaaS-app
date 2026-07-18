@@ -1,15 +1,8 @@
-/* TABLET / MOBILE — shared full-width layout */
-.tabletLayout {
-  display: flex; flex-direction: column; min-height: 100vh;
-  background: #0B1026;
-}
-.tabletScroll { flex: 1; overflow-y: auto; padding-bottom: 96px; }
-.tabletInner {
-  max-width: 900px; margin: 0 auto; padding: 0 16px;
-}
-@media (min-width: 768px) { .tabletInner { padding: 0 28px; } }
+.tabletLayout { display: flex; flex-direction: column; min-height: 100vh; background: #0E1117; }
+.tabletScroll { flex: 1; overflow-y: auto; padding-bottom: 88px; }
+.tabletInner  { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+@media (min-width: 768px) { .tabletInner { padding: 0 24px; } }
 
-/* DESKTOP */
-.desktopLayout { display: flex; min-height: 100vh; background: #0B1026; }
-.desktopMain { margin-right: 244px; flex: 1; min-height: 100vh; overflow-y: auto; }
-.desktopInner { max-width: 1180px; margin: 0 auto; padding: 28px 36px; }
+.desktopLayout { display: flex; min-height: 100vh; background: #0E1117; }
+.desktopMain   { margin-right: 232px; flex: 1; min-height: 100vh; overflow-y: auto; }
+.desktopInner  { max-width: 1100px; margin: 0 auto; padding: 24px 32px; }

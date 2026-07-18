@@ -1,39 +1,120 @@
 .nav {
-  position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);
-  width: calc(100% - 20px); max-width: 520px; height: 68px;
-  z-index: 50; pointer-events: none;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  pointer-events: none;
+  /* enough width so magnification has room */
+  width: auto;
+  max-width: calc(100vw - 32px);
 }
 @media (min-width: 1024px) { .nav { display: none; } }
 
-.bg {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  filter: drop-shadow(0 8px 28px rgba(0,0,0,0.55));
+/* Glass dock bar */
+.dock {
+  display: flex;
+  align-items: flex-end;   /* items grow upward from bottom */
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(20, 25, 33, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255,255,255,0.05) inset;
+  pointer-events: auto;
 }
-.row {
-  position: absolute; inset: 0; display: flex; align-items: center;
-  padding-top: 4px; pointer-events: auto;
-}
-.side { flex: 1; display: flex; align-items: center; justify-content: space-around; height: 100%; }
-.gap  { width: 68px; flex-shrink: 0; }
 
-.tab {
-  display: flex; flex-direction: column; align-items: center; gap: 3px;
-  background: none; border: none; cursor: pointer; font-family: inherit;
-  color: rgba(241,245,249,0.38); padding: 3px 6px; border-radius: 10px;
-  transition: color 0.2s, transform 0.2s;
+/* Wrapper keeps tooltip above button */
+.dockItemWrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.tab.active { color: #A78BFA; transform: translateY(-2px); }
-.icon  { display: flex; }
-.label { font-size: 10px; font-weight: 700; }
 
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 25, 33, 0.95);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(230,237,243,0.9);
+  font-size: 11px;
+  font-weight: 600;
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+  padding: 4px 9px;
+  border-radius: 7px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Dock button */
+.dockItem {
+  position: relative;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(230, 237, 243, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  /* width/height controlled by framer-motion MotionValue */
+}
+.dockItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(230, 237, 243, 0.85);
+  border-color: rgba(255,255,255,0.14);
+}
+.dockItemActive {
+  background: rgba(124, 58, 237, 0.2);
+  color: #C4B5FD;
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+/* Active dot */
+.dot {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #A78BFA;
+}
+
+/* Separator */
+.sep {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 2px;
+  align-self: center;
+}
+
+/* FAB */
 .fab {
-  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-  width: 50px; height: 50px; border-radius: 50%;
-  background: linear-gradient(135deg, #7C3AED, #8B5CF6); border: none; color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; pointer-events: auto;
-  box-shadow: 0 6px 20px rgba(124,58,237,0.55);
-  transition: transform 0.18s, opacity 0.18s;
+  border-radius: 12px;
+  background: #7C3AED;
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.5);
+  transition: background 0.12s;
 }
-.fab:hover { opacity: 0.9; transform: translateX(-50%) translateY(-2px); }
-.fab:active { transform: translateX(-50%) scale(0.92); }
+.fab:hover { background: #6D28D9; }

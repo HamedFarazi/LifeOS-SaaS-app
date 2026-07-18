@@ -1,70 +1,35 @@
-/* Mobile: single column */
+/* Mobile: single col */
 .desktopGrid { display: contents; }
 .mainCol     { display: contents; }
 .sideCol     { display: none; }
 .mobileExtra { display: block; }
 
-/* Desktop: two-column */
+/* Desktop: two-col */
 @media (min-width: 1024px) {
-  .desktopGrid {
-    display: grid;
-    grid-template-columns: 1fr 292px;
-    gap: 22px;
-    align-items: start;
-    margin-top: 4px;
-  }
-  .mainCol { display: block; min-width: 0; }
-  .sideCol { display: block; position: sticky; top: 0; }
+  .desktopGrid { display: grid; grid-template-columns: 1fr 268px; gap: 20px; align-items: start; margin-top: 4px; }
+  .mainCol     { display: block; min-width: 0; }
+  .sideCol     { display: block; position: sticky; top: 0; }
   .mobileExtra { display: none; }
 }
 
-/* Trend mini panel */
-.trendPanel {
-  padding: 15px 16px;
-  border-radius: 16px;
-  background: rgba(19,26,58,0.7);
-  border: 1px solid rgba(255,255,255,0.06);
-  margin-bottom: 4px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-}
+.trendPanel { padding: 14px; border-radius: 10px; background: #1C2333; border: 1px solid rgba(255,255,255,0.06); margin-bottom: 4px; }
 .trendHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
-.trendTitle  { font-size: 13px; font-weight: 600; color: rgba(241,245,249,0.65); }
-.trendLink {
-  background: none; border: none; color: #8B5CF6;
-  font-family: inherit; font-size: 11.5px; font-weight: 600; cursor: pointer;
-  padding: 3px 8px; border-radius: 7px; transition: background 0.15s;
-}
-.trendLink:hover { background: rgba(139,92,246,0.12); }
+.trendTitle  { font-size: 13px; font-weight: 600; color: rgba(230,237,243,0.55); }
+.trendLink   { background: none; border: none; color: #7C3AED; font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; padding: 3px 0; transition: color 0.12s; }
+.trendLink:hover { color: #9F67FF; }
 
-/* Side panels */
-.panel {
-  padding: 14px;
-  border-radius: 14px;
-  background: rgba(19,26,58,0.7);
-  border: 1px solid rgba(255,255,255,0.06);
-  margin-bottom: 10px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-}
+.panel { padding: 14px; border-radius: 10px; background: #1C2333; border: 1px solid rgba(255,255,255,0.06); margin-bottom: 10px; }
 .panel:last-child { margin-bottom: 0; }
-.panelTitle {
-  font-size: 11px; font-weight: 700;
-  color: rgba(241,245,249,0.4);
-  text-transform: uppercase; letter-spacing: 0.06em;
-  margin-bottom: 12px;
-}
+.panelTitle { font-size: 11px; font-weight: 600; color: rgba(230,237,243,0.38); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+
 .legend { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
 .legendItem { display: flex; align-items: center; gap: 7px; }
 .legendDot  { width: 7px; height: 7px; border-radius: 2px; flex-shrink: 0; }
-.legendLabel { flex: 1; font-size: 12px; color: rgba(241,245,249,0.6); }
-.legendVal   { font-size: 12px; font-weight: 700; color: #F1F5F9; }
+.legendLabel { flex: 1; font-size: 12px; color: rgba(230,237,243,0.55); }
+.legendVal   { font-size: 12px; font-weight: 600; color: #E6EDF3; }
 
-.topRow {
-  display: flex; align-items: center; gap: 10px;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
+.topRow { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
 .topRow:last-child { border-bottom: none; }
-.topRow:hover { background: rgba(255,255,255,0.02); border-radius: 8px; }
-.topRank  { width: 16px; font-size: 11px; font-weight: 700; color: rgba(241,245,249,0.28); text-align: center; flex-shrink: 0; }
-.topName  { flex: 1; font-size: 13px; font-weight: 600; color: #F1F5F9; }
-.topPrice { font-size: 12px; font-weight: 700; color: #A78BFA; flex-shrink: 0; }
+.topRank  { width: 16px; font-size: 11px; font-weight: 600; color: rgba(230,237,243,0.25); text-align: center; flex-shrink: 0; }
+.topName  { flex: 1; font-size: 13px; font-weight: 500; color: #E6EDF3; }
+.topPrice { font-size: 12px; font-weight: 600; color: rgba(230,237,243,0.6); flex-shrink: 0; }

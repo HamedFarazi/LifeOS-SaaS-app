@@ -1,57 +1,135 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Layers, ChartPie, Settings2, Plus } from 'lucide-react';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import {
+  IconLayoutDashboard, IconStack2, IconChartPie,
+  IconSettings, IconPlus,
+} from '@tabler/icons-react';
 import styles from './bottom-nav.module.css';
 
-interface Tab { path: string; label: string; icon: React.ReactNode; }
+interface DockTab {
+  path: string;
+  label: string;
+  icon: React.ReactNode;
+}
 
-const LEFT: Tab[] = [
-  { path: '/',         label: 'داشبورد',  icon: <LayoutDashboard size={20} strokeWidth={1.8} /> },
-  { path: '/services', label: 'سرویس‌ها', icon: <Layers          size={20} strokeWidth={1.8} /> },
+const TABS: DockTab[] = [
+  { path: '/',          label: 'داشبورد',  icon: <IconLayoutDashboard size={22} stroke={1.8} /> },
+  { path: '/services',  label: 'سرویس‌ها', icon: <IconStack2          size={22} stroke={1.8} /> },
+  { path: '/analytics', label: 'تحلیل',   icon: <IconChartPie        size={22} stroke={1.8} /> },
+  { path: '/settings',  label: 'تنظیمات', icon: <IconSettings        size={22} stroke={1.8} /> },
 ];
-const RIGHT: Tab[] = [
-  { path: '/analytics', label: 'تحلیل',    icon: <ChartPie  size={20} strokeWidth={1.8} /> },
-  { path: '/settings',  label: 'تنظیمات',  icon: <Settings2 size={20} strokeWidth={1.8} /> },
-];
+
+/** Single dock item with magnification spring effect */
+function DockItem({
+  tab,
+  mouseX,
+  isActive,
+  onClick,
+}: {
+  tab: DockTab;
+  mouseX: ReturnType<typeof useMotionValue<number>>;
+  isActive: boolean;
+  onClick: () => void;
+}) {
+  const ref = useRef<HTMLButtonElement>(null);
+
+  const distance = useTransform(mouseX, (val) => {
+    const el = ref.current;
+    if (!el) return 999;
+    const rect = el.getBoundingClientRect();
+    return Math.abs(val - (rect.left + rect.width / 2));
+  });
+
+  // Magnify: 44px base → 58px at cursor
+  const size = useSpring(
+    useTransform(distance, [0, 80, 160], [58, 50, 44]),
+    { stiffness: 340, damping: 28 }
+  );
+
+  // Lift: float up toward cursor
+  const y = useSpring(
+    useTransform(distance, [0, 80, 160], [-10, -4, 0]),
+    { stiffness: 340, damping: 28 }
+  );
+
+  const [tooltip, setTooltip] = useState(false);
+
+  return (
+    <div className={styles.dockItemWrap}>
+      {tooltip && (
+        <motion.div
+          className={styles.tooltip}
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.12 }}
+        >
+          {tab.label}
+        </motion.div>
+      )}
+      <motion.button
+        ref={ref}
+        type="button"
+        className={`${styles.dockItem} ${isActive ? styles.dockItemActive : ''}`}
+        style={{ width: size, height: size, y }}
+        onClick={onClick}
+        onMouseEnter={() => setTooltip(true)}
+        onMouseLeave={() => setTooltip(false)}
+        whileTap={{ scale: 0.88 }}
+        aria-label={tab.label}
+      >
+        {tab.icon}
+        {isActive && <span className={styles.dot} />}
+      </motion.button>
+    </div>
+  );
+}
 
 export function BottomNav(): React.JSX.Element {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-
-  const renderTab = (tab: Tab) => {
-    const active = pathname === tab.path;
-    return (
-      <button key={tab.path} type="button"
-        className={`${styles.tab} ${active ? styles.active : ''}`}
-        onClick={() => navigate(tab.path)}>
-        <span className={styles.icon}>{tab.icon}</span>
-        <span className={styles.label}>{tab.label}</span>
-      </button>
-    );
-  };
+  const mouseX = useMotionValue(Infinity);
 
   return (
-    <nav className={styles.nav}>
-      <svg className={styles.bg} viewBox="0 0 360 80" preserveAspectRatio="none" aria-hidden>
-        <path
-          fill="#1a1040"
-          stroke="rgba(255,255,255,0.08)"
-          strokeWidth="1"
-          d="M26,6 L140,6 C155,6 157,38 180,38 C203,38 205,6 220,6 L334,6
-             C350,6 360,16 360,30 L360,60 C360,74 350,80 334,80
-             L26,80 C10,80 0,74 0,60 L0,30 C0,16 10,6 26,6 Z"
-        />
-      </svg>
+    <nav
+      className={styles.nav}
+      onMouseMove={(e) => mouseX.set(e.clientX)}
+      onMouseLeave={() => mouseX.set(Infinity)}
+    >
+      <motion.div
+        className={styles.dock}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      >
+        {TABS.map((tab) => (
+          <DockItem
+            key={tab.path}
+            tab={tab}
+            mouseX={mouseX}
+            isActive={pathname === tab.path}
+            onClick={() => navigate(tab.path)}
+          />
+        ))}
 
-      <div className={styles.row}>
-        <div className={styles.side}>{LEFT.map(renderTab)}</div>
-        <div className={styles.gap} />
-        <div className={styles.side}>{RIGHT.map(renderTab)}</div>
-      </div>
+        <div className={styles.sep} />
 
-      <button type="button" className={styles.fab} onClick={() => navigate('/add')} aria-label="افزودن سرویس">
-        <Plus size={22} strokeWidth={2.5} />
-      </button>
+        {/* FAB */}
+        <div className={styles.dockItemWrap}>
+          <motion.button
+            type="button"
+            className={styles.fab}
+            onClick={() => navigate('/add')}
+            style={{ width: 44, height: 44 }}
+            whileHover={{ scale: 1.12, y: -6 }}
+            whileTap={{ scale: 0.88 }}
+            transition={{ type: 'spring', stiffness: 340, damping: 28 }}
+            aria-label="افزودن سرویس"
+          >
+            <IconPlus size={20} stroke={2.5} />
+          </motion.button>
+        </div>
+      </motion.div>
     </nav>
   );
 }
