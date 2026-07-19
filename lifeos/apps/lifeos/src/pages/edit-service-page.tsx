@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+﻿import React, { useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Camera } from 'lucide-react';
 import { useServices } from '../store/use-services';
@@ -46,7 +46,7 @@ export function EditServicePage(): React.JSX.Element {
     next.setDate(next.getDate() + Number(days || 0));
     updateService(service.id, {
       name: name.trim(),
-      plan: plan.trim() || CATEGORY_META[category].label,
+      plan: plan.trim() || CATEGORY_META[category].labelFa,
       price: Number(price),
       priceCurrency,
       category, billingCycle,
@@ -88,7 +88,7 @@ export function EditServicePage(): React.JSX.Element {
               className={`${styles.chip} ${category === cat ? styles.activeChip : ''}`}
               onClick={() => setCategory(cat)}>
               <CategoryIcon icon={CATEGORY_META[cat].icon} size={15} color={CATEGORY_META[cat].color} />
-              {CATEGORY_META[cat].label}
+              {CATEGORY_META[cat].labelFa}
             </button>
           ))}
         </div>

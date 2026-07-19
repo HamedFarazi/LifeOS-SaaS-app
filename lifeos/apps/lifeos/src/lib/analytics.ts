@@ -1,4 +1,4 @@
-import type { Service, ServiceCategory } from '../types/index';
+﻿import type { Service, ServiceCategory } from '../types/index';
 import { monthlyCost } from './dates';
 import { CATEGORY_META } from '../data/categories';
 
@@ -26,7 +26,7 @@ export function spendByCategory(services: Service[]): CategorySlice[] {
   return Array.from(map.entries())
     .map(([category, value]) => ({
       category,
-      label: CATEGORY_META[category].label,
+      label: CATEGORY_META[category].labelFa,
       color: CATEGORY_META[category].color,
       value: Math.round(value),
     }))

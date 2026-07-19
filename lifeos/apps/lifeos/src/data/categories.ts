@@ -1,30 +1,23 @@
 import type { ServiceCategory } from '../types/index';
 
-/**
- * Human-readable Persian metadata for every service category.
- */
-export const CATEGORY_META: Record<
-  ServiceCategory,
-  { label: string; icon: string; color: string }
-> = {
-  subscription: { label: 'اشتراک',       icon: 'layers',       color: '#A855F7' },
-  domain:       { label: 'دامنه',          icon: 'globe',        color: '#2FD0FF' },
-  hosting:      { label: 'هاستینگ',        icon: 'server',       color: '#63E8FF' },
-  ssl:          { label: 'گواهی SSL',      icon: 'shield-check', color: '#34D399' },
-  vpn:          { label: 'وی‌پی‌ان',        icon: 'shield',       color: '#F472B6' },
-  internet:     { label: 'اینترنت',        icon: 'wifi',         color: '#FBBF24' },
-  expense:      { label: 'هزینه تکراری',   icon: 'wallet',       color: '#FB7185' },
+type CategoryMeta = { labelFa: string; labelEn: string; icon: string; color: string };
+
+export const CATEGORY_META: Record<ServiceCategory, CategoryMeta> = {
+  subscription: { labelFa: 'اشتراک',       labelEn: 'Subscription', icon: 'layers',       color: '#3B82F6' },
+  domain:       { labelFa: 'دامنه',          labelEn: 'Domain',       icon: 'globe',        color: '#06B6D4' },
+  hosting:      { labelFa: 'هاستینگ',        labelEn: 'Hosting',      icon: 'server',       color: '#8B5CF6' },
+  ssl:          { labelFa: 'گواهی SSL',      labelEn: 'SSL',          icon: 'shield-check', color: '#34D399' },
+  vpn:          { labelFa: 'وی‌پی‌ان',        labelEn: 'VPN',          icon: 'shield',       color: '#F59E0B' },
+  internet:     { labelFa: 'اینترنت',        labelEn: 'Internet',     icon: 'wifi',         color: '#6366F1' },
+  expense:      { labelFa: 'هزینه تکراری',   labelEn: 'Expense',      icon: 'wallet',       color: '#F87171' },
 };
 
-/**
- * Ordered list of categories for filter chips.
- */
+/** Returns the label in the current UI language */
+export function categoryLabel(cat: ServiceCategory): string {
+  const meta = CATEGORY_META[cat];
+  return document.documentElement.lang === 'en' ? meta.labelEn : meta.labelFa;
+}
+
 export const CATEGORY_ORDER: ServiceCategory[] = [
-  'subscription',
-  'domain',
-  'hosting',
-  'ssl',
-  'vpn',
-  'internet',
-  'expense',
+  'subscription', 'domain', 'hosting', 'ssl', 'vpn', 'internet', 'expense',
 ];

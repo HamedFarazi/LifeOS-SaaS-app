@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+﻿import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, X } from 'lucide-react';
 import { useServices } from '../store/use-services';
@@ -34,7 +34,7 @@ export function GlobalSearch({ onClose }: GlobalSearchProps): React.JSX.Element 
       (s) =>
         s.name.toLowerCase().includes(q) ||
         s.plan.toLowerCase().includes(q) ||
-        CATEGORY_META[s.category].label.includes(q)
+        CATEGORY_META[s.category].labelFa.includes(q)
     ).slice(0, 8);
   }, [query, services]);
 
@@ -65,7 +65,7 @@ export function GlobalSearch({ onClose }: GlobalSearchProps): React.JSX.Element 
                 <div className={styles.resultInfo}>
                   <p className={styles.resultName}>{s.name}</p>
                   <p className={styles.resultMeta}>
-                    {CATEGORY_META[s.category].label} · {s.plan}
+                    {CATEGORY_META[s.category].labelFa} · {s.plan}
                   </p>
                 </div>
                 <span className={styles.resultPrice}>

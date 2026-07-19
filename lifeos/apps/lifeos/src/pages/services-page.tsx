@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+﻿import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, SortAsc, Plus } from 'lucide-react';
 import { useServices } from '../store/use-services';
@@ -95,7 +95,7 @@ export function ServicesPage(): React.JSX.Element {
             className={`${styles.chip} ${filter === cat ? styles.activeChip : ''}`}
             onClick={() => setFilter(cat)}>
             <CategoryIcon icon={CATEGORY_META[cat].icon} size={13} color={filter === cat ? '#0B1020' : CATEGORY_META[cat].color} />
-            {CATEGORY_META[cat].label}
+            {CATEGORY_META[cat].labelFa}
           </button>
         ))}
       </div>

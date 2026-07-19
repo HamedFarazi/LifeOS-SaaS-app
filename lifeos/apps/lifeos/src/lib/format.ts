@@ -2,29 +2,22 @@ import type { Currency } from '../types/index';
 
 const FA_DIGITS = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
 
-/**
- * Converts Latin digits in a string to Persian digits.
- *
- * @param input - String or number containing Latin digits.
- * @returns String with Persian digits.
- */
 export function toFaDigits(input: string | number): string {
+  // In English mode, return Latin digits unchanged
+  if (document.documentElement.lang === 'en') return String(input);
   return String(input).replace(/[0-9]/g, (d) => FA_DIGITS[Number(d)]);
 }
 
-/** Approximate Toman -> USD conversion rate used for display only. */
 const USD_RATE = 60_000;
 
 /**
- * Formats a Toman amount into a localized currency string with Persian digits.
- *
- * @param amount - Amount in Toman.
- * @param currency - Target display currency.
- * @returns Formatted, grouped currency string.
+ * Returns the current UI language from <html> lang attribute.
+ * Avoids importing useSettings (which needs React context) in a pure lib.
  */
-/**
- * Formats an amount (in `sourceCurrency`) into the user's display currency.
- */
+function uiLang(): 'fa' | 'en' {
+  return document.documentElement.lang === 'en' ? 'en' : 'fa';
+}
+
 export function formatMoney(
   amount: number,
   sourceCurrency: Currency = 'IRT',
@@ -33,29 +26,33 @@ export function formatMoney(
   const inIRT = sourceCurrency === 'USD' ? amount * USD_RATE : amount;
   if (displayCurrency === 'USD') {
     const usd = inIRT / USD_RATE;
-    return `${usd.toLocaleString('en-US', { maximumFractionDigits: 1 })}`;
+    return `$${usd.toLocaleString('en-US', { maximumFractionDigits: 1 })}`;
   }
-  return `${toFaDigits(Math.round(inIRT).toLocaleString('en-US'))} تومان`;
+  const lang   = uiLang();
+  const number = Math.round(inIRT).toLocaleString('en-US');
+  if (lang === 'en') {
+    return `${number} Toman`;
+  }
+  return `${toFaDigits(number)} تومان`;
 }
 
-/** Format a price in its native currency without conversion. */
 export function formatNative(amount: number, currency: Currency): string {
-  if (currency === 'USD') return `${amount.toLocaleString('en-US', { maximumFractionDigits: 2 })}`;
-  return `${toFaDigits(Math.round(amount).toLocaleString('en-US'))} تومان`;
+  const lang = uiLang();
+  if (currency === 'USD') {
+    return `$${amount.toLocaleString('en-US', { maximumFractionDigits: 2 })}`;
+  }
+  const number = Math.round(amount).toLocaleString('en-US');
+  return lang === 'en' ? `${number} Toman` : `${toFaDigits(number)} تومان`;
 }
 
-/**
- * Compact money formatting for chart axes and tight spaces.
- *
- * @param amount - Amount in Toman.
- * @returns Short string like "۱.۲م".
- */
 export function formatMoneyShort(amount: number): string {
-  if (amount >= 1_000_000) {
-    return `${toFaDigits((amount / 1_000_000).toFixed(1))}م`;
+  const lang = uiLang();
+  if (lang === 'en') {
+    if (amount >= 1_000_000) return `${(amount / 1_000_000).toFixed(1)}M`;
+    if (amount >= 1_000)     return `${Math.round(amount / 1_000)}K`;
+    return String(amount);
   }
-  if (amount >= 1_000) {
-    return `${toFaDigits(Math.round(amount / 1_000))}ه`;
-  }
+  if (amount >= 1_000_000) return `${toFaDigits((amount / 1_000_000).toFixed(1))}م`;
+  if (amount >= 1_000)     return `${toFaDigits(Math.round(amount / 1_000))}ه`;
   return toFaDigits(amount);
 }

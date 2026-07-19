@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Pencil, PauseCircle, PlayCircle, Trash2 } from 'lucide-react';
 import { useServices } from '../store/use-services';
@@ -6,7 +6,7 @@ import { useSettings } from '../store/use-settings';
 import { PageHeader } from '../components/page-header';
 import { ServiceLogo } from '../components/service-logo';
 import { CategoryIcon } from '../components/category-icon';
-import { CATEGORY_META } from '../data/categories';
+import { CATEGORY_META, categoryLabel } from '../data/categories';
 import { monthlyCost, renewalLabel, formatDate } from '../lib/dates';
 import { formatMoney } from '../lib/format';
 import styles from './service-detail-page.module.css';
@@ -53,7 +53,7 @@ export function ServiceDetailPage(): React.JSX.Element {
         </div>
         <div className={styles.fact}>
           <span className={styles.factLabel}>دسته‌بندی</span>
-          <span className={styles.factValue}><CategoryIcon icon={meta.icon} size={16} color={meta.color} /> {meta.label}</span>
+          <span className={styles.factValue}><CategoryIcon icon={meta.icon} size={16} color={meta.color} /> {categoryLabel(service.category)}</span>
         </div>
         <div className={styles.fact}>
           <span className={styles.factLabel}>دوره پرداخت</span>
