@@ -2,132 +2,55 @@
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 16px;
-  align-items: start;
+  align-items: center;
   padding: 16px 18px;
   border-radius: 12px;
-  background: #1C2333;
-  border: 1px solid rgba(255,255,255,0.07);
+  background: var(--surface);
+  border: 1px solid var(--border);
   margin-bottom: 10px;
 }
 
-/* LEFT */
-.left {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-width: 0;
-}
+.left { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+
+.metaLabel { font-size: 11px; color: var(--text-3); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
 
 .amount {
-  font-size: 28px;
-  font-weight: 700;
-  color: #E6EDF3;
-  letter-spacing: -0.8px;
-  line-height: 1;
-  margin: 4px 0 6px;
+  font-size: 28px; font-weight: 700; color: var(--text);
+  letter-spacing: -0.8px; line-height: 1.1; margin: 2px 0 4px;
 }
 
 .change {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 3px 8px;
-  border-radius: 6px;
-  width: fit-content;
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 12px; font-weight: 600;
+  padding: 3px 8px; border-radius: 6px; width: fit-content;
 }
 .changeUp   { background: rgba(248,113,113,0.1); color: #F87171; }
 .changeDown { background: rgba(52,211,153,0.1);  color: #34D399; }
 
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.metaItem {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.metaLabel {
-  font-size: 11px;
-  color: rgba(230,237,243,0.38);
-  font-weight: 500;
-}
-.metaVal {
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(230,237,243,0.75);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.metaWarn   { color: #FBBF24; }
-.metaDanger { color: #F87171; }
+.meta { display: flex; flex-wrap: wrap; gap: 14px; }
+.metaItem { display: flex; flex-direction: column; gap: 2px; }
+.metaVal { font-size: 13px; font-weight: 600; color: var(--text-2); display: flex; align-items: center; gap: 4px; }
+.metaWarn   { color: #FBBF24 !important; }
+.metaDanger { color: #F87171 !important; }
 
-.budgetBar {
-  height: 3px;
-  background: rgba(255,255,255,0.07);
-  border-radius: 999px;
-  overflow: hidden;
-  max-width: 200px;
-}
-.budgetFill {
-  height: 100%;
-  border-radius: 999px;
-  transition: width 0.5s ease;
-}
+.budgetBar { height: 3px; background: var(--border); border-radius: 999px; overflow: hidden; max-width: 180px; }
+.budgetFill { height: 100%; border-radius: 999px; transition: width 0.5s ease; }
 
-/* RIGHT */
-.right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-  flex-shrink: 0;
-}
-
-.toggleWrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-}
+.right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex-shrink: 0; }
+.toggleWrap { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
 
 .toggle {
-  display: inline-flex;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 6px;
-  padding: 2px;
-  gap: 1px;
-  cursor: pointer;
+  display: inline-flex; background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border); border-radius: 6px; padding: 2px; gap: 1px; cursor: pointer;
 }
-.opt {
-  padding: 3px 8px;
-  border-radius: 5px;
-  font-size: 11px;
-  font-weight: 600;
-  color: rgba(230,237,243,0.38);
-  transition: background 0.15s, color 0.15s;
-  white-space: nowrap;
-}
-.optActive { background: rgba(124,58,237,0.35); color: #C4B5FD; }
+.opt { padding: 3px 8px; border-radius: 5px; font-size: 11px; font-weight: 600; color: var(--text-3); transition: background 0.15s, color 0.15s; }
+.optActive { background: var(--accent); color: #fff; }
+.dateLabel { font-size: 10px; color: var(--text-3); }
 
-.dateLabel {
-  font-size: 10px;
-  color: rgba(230,237,243,0.3);
-}
+.chart { width: 110px; height: 54px; }
 
-.chart {
-  width: 120px;
-  height: 58px;
-}
-
-/* Desktop */
 @media (min-width: 1024px) {
   .hero   { padding: 18px 20px; margin-bottom: 12px; }
   .amount { font-size: 32px; }
-  .chart  { width: 140px; height: 64px; }
+  .chart  { width: 140px; height: 62px; }
 }
