@@ -15,11 +15,12 @@ import { ServiceCard } from '../components/service-card';
 import { InsightCard } from '../components/insight-card';
 import { ServiceMiniPopup } from '../components/service-mini-popup';
 import { ServiceLogo } from '../components/service-logo';
-import { computeInsights } from '../lib/insights';
+import { computeRawInsights } from '../lib/insights';
 import { daysUntil, monthlyCost } from '../lib/dates';
 import { spendTrend, spendByCategory, topServices } from '../lib/analytics';
 import { formatMoney, formatMoneyShort, toFaDigits } from '../lib/format';
 import { useSettings } from '../store/use-settings';
+import { useT } from '../hooks/use-t';
 import type { Service } from '../types/index';
 import styles from './dashboard-page.module.css';
 
@@ -35,6 +36,7 @@ export function DashboardPage(): React.JSX.Element {
   const services = useServices((s) => s.services);
   const currency = useSettings((s) => s.currency);
   const navigate = useNavigate();
+  const t = useT();
   const [popup, setPopup] = useState<Service | null>(null);
 
   const upcoming = useMemo(
@@ -44,7 +46,7 @@ export function DashboardPage(): React.JSX.Element {
       .slice(0, 8),
     [services]
   );
-  const insights = useMemo(() => computeInsights(services), [services]);
+  const insights = useMemo(() => computeRawInsights(services), [services]);
   const all      = useMemo(() => services.filter((s) => s.active), [services]);
   const trend    = useMemo(() => spendTrend(services), [services]);
   const byCat    = useMemo(() => spendByCategory(services), [services]);
@@ -65,9 +67,9 @@ export function DashboardPage(): React.JSX.Element {
           {/* Spending trend mini-chart */}
           <div className={styles.trendPanel}>
             <div className={styles.trendHeader}>
-              <p className={styles.trendTitle}>روند هزینه ۶ ماه</p>
+              <p className={styles.trendTitle}>{t('spendTrend')}</p>
               <button type="button" className={styles.trendLink} onClick={() => navigate('/analytics')}>
-                جزئیات بیشتر
+                {t('moreDetails')}
               </button>
             </div>
             <div style={{ direction: 'ltr' }}>
@@ -87,14 +89,14 @@ export function DashboardPage(): React.JSX.Element {
             </div>
           </div>
 
-          <SectionHeader title="تمدیدهای نزدیک" action="مشاهده همه" onAction={() => navigate('/renewals')} />
+          <SectionHeader title={t('upcomingRenewals')} action={t('viewAll')} onAction={() => navigate('/renewals')} />
           <Carousel>
             {upcoming.map((s) => (
               <RenewalCard key={s.id} service={s} onClick={() => setPopup(s)} />
             ))}
           </Carousel>
 
-          <SectionHeader title="همه سرویس‌ها" action="مشاهده همه" onAction={() => navigate('/services')} />
+          <SectionHeader title={t('allServices')} action={t('viewAll')} onAction={() => navigate('/services')} />
           <Carousel>
             {all.map((s) => (
               <ServiceCard key={s.id} service={s} onClick={() => setPopup(s)} />
@@ -108,7 +110,7 @@ export function DashboardPage(): React.JSX.Element {
 
           {/* Category pie */}
           <div className={styles.panel}>
-            <p className={styles.panelTitle}>بر اساس دسته</p>
+            <p className={styles.panelTitle}>{t('byCategory')}</p>
             <div style={{ direction: 'ltr' }}>
               <ResponsiveContainer width="100%" height={160}>
                 <PieChart>
@@ -145,7 +147,7 @@ export function DashboardPage(): React.JSX.Element {
 
           {/* Insights */}
           <div className={styles.panel}>
-            <p className={styles.panelTitle}>مرکز کنترل</p>
+            <p className={styles.panelTitle}>{t('controlCenter')}</p>
             {insights.map((i) => (
               <InsightCard key={i.id} insight={i} />
             ))}
@@ -160,8 +162,8 @@ export function DashboardPage(): React.JSX.Element {
         {/* Mini category chart */}
         <div className={styles.trendPanel} style={{ marginTop: 8 }}>
           <div className={styles.trendHeader}>
-            <p className={styles.trendTitle}>روند هزینه ۶ ماه</p>
-            <button type="button" className={styles.trendLink} onClick={() => navigate('/analytics')}>جزئیات</button>
+            <p className={styles.trendTitle}>{t('spendTrend')}</p>
+            <button type="button" className={styles.trendLink} onClick={() => navigate('/analytics')}>{t('moreDetails')}</button>
           </div>
           <div style={{ direction: 'ltr' }}>
             <ResponsiveContainer width="100%" height={90}>
@@ -180,7 +182,7 @@ export function DashboardPage(): React.JSX.Element {
           </div>
         </div>
 
-        <SectionHeader title="مرکز کنترل" />
+        <SectionHeader title={t('controlCenter')} />
         {insights.map((i) => <InsightCard key={i.id} insight={i} />)}
       </div>
 

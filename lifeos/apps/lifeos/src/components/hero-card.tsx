@@ -3,6 +3,7 @@ import { IconTrendingUp, IconTrendingDown, IconCalendar } from '@tabler/icons-re
 import { ResponsiveContainer, AreaChart, Area, Tooltip } from 'recharts';
 import { useServices } from '../store/use-services';
 import { useSettings } from '../store/use-settings';
+import { useT } from '../hooks/use-t';
 import { monthlyCost, yearlyCost, daysUntil, todayJalali } from '../lib/dates';
 import { formatMoney, toFaDigits } from '../lib/format';
 import { spendTrend } from '../lib/analytics';
@@ -12,6 +13,8 @@ export function HeroCard(): React.JSX.Element {
   const services        = useServices((s) => s.services);
   const displayCurrency = useSettings((s) => s.currency);
   const monthlyBudget   = useSettings((s) => s.monthlyBudget);
+  const language        = useSettings((s) => s.language);
+  const t               = useT();
   const [yearly, setYearly] = useState(false);
 
   const active = useMemo(() => services.filter((s) => s.active), [services]);
@@ -27,9 +30,7 @@ export function HeroCard(): React.JSX.Element {
     return Math.round(base * 0.85);
   }, [active]);
 
-  const changePct = prevTotal > 0
-    ? Math.round(((total - prevTotal) / prevTotal) * 100)
-    : 0;
+  const changePct = prevTotal > 0 ? Math.round(((total - prevTotal) / prevTotal) * 100) : 0;
   const isUp = changePct > 0;
 
   const upcoming7 = useMemo(
@@ -44,44 +45,42 @@ export function HeroCard(): React.JSX.Element {
   return (
     <div className={styles.hero}>
       <div className={styles.left}>
-        {/* spending */}
         <div>
-          <p className={styles.metaLabel}>{yearly ? 'هزینه سالانه' : 'هزینه این ماه'}</p>
+          <p className={styles.metaLabel}>{yearly ? t('yearlySpend') : t('monthlySpend')}</p>
           <p className={styles.amount}>{formatMoney(total, 'IRT', displayCurrency)}</p>
           <div className={`${styles.change} ${isUp ? styles.changeUp : styles.changeDown}`}>
-            {isUp
-              ? <IconTrendingUp size={13} stroke={2} />
-              : <IconTrendingDown size={13} stroke={2} />}
-            <span>{isUp ? '+' : ''}{toFaDigits(Math.abs(changePct))}٪ نسبت به ماه قبل</span>
+            {isUp ? <IconTrendingUp size={13} stroke={2} /> : <IconTrendingDown size={13} stroke={2} />}
+            <span>
+              {isUp ? '+' : ''}{toFaDigits(Math.abs(changePct))}
+              {language === 'en' ? '% vs last month' : '٪ ' + t('comparedToLastMonth')}
+            </span>
           </div>
         </div>
 
-        {/* meta info */}
         <div className={styles.meta}>
           <div className={styles.metaItem}>
-            <span className={styles.metaLabel}>سرویس‌های فعال</span>
+            <span className={styles.metaLabel}>{t('activeServices')}</span>
             <span className={styles.metaVal}>{toFaDigits(active.length)}</span>
           </div>
           {upcoming7.length > 0 && (
             <div className={styles.metaItem}>
-              <span className={styles.metaLabel}>پرداخت این هفته</span>
+              <span className={styles.metaLabel}>{t('renewThisWeek')}</span>
               <span className={`${styles.metaVal} ${styles.metaWarn}`}>
                 <IconCalendar size={12} stroke={2} />
-                {toFaDigits(upcoming7.length)} سرویس
+                {toFaDigits(upcoming7.length)} {t('active')}
               </span>
             </div>
           )}
           {budgetPct !== null && (
             <div className={styles.metaItem}>
-              <span className={styles.metaLabel}>از بودجه ماهانه</span>
+              <span className={styles.metaLabel}>{t('monthlyBudget')}</span>
               <span className={`${styles.metaVal} ${budgetPct > 80 ? styles.metaDanger : ''}`}>
-                {toFaDigits(budgetPct)}٪
+                {toFaDigits(budgetPct)}%
               </span>
             </div>
           )}
         </div>
 
-        {/* budget bar */}
         {budgetPct !== null && (
           <div className={styles.budgetBar}>
             <div
@@ -98,8 +97,8 @@ export function HeroCard(): React.JSX.Element {
       <div className={styles.right}>
         <div className={styles.toggleWrap}>
           <button type="button" className={styles.toggle} onClick={() => setYearly((v) => !v)}>
-            <span className={`${styles.opt} ${!yearly ? styles.optActive : ''}`}>ماه</span>
-            <span className={`${styles.opt} ${yearly ? styles.optActive : ''}`}>سال</span>
+            <span className={`${styles.opt} ${!yearly ? styles.optActive : ''}`}>{t('month')}</span>
+            <span className={`${styles.opt} ${yearly ? styles.optActive : ''}`}>{t('year')}</span>
           </button>
           <p className={styles.dateLabel}>{todayJalali()}</p>
         </div>
@@ -109,16 +108,12 @@ export function HeroCard(): React.JSX.Element {
               <AreaChart data={trend} margin={{ top: 4, right: 2, left: 2, bottom: 0 }}>
                 <defs>
                   <linearGradient id="hg2" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stopColor="#7C3AED" stopOpacity={0.35} />
-                    <stop offset="100%" stopColor="#7C3AED" stopOpacity={0} />
+                    <stop offset="0%" stopColor="#1D4ED8" stopOpacity={0.3} />
+                    <stop offset="100%" stopColor="#1D4ED8" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <Tooltip contentStyle={{ display: 'none' }} cursor={false} />
-                <Area
-                  type="monotone" dataKey="value"
-                  stroke="#7C3AED" strokeWidth={1.5}
-                  fill="url(#hg2)" dot={false}
-                />
+                <Area type="monotone" dataKey="value" stroke="#3B82F6" strokeWidth={1.5} fill="url(#hg2)" dot={false} />
               </AreaChart>
             </ResponsiveContainer>
           </div>
