@@ -162,8 +162,8 @@ export function DesktopSidebar(): React.JSX.Element {
         {/* Profile */}
         <div className={styles.profile}>
           {!editing ? (
-            <div className={styles.profileRow}>
-              <UserAvatar size={32} showStatus onClick={() => setSheetOpen((v) => !v)}
+            <div className={styles.profileCard}>
+              <UserAvatar size={42} showStatus onClick={() => setSheetOpen((v) => !v)}
                 ariaLabel="Quick actions" ariaExpanded={sheetOpen} ref={avatarRef} />
               <div className={styles.profileInfo}
                 onClick={() => { setNameDraft(userName); setEmailDraft(userEmail ?? ''); setEditing(true); }}>
@@ -171,8 +171,11 @@ export function DesktopSidebar(): React.JSX.Element {
                 <p className={styles.profileEmail}>{userEmail || t('lifeosUser')}</p>
               </div>
               <div className={styles.profileActions}>
-                <IconPencil size={13} stroke={1.8} className={styles.editIcon}
-                  onClick={() => { setNameDraft(userName); setEmailDraft(userEmail ?? ''); setEditing(true); }} />
+                <button type="button" className={styles.editIcon}
+                  onClick={() => { setNameDraft(userName); setEmailDraft(userEmail ?? ''); setEditing(true); }}
+                  title="ویرایش">
+                  <IconPencil size={13} stroke={1.8} />
+                </button>
                 <button type="button" className={styles.logoutBtn}
                   onClick={() => { logout(); navigate('/login'); }}
                   title="خروج">

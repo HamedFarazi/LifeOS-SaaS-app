@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from "react";
 import {
   ResponsiveContainer,
   AreaChart,
@@ -8,19 +8,15 @@ import {
   PieChart,
   Pie,
   Cell,
-} from 'recharts';
-import { useServices } from '../store/use-services';
-import { useSettings } from '../store/use-settings';
-import { PageHeader } from '../components/page-header';
-import { ServiceLogo } from '../components/service-logo';
-import {
-  spendByCategory,
-  spendTrend,
-  topServices,
-} from '../lib/analytics';
-import { monthlyCost, daysUntil } from '../lib/dates';
-import { formatMoney, formatMoneyShort, toFaDigits } from '../lib/format';
-import styles from './analytics-page.module.css';
+} from "recharts";
+import { useServices } from "../store/use-services";
+import { useSettings } from "../store/use-settings";
+import { PageHeader } from "../components/page-header";
+import { ServiceLogo } from "../components/service-logo";
+import { spendByCategory, spendTrend, topServices } from "../lib/analytics";
+import { monthlyCost, daysUntil } from "../lib/dates";
+import { formatMoney, formatMoneyShort, toFaDigits } from "../lib/format";
+import styles from "./analytics-page.module.css";
 
 export function AnalyticsPage(): React.JSX.Element {
   const services = useServices((s) => s.services);
@@ -30,22 +26,30 @@ export function AnalyticsPage(): React.JSX.Element {
   const byCat = useMemo(() => spendByCategory(services), [services]);
   const top = useMemo(() => topServices(services, 5), [services]);
   const monthlyTotal = useMemo(
-    () => services.filter((s) => s.active).reduce((sum, s) => sum + monthlyCost(s), 0),
-    [services]
+    () =>
+      services
+        .filter((s) => s.active)
+        .reduce((sum, s) => sum + monthlyCost(s), 0),
+    [services],
   );
   const upcomingCost = useMemo(
     () =>
       services
-        .filter((s) => s.active && daysUntil(s.nextRenewal) >= 0 && daysUntil(s.nextRenewal) <= 30)
+        .filter(
+          (s) =>
+            s.active &&
+            daysUntil(s.nextRenewal) >= 0 &&
+            daysUntil(s.nextRenewal) <= 30,
+        )
         .reduce((sum, s) => sum + s.price, 0),
-    [services]
+    [services],
   );
 
   const chartTooltipStyle = {
-    background: '#0a154f',
-    border: '1px solid rgba(255,255,255,0.15)',
+    background: "#ffffff",
+    border: "1px solid rgba(255,255,255,0.15)",
     borderRadius: 14,
-    fontFamily: 'Vazirmatn',
+    fontFamily: "Vazirmatn",
     fontSize: 12,
   };
 
@@ -56,20 +60,28 @@ export function AnalyticsPage(): React.JSX.Element {
       <div className={styles.kpis}>
         <div className={styles.kpi}>
           <span className={styles.kpiLabel}>هزینه ماهانه</span>
-          <span className={styles.kpiValue}>{formatMoney(monthlyTotal, 'IRT', currency)}</span>
+          <span className={styles.kpiValue}>
+            {formatMoney(monthlyTotal, "IRT", currency)}
+          </span>
         </div>
         <div className={styles.kpi}>
           <span className={styles.kpiLabel}>پرداخت ۳۰ روز آینده</span>
-          <span className={styles.kpiValue}>{formatMoney(upcomingCost, 'IRT', currency)}</span>
+          <span className={styles.kpiValue}>
+            {formatMoney(upcomingCost, "IRT", currency)}
+          </span>
         </div>
         {/* Extra KPIs visible on desktop 4-col grid */}
         <div className={styles.kpi}>
           <span className={styles.kpiLabel}>سرویس‌های فعال</span>
-          <span className={styles.kpiValue}>{toFaDigits(services.filter((s) => s.active).length)} سرویس</span>
+          <span className={styles.kpiValue}>
+            {toFaDigits(services.filter((s) => s.active).length)} سرویس
+          </span>
         </div>
         <div className={styles.kpi}>
           <span className={styles.kpiLabel}>دسته‌بندی‌ها</span>
-          <span className={styles.kpiValue}>{toFaDigits(byCat.length)} دسته</span>
+          <span className={styles.kpiValue}>
+            {toFaDigits(byCat.length)} دسته
+          </span>
         </div>
       </div>
 
@@ -79,7 +91,10 @@ export function AnalyticsPage(): React.JSX.Element {
           <p className={styles.panelTitle}>روند هزینه ماهانه</p>
           <div className={styles.chart}>
             <ResponsiveContainer width="100%" height={220}>
-              <AreaChart data={trend} margin={{ top: 10, right: 6, left: 6, bottom: 0 }}>
+              <AreaChart
+                data={trend}
+                margin={{ top: 10, right: 6, left: 6, bottom: 0 }}
+              >
                 <defs>
                   <linearGradient id="spend" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0%" stopColor="#63E8FF" stopOpacity={0.7} />
@@ -88,16 +103,29 @@ export function AnalyticsPage(): React.JSX.Element {
                 </defs>
                 <XAxis
                   dataKey="month"
-                  tick={{ fill: 'rgba(255,255,255,0.55)', fontSize: 11, fontFamily: 'Vazirmatn' }}
+                  tick={{
+                    fill: "rgba(255,255,255,0.55)",
+                    fontSize: 11,
+                    fontFamily: "Vazirmatn",
+                  }}
                   axisLine={false}
                   tickLine={false}
                 />
                 <Tooltip
                   contentStyle={chartTooltipStyle}
-                  labelStyle={{ color: '#fff' }}
-                  formatter={(v: number) => [formatMoney(v, 'IRT', currency), 'هزینه']}
+                  labelStyle={{ color: "#fff" }}
+                  formatter={(v: number) => [
+                    formatMoney(v, "IRT", currency),
+                    "هزینه",
+                  ]}
                 />
-                <Area type="monotone" dataKey="value" stroke="#63E8FF" strokeWidth={3} fill="url(#spend)" />
+                <Area
+                  type="monotone"
+                  dataKey="value"
+                  stroke="#63E8FF"
+                  strokeWidth={3}
+                  fill="url(#spend)"
+                />
               </AreaChart>
             </ResponsiveContainer>
           </div>
@@ -123,7 +151,10 @@ export function AnalyticsPage(): React.JSX.Element {
                 </Pie>
                 <Tooltip
                   contentStyle={chartTooltipStyle}
-                  formatter={(v: number, n) => [formatMoney(v, 'IRT', currency), n]}
+                  formatter={(v: number, n) => [
+                    formatMoney(v, "IRT", currency),
+                    n,
+                  ]}
                 />
               </PieChart>
             </ResponsiveContainer>
@@ -131,9 +162,14 @@ export function AnalyticsPage(): React.JSX.Element {
           <div className={styles.legend}>
             {byCat.map((slice) => (
               <div key={slice.category} className={styles.legendItem}>
-                <span className={styles.dot} style={{ background: slice.color }} />
+                <span
+                  className={styles.dot}
+                  style={{ background: slice.color }}
+                />
                 <span className={styles.legendLabel}>{slice.label}</span>
-                <span className={styles.legendValue}>{formatMoneyShort(slice.value)}</span>
+                <span className={styles.legendValue}>
+                  {formatMoneyShort(slice.value)}
+                </span>
               </div>
             ))}
           </div>
@@ -147,7 +183,9 @@ export function AnalyticsPage(): React.JSX.Element {
                 <span className={styles.rank}>{toFaDigits(i + 1)}</span>
                 <ServiceLogo service={item.service} size={40} />
                 <span className={styles.topName}>{item.service.name}</span>
-                <span className={styles.topPrice}>{formatMoney(item.monthly, 'IRT', currency)}</span>
+                <span className={styles.topPrice}>
+                  {formatMoney(item.monthly, "IRT", currency)}
+                </span>
               </div>
             ))}
           </div>

@@ -5,6 +5,7 @@ import {
 } from '@tabler/icons-react';
 import { useAuth } from '../store/use-auth';
 import { useSettings } from '../store/use-settings';
+import { WelcomeTransition } from '../components/welcome-transition';
 import styles from './auth-pages.module.css';
 
 const FloatingLines = lazy(() => import('../components/floating-lines'));
@@ -14,6 +15,7 @@ export function RegisterPage(): React.JSX.Element {
   const register     = useAuth((s) => s.register);
   const setUserName  = useSettings((s) => s.setUserName);
   const setUserEmail = useSettings((s) => s.setUserEmail);
+  const language     = useSettings((s) => s.language);
 
   const [name,     setName]     = useState('');
   const [email,    setEmail]    = useState('');
@@ -22,6 +24,7 @@ export function RegisterPage(): React.JSX.Element {
   const [showPass, setShowPass] = useState(false);
   const [error,    setError]    = useState('');
   const [loading,  setLoading]  = useState(false);
+  const [welcoming, setWelcoming] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,9 +34,19 @@ export function RegisterPage(): React.JSX.Element {
     setLoading(true); setError('');
     await new Promise((r) => setTimeout(r, 900));
     const ok = register(name, email, password);
-    if (ok) { setUserName(name.trim()); setUserEmail(email.trim().toLowerCase()); navigate('/'); }
-    else    { setError('خطا در ثبت نام'); setLoading(false); }
+    if (ok) {
+      setUserName(name.trim());
+      setUserEmail(email.trim().toLowerCase());
+      setWelcoming(true);
+    } else {
+      setError('خطا در ثبت نام');
+      setLoading(false);
+    }
   };
+
+  if (welcoming) {
+    return <WelcomeTransition userName={name} language={language} onDone={() => navigate('/')} />;
+  }
 
   return (
     <div className={styles.authLayout}>

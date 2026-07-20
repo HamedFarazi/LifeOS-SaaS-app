@@ -87,18 +87,34 @@
 
 /* Profile */
 .profile { position: relative; border-top: 1px solid var(--sidebar-border, rgba(255,255,255,0.06)); padding-top: 10px; margin-top: 10px; flex-shrink: 0; }
+.profileCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+.profileCard:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); }
+
 .profileRow { display: flex; align-items: center; gap: 9px; padding: 6px 8px; border-radius: 8px; transition: background 0.12s; cursor: pointer; }
 .profileRow:hover { background: rgba(255,255,255,0.04); }
 .profileInfo { flex: 1; min-width: 0; text-align: right; cursor: pointer; }
-.profileName  { font-size: 13px; font-weight: 600; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.profileEmail { font-size: 11px; color: var(--text-3); margin-top: 1px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.editIcon { color: var(--text-3); flex-shrink: 0; cursor: pointer; transition: color 0.12s; }
-.editIcon:hover { color: var(--text); }
+.profileName  { font-size: 13px; font-weight: 700; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.profileEmail { font-size: 11px; color: var(--text-3); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.editIcon {
+  background: none; border: none; color: var(--text-3); flex-shrink: 0; cursor: pointer;
+  display: flex; padding: 5px; border-radius: 6px; transition: color 0.12s, background 0.12s;
+}
+.editIcon:hover { color: var(--text); background: rgba(255,255,255,0.07); }
 
-.profileActions { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.profileActions { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
 .logoutBtn {
   background: none; border: none; color: var(--text-3); cursor: pointer;
-  display: flex; padding: 4px; border-radius: 5px; transition: color 0.12s, background 0.12s;
+  display: flex; padding: 5px; border-radius: 6px; transition: color 0.12s, background 0.12s;
 }
 .logoutBtn:hover { color: #F87171; background: rgba(248,113,113,0.1); }
 

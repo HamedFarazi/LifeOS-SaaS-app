@@ -6,6 +6,7 @@ import {
 } from '@tabler/icons-react';
 import { useAuth } from '../store/use-auth';
 import { useSettings } from '../store/use-settings';
+import { WelcomeTransition } from '../components/welcome-transition';
 import styles from './auth-pages.module.css';
 
 const FloatingLines = lazy(() => import('../components/floating-lines'));
@@ -15,6 +16,7 @@ export function LoginPage(): React.JSX.Element {
   const login        = useAuth((s) => s.login);
   const setUserEmail = useSettings((s) => s.setUserEmail);
   const setUserName  = useSettings((s) => s.setUserName);
+  const language     = useSettings((s) => s.language);
 
   const [email,    setEmail]    = useState('');
   const [password, setPassword] = useState('');
@@ -22,22 +24,38 @@ export function LoginPage(): React.JSX.Element {
   const [showPass, setShowPass] = useState(false);
   const [error,    setError]    = useState('');
   const [loading,  setLoading]  = useState(false);
+  const [welcoming, setWelcoming] = useState(false);
+  const [loggedName, setLoggedName] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim() || !password.trim()) { setError('لطفاً همه فیلدها را پر کنید'); return; }
     setLoading(true); setError('');
     await new Promise((r) => setTimeout(r, 800));
-    const ok = login('', email, password, remember);
-    if (ok) { setUserEmail(email.trim().toLowerCase()); navigate('/'); }
-    else    { setError('اطلاعات وارد شده صحیح نیست'); setLoading(false); }
+    const name = email.split('@')[0];
+    const ok = login(name, email, password, remember);
+    if (ok) {
+      setUserEmail(email.trim().toLowerCase());
+      setUserName(name);
+      setLoggedName(name);
+      setWelcoming(true);
+    } else {
+      setError('اطلاعات وارد شده صحیح نیست');
+      setLoading(false);
+    }
   };
 
   const handleSocial = (provider: string) => {
     const name = provider + ' User';
     login(name, `user@${provider.toLowerCase()}.com`, 'fake', true);
-    setUserName(name); navigate('/');
+    setUserName(name);
+    setLoggedName(name);
+    setWelcoming(true);
   };
+
+  if (welcoming) {
+    return <WelcomeTransition userName={loggedName} language={language} onDone={() => navigate('/')} />;
+  }
 
   return (
     <div className={styles.authLayout}>
