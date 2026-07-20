@@ -20,3 +20,41 @@
 .danger { color: #F87171; border-color: rgba(248,113,113,0.2); background: rgba(248,113,113,0.04); }
 .danger:hover { background: rgba(248,113,113,0.09); }
 .version { text-align: center; margin: 20px 0 0; font-size: 11px; color: rgba(230,237,243,0.2); }
+
+/* Background picker trigger button */
+.bgPickerBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.09);
+  background: rgba(255,255,255,0.03);
+  color: rgba(230,237,243,0.8);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.13s, border-color 0.13s;
+  text-align: right;
+}
+
+.bgPickerBtn:hover {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.3);
+  color: #BFDBFE;
+}
+
+.bgCurrentLabel {
+  margin-right: auto;
+  margin-left: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent, #3B82F6);
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 4px;
+  padding: 2px 7px;
+}

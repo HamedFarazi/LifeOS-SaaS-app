@@ -5,4 +5,7 @@
   font-family: 'Vazirmatn', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   transition: background 0.25s ease, color 0.2s ease;
+  position: relative;
+  /* AppBackground sits at z-index 0, shell content at z-index 1 */
+  isolation: isolate;
 }

@@ -1,0 +1,34 @@
+/* AppBackground – fixed layer behind all app content */
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Image background */
+.imageBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Canvas-based backgrounds (Ballpit / Hyperspeed / Galaxy) */
+.canvasBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Semi-transparent overlay to keep content readable */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 30, 0.60);
+  backdrop-filter: blur(0px);
+}
