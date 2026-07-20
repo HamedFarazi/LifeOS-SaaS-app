@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+﻿import React, { useMemo } from 'react';
 import {
   ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip,
   BarChart, Bar, CartesianGrid,
@@ -72,7 +72,7 @@ export function ReportsPage(): React.JSX.Element {
       {/* Summary KPIs */}
       <div className={styles.kpiRow}>
         {[
-          { icon: <Wallet size={18} strokeWidth={1.8} />, label: 'هزینه ماهانه',   value: formatMoney(monthlyTotal, 'IRT', currency), color: '#8B5CF6' },
+          { icon: <Wallet size={18} strokeWidth={1.8} />, label: 'هزینه ماهانه',   value: formatMoney(monthlyTotal, 'IRT', currency), color: '#3B82F6' },
           { icon: <TrendingUp size={18} strokeWidth={1.8} />, label: 'هزینه سالانه', value: formatMoney(yearlyTotal, 'IRT', currency),  color: '#22D3EE' },
           { icon: <Layers size={18} strokeWidth={1.8} />,    label: 'تعداد سرویس',  value: toFaDigits(active.length) + ' سرویس',        color: '#34D399' },
           { icon: <CalendarClock size={18} strokeWidth={1.8} />, label: 'پرداخت ۳۰ روز', value: formatMoney(upcoming30Cost, 'IRT', currency), color: '#F59E0B' },
@@ -107,15 +107,15 @@ export function ReportsPage(): React.JSX.Element {
               <AreaChart data={trend} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="trendGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stopColor="#8B5CF6" stopOpacity={0.5} />
-                    <stop offset="100%" stopColor="#8B5CF6" stopOpacity={0} />
+                    <stop offset="0%"   stopColor="#3B82F6" stopOpacity={0.5} />
+                    <stop offset="100%" stopColor="#3B82F6" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
                 <XAxis dataKey="month" tick={{ fill: 'rgba(255,255,255,0.4)', fontSize: 11, fontFamily: 'Vazirmatn' }} axisLine={false} tickLine={false} />
                 <YAxis tick={{ fill: 'rgba(255,255,255,0.4)', fontSize: 10 }} axisLine={false} tickLine={false} tickFormatter={(v) => (v / 1000).toFixed(0) + 'K'} />
                 <Tooltip contentStyle={TOOLTIP_STYLE} labelStyle={{ color: '#fff' }} formatter={(v: number) => [formatMoney(v, 'IRT', currency), 'هزینه']} />
-                <Area type="monotone" dataKey="value" stroke="#8B5CF6" strokeWidth={2.5} fill="url(#trendGrad)" />
+                <Area type="monotone" dataKey="value" stroke="#3B82F6" strokeWidth={2.5} fill="url(#trendGrad)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>

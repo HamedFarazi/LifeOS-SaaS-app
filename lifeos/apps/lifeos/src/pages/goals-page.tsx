@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Plus, Laptop, Plane, Shield, Target, Trash2, PlusCircle } from 'lucide-react';
 import { useGoals } from '../store/use-goals';
 import { useSettings } from '../store/use-settings';
@@ -15,7 +15,7 @@ const GOAL_ICONS: Record<string, React.ReactNode> = {
   target: <Target size={20} strokeWidth={1.8} />,
 };
 
-const COLORS = ['#8B5CF6', '#22D3EE', '#34D399', '#F59E0B', '#FB7185', '#6366F1'];
+const COLORS = ['#3B82F6', '#22D3EE', '#34D399', '#F59E0B', '#FB7185', '#6366F1'];
 
 function GoalCard({ goal, currency }: { goal: Goal; currency: 'IRT' | 'USD' }) {
   const { removeGoal, deposit } = useGoals();

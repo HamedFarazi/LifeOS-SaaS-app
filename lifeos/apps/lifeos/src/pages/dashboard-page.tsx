@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+﻿import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   ResponsiveContainer, AreaChart, Area, XAxis, Tooltip,
@@ -77,13 +77,13 @@ export function DashboardPage(): React.JSX.Element {
                 <AreaChart data={trend} margin={{ top: 4, right: 4, left: 0, bottom: 0 }}>
                   <defs>
                     <linearGradient id="dashGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%"   stopColor="#8B5CF6" stopOpacity={0.45} />
-                      <stop offset="100%" stopColor="#8B5CF6" stopOpacity={0} />
+                      <stop offset="0%"   stopColor="#3B82F6" stopOpacity={0.45} />
+                      <stop offset="100%" stopColor="#3B82F6" stopOpacity={0} />
                     </linearGradient>
                   </defs>
                   <XAxis dataKey="month" tick={{ fill: 'rgba(255,255,255,0.35)', fontSize: 10, fontFamily: 'Vazirmatn' }} axisLine={false} tickLine={false} />
                   <Tooltip contentStyle={TOOLTIP} labelStyle={{ color: '#fff' }} formatter={(v: number) => [formatMoney(v, 'IRT', currency), 'هزینه']} />
-                  <Area type="monotone" dataKey="value" stroke="#8B5CF6" strokeWidth={2} fill="url(#dashGrad)" />
+                  <Area type="monotone" dataKey="value" stroke="#3B82F6" strokeWidth={2} fill="url(#dashGrad)" />
                 </AreaChart>
               </ResponsiveContainer>
             </div>
@@ -170,13 +170,13 @@ export function DashboardPage(): React.JSX.Element {
               <AreaChart data={trend} margin={{ top: 4, right: 4, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="dashGradM" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stopColor="#8B5CF6" stopOpacity={0.4} />
-                    <stop offset="100%" stopColor="#8B5CF6" stopOpacity={0} />
+                    <stop offset="0%"   stopColor="#3B82F6" stopOpacity={0.4} />
+                    <stop offset="100%" stopColor="#3B82F6" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <XAxis dataKey="month" tick={{ fill: 'rgba(255,255,255,0.35)', fontSize: 10, fontFamily: 'Vazirmatn' }} axisLine={false} tickLine={false} />
                 <Tooltip contentStyle={TOOLTIP} formatter={(v: number) => [formatMoney(v, 'IRT', currency), 'هزینه']} />
-                <Area type="monotone" dataKey="value" stroke="#8B5CF6" strokeWidth={2} fill="url(#dashGradM)" />
+                <Area type="monotone" dataKey="value" stroke="#3B82F6" strokeWidth={2} fill="url(#dashGradM)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>

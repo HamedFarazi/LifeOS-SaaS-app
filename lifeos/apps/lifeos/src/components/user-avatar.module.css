@@ -1,8 +1,8 @@
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+﻿@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 .avatar {
   position: relative; border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.1);
-  background: linear-gradient(135deg, #6D28D9, #4338CA);
+  background: linear-gradient(135deg, #1D4ED8, #4338CA);
   display: flex; align-items: center; justify-content: center;
   color: #fff; font-weight: 700; flex-shrink: 0; overflow: hidden;
   padding: 0; cursor: pointer; font-family: inherit;

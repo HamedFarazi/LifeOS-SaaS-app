@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+﻿import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   IconPlus, IconWorld, IconCalendarPlus, IconCheckbox, IconCoin,
@@ -24,7 +24,7 @@ interface QuickAction {
 }
 
 const ACTIONS: QuickAction[] = [
-  { icon: <IconPlus         size={20} stroke={1.8} />, label: 'افزودن سرویس', to: '/add',      color: '#7C3AED' },
+  { icon: <IconPlus         size={20} stroke={1.8} />, label: 'افزودن سرویس', to: '/add',      color: '#2563EB' },
   { icon: <IconWorld        size={20} stroke={1.8} />, label: 'افزودن دامنه',  to: '/add',      color: '#06B6D4' },
   { icon: <IconCalendarPlus size={20} stroke={1.8} />, label: 'تمدید جدید',   to: '/renewals', color: '#34D399' },
   { icon: <IconCheckbox     size={20} stroke={1.8} />, label: 'افزودن وظیفه', to: '/add',      color: '#FBBF24' },

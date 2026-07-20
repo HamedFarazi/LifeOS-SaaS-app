@@ -1,4 +1,4 @@
-.grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 8px; }
+﻿.grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 8px; }
 @media (min-width: 768px)  { .grid { grid-template-columns: repeat(2,1fr); } }
 @media (min-width: 1024px) { .grid { grid-template-columns: repeat(3,1fr); } }
 .goalCard { padding: 16px; border-radius: 10px; background: #1C2333; border: 1px solid rgba(255,255,255,0.07); display: flex; flex-direction: column; gap: 10px; transition: background 0.12s; }
@@ -19,19 +19,19 @@
 .depositBtn:hover { background: rgba(255,255,255,0.06); }
 .depositRow { display: flex; gap: 6px; }
 .depositInput { flex: 1; padding: 8px 10px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.04); color: #E6EDF3; font-family: inherit; font-size: 12px; outline: none; }
-.depositInput:focus { border-color: #7C3AED; }
+.depositInput:focus { border-color: #2563EB; }
 .confirmBtn  { padding: 8px 12px; border-radius: 7px; border: none; color: #fff; font-family: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
 .cancelDepBtn { padding: 8px; border-radius: 7px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: rgba(230,237,243,0.5); font-family: inherit; font-size: 12px; cursor: pointer; }
 .done { text-align: center; font-size: 12px; font-weight: 600; color: #34D399; }
 .addForm { display: flex; flex-direction: column; gap: 9px; padding: 14px; border-radius: 10px; background: #1C2333; border: 1px solid rgba(255,255,255,0.09); margin-bottom: 14px; }
 .addInput { width: 100%; padding: 10px 13px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.04); color: #E6EDF3; font-family: inherit; font-size: 13px; outline: none; }
-.addInput:focus { border-color: #7C3AED; }
+.addInput:focus { border-color: #2563EB; }
 .colorRow { display: flex; gap: 7px; }
 .colorDot { width: 24px; height: 24px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; transition: transform 0.12s; }
 .colorDot:hover { transform: scale(1.12); }
 .colorDotActive { border-color: #fff; transform: scale(1.1); }
 .formActions { display: flex; gap: 7px; }
 .cancelAdd { flex: 1; padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: rgba(230,237,243,0.6); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
-.saveAdd   { flex: 2; padding: 10px; border-radius: 8px; border: none; background: #7C3AED; color: #fff; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.saveAdd   { flex: 2; padding: 10px; border-radius: 8px; border: none; background: #2563EB; color: #fff; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
 .addCard { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px; padding: 28px; border-radius: 10px; border: 2px dashed rgba(255,255,255,0.08); background: transparent; color: rgba(230,237,243,0.28); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: border-color 0.12s, color 0.12s; }
-.addCard:hover { border-color: rgba(124,58,237,0.4); color: #C4B5FD; }
+.addCard:hover { border-color: rgba(37,99,235,0.4); color: #BFDBFE; }

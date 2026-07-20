@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+﻿import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Goal } from '../types/index';
 
@@ -21,7 +21,7 @@ const SEED_GOALS: Goal[] = [
     targetAmount: 50_000_000,
     savedAmount: 18_000_000,
     currency: 'IRT',
-    color: '#8B5CF6',
+    color: '#3B82F6',
     icon: 'laptop',
     createdAt: new Date(Date.now() - 60 * 86400000).toISOString(),
   },

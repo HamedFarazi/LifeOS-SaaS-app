@@ -1,4 +1,4 @@
-.nav {
+﻿.nav {
   position: fixed;
   bottom: 16px;
   left: 50%;
@@ -77,9 +77,9 @@
   border-color: rgba(255,255,255,0.14);
 }
 .dockItemActive {
-  background: rgba(124, 58, 237, 0.2);
-  color: #C4B5FD;
-  border-color: rgba(124, 58, 237, 0.35);
+  background: rgba(37,99,235, 0.2);
+  color: #BFDBFE;
+  border-color: rgba(37,99,235, 0.35);
 }
 
 /* Active dot */
@@ -91,7 +91,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #A78BFA;
+  background: #93C5FD;
 }
 
 /* Separator */
@@ -106,7 +106,7 @@
 /* FAB */
 .fab {
   border-radius: 12px;
-  background: #7C3AED;
+  background: #2563EB;
   border: none;
   color: #fff;
   display: flex;
@@ -114,7 +114,7 @@
   justify-content: center;
   cursor: pointer;
   flex-shrink: 0;
-  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.5);
+  box-shadow: 0 4px 14px rgba(37,99,235, 0.5);
   transition: background 0.12s;
 }
-.fab:hover { background: #6D28D9; }
+.fab:hover { background: #1D4ED8; }

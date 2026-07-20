@@ -1,4 +1,4 @@
-.settingsGrid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 4px; }
+﻿.settingsGrid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 4px; }
 @media (min-width: 1024px) { .settingsGrid { grid-template-columns: 1fr 1fr; } }
 .section { padding: 16px; border-radius: 10px; background: #1C2333; border: 1px solid rgba(255,255,255,0.06); }
 .sectionTitle { font-size: 12px; font-weight: 600; color: rgba(230,237,243,0.5); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -6,13 +6,13 @@
 .themeRow { display: flex; gap: 7px; margin-top: 12px; }
 .themeBtn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 9px 6px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.03); color: rgba(230,237,243,0.45); font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.12s; }
 .themeBtn:hover { background: rgba(255,255,255,0.07); color: rgba(230,237,243,0.8); }
-.themeBtnActive { background: rgba(124,58,237,0.15); border-color: rgba(124,58,237,0.35); color: #C4B5FD; }
+.themeBtnActive { background: rgba(37,99,235,0.15); border-color: rgba(37,99,235,0.35); color: #BFDBFE; }
 .segment { display: flex; gap: 4px; margin-top: 12px; background: rgba(255,255,255,0.03); padding: 3px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.07); }
 .segBtn { flex: 1; padding: 8px; border-radius: 6px; border: none; background: transparent; color: rgba(230,237,243,0.4); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.12s, color 0.12s; }
 .segBtn:hover { color: rgba(230,237,243,0.75); }
-.segActive { background: rgba(124,58,237,0.2); color: #C4B5FD; }
+.segActive { background: rgba(37,99,235,0.2); color: #BFDBFE; }
 .budgetInput { width: 100%; padding: 10px 12px; margin-top: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.04); color: #E6EDF3; font-family: inherit; font-size: 14px; outline: none; transition: border-color 0.12s; }
-.budgetInput:focus { border-color: #7C3AED; }
+.budgetInput:focus { border-color: #2563EB; }
 .budgetInput::placeholder { color: rgba(230,237,243,0.2); }
 .actionList { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
 .action { display: flex; align-items: center; gap: 10px; width: 100%; text-align: right; padding: 11px 12px; border-radius: 8px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); color: rgba(230,237,243,0.7); font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; transition: background 0.12s; }

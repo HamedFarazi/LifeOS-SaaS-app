@@ -4,10 +4,11 @@ import {
   IconLayoutDashboard, IconStack2, IconCalendarStats,
   IconChartPie, IconWallet, IconTarget, IconReportAnalytics,
   IconSettings, IconPlus, IconSearch, IconPencil, IconCamera,
-  IconCreditCard, IconChevronLeft,
+  IconCreditCard, IconChevronLeft, IconLogout,
 } from '@tabler/icons-react';
 import { useSettings } from '../store/use-settings';
 import { useServices } from '../store/use-services';
+import { useAuth } from '../store/use-auth';
 import { resizeImageToDataUrl, ACCEPTED_IMAGE_TYPES } from '../lib/image';
 import { monthlyCost, daysUntil } from '../lib/dates';
 import { formatMoney, toFaDigits } from '../lib/format';
@@ -28,6 +29,10 @@ export function DesktopSidebar(): React.JSX.Element {
   const monthlyBudget = useSettings((s) => s.monthlyBudget);
   const currency     = useSettings((s) => s.currency);
   const setUserName  = useSettings((s) => s.setUserName);
+  const setUserEmail = useSettings((s) => s.setUserEmail);
+  const setAvatarImage = useSettings((s) => s.setAvatarImage);
+  const services     = useServices((s) => s.services);
+  const logout       = useAuth((s) => s.logout);
   const setUserEmail = useSettings((s) => s.setUserEmail);
   const setAvatarImage = useSettings((s) => s.setAvatarImage);
   const services     = useServices((s) => s.services);
@@ -168,8 +173,15 @@ export function DesktopSidebar(): React.JSX.Element {
                 <p className={styles.profileName}>{userName}</p>
                 <p className={styles.profileEmail}>{userEmail || t('lifeosUser')}</p>
               </div>
-              <IconPencil size={13} stroke={1.8} className={styles.editIcon}
-                onClick={() => { setNameDraft(userName); setEmailDraft(userEmail ?? ''); setEditing(true); }} />
+              <div className={styles.profileActions}>
+                <IconPencil size={13} stroke={1.8} className={styles.editIcon}
+                  onClick={() => { setNameDraft(userName); setEmailDraft(userEmail ?? ''); setEditing(true); }} />
+                <button type="button" className={styles.logoutBtn}
+                  onClick={() => { logout(); navigate('/login'); }}
+                  title="خروج">
+                  <IconLogout size={13} stroke={1.8} />
+                </button>
+              </div>
             </div>
           ) : (
             <div className={styles.editPanel}>

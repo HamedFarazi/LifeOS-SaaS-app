@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { Service } from '../types/index';
+import { ServiceLogo } from './service-logo';
 import { monthlyCost, daysUntil } from '../lib/dates';
 import { formatMoney, toFaDigits } from '../lib/format';
 import { useSettings } from '../store/use-settings';
+import { useT } from '../hooks/use-t';
 import styles from './service-mini-popup.module.css';
 
 export interface ServiceMiniPopupProps {
@@ -36,18 +38,13 @@ export function ServiceMiniPopup({ service, onClose }: ServiceMiniPopupProps): R
 
   const days = daysUntil(service.nextRenewal);
   const cost = formatMoney(monthlyCost(service), 'IRT', displayCurrency);
+  const t    = useT();
 
   return (
     <div className={styles.overlay}>
       <div ref={ref} className={styles.popup} role="dialog">
         <div className={styles.logoWrap}>
-          {service.logoImage ? (
-            <img src={service.logoImage} alt={service.name} className={styles.logoImg} />
-          ) : (
-            <div className={styles.logoTile} style={{ background: service.color }}>
-              {service.logoText ?? service.name.charAt(0)}
-            </div>
-          )}
+          <ServiceLogo service={service} size={64} />
         </div>
 
         <p className={styles.name}>{service.name}</p>
@@ -55,16 +52,16 @@ export function ServiceMiniPopup({ service, onClose }: ServiceMiniPopupProps): R
 
         <div className={styles.meta}>
           <div className={styles.metaItem}>
-            <span className={styles.metaLabel}>هزینه ماهانه</span>
+            <span className={styles.metaLabel}>{t('monthlySpend')}</span>
             <span className={styles.metaValue}>{cost}</span>
           </div>
           <div className={styles.metaDivider} />
           <div className={styles.metaItem}>
-            <span className={styles.metaLabel}>تا تمدید</span>
+            <span className={styles.metaLabel}>{t('renewals')}</span>
             <span
               className={`${styles.metaValue} ${days <= 3 ? styles.urgent : days <= 7 ? styles.soon : ''}`}
             >
-              {days <= 0 ? 'منقضی' : days === 1 ? 'فردا' : `${toFaDigits(days)} روز`}
+              {days <= 0 ? t('expired') : days === 1 ? t('tomorrow') : `${toFaDigits(days)} ${t('daysLeft')}`}
             </span>
           </div>
         </div>
@@ -74,7 +71,7 @@ export function ServiceMiniPopup({ service, onClose }: ServiceMiniPopupProps): R
           className={styles.detailBtn}
           onClick={() => { navigate(`/service/${service.id}`); onClose(); }}
         >
-          مشاهده جزئیات
+          {t('manage')}
         </button>
       </div>
     </div>

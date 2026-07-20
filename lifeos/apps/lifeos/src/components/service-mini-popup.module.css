@@ -1,4 +1,4 @@
-@keyframes popIn { from { opacity:0; transform: translate(-50%,-50%) scale(0.95); } to { opacity:1; transform: translate(-50%,-50%) scale(1); } }
+﻿@keyframes popIn { from { opacity:0; transform: translate(-50%,-50%) scale(0.95); } to { opacity:1; transform: translate(-50%,-50%) scale(1); } }
 .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 150; }
 .popup {
   position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
@@ -21,7 +21,7 @@
 .metaDivider { width: 1px; height: 28px; background: rgba(255,255,255,0.08); }
 .detailBtn {
   width: 100%; padding: 11px; border-radius: 10px; border: none;
-  background: #7C3AED; color: #fff; font-family: inherit; font-size: 13.5px; font-weight: 700; cursor: pointer;
+  background: #2563EB; color: #fff; font-family: inherit; font-size: 13.5px; font-weight: 700; cursor: pointer;
   transition: background 0.12s;
 }
-.detailBtn:hover { background: #6D28D9; }
+.detailBtn:hover { background: #1D4ED8; }

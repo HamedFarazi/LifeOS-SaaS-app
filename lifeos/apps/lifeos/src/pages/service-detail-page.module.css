@@ -1,4 +1,4 @@
-.hero { margin-top: 4px; padding: 22px 18px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; position: relative; overflow: hidden; margin-bottom: 16px; }
+﻿.hero { margin-top: 4px; padding: 22px 18px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; position: relative; overflow: hidden; margin-bottom: 16px; }
 .hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.2); z-index: 0; }
 .hero > * { position: relative; z-index: 1; }
 .name { font-size: 20px; font-weight: 700; color: #fff; margin-top: 4px; }
@@ -13,6 +13,6 @@
 .action:hover { background: rgba(255,255,255,0.08); color: #E6EDF3; }
 .danger  { color: #F87171; border-color: rgba(248,113,113,0.2); background: rgba(248,113,113,0.04); }
 .danger:hover { background: rgba(248,113,113,0.09); }
-.primary { background: #7C3AED; border-color: transparent; color: #fff; }
-.primary:hover { background: #6D28D9; }
+.primary { background: #2563EB; border-color: transparent; color: #fff; }
+.primary:hover { background: #1D4ED8; }
 .notFound { text-align: center; color: rgba(230,237,243,0.35); padding: 40px 0; }

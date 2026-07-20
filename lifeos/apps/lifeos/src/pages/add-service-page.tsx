@@ -9,7 +9,7 @@ import { resizeImageToDataUrl, ACCEPTED_IMAGE_TYPES } from '../lib/image';
 import type { BillingCycle, Currency, ServiceCategory } from '../types/index';
 import styles from './add-service-page.module.css';
 
-const COLORS = ['#A855F7', '#2FD0FF', '#63E8FF', '#34D399', '#F472B6', '#FBBF24', '#FB7185', '#6366F1'];
+const COLORS = ['#2563EB', '#2FD0FF', '#63E8FF', '#34D399', '#F472B6', '#FBBF24', '#FB7185', '#6366F1'];
 
 export function AddServicePage(): React.JSX.Element {
   const addService = useServices((s) => s.addService);

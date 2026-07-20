@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import {
-  LayoutDashboard, Layers, CalendarClock, ChartPie,
-  Wallet, Settings2, Pencil, Camera, Target, FileBarChart2,
-} from 'lucide-react';
+  IconLayoutDashboard, IconStack2, IconCalendarStats,
+  IconChartPie, IconWallet, IconSettings, IconPencil,
+  IconCamera, IconTarget, IconReportAnalytics, IconLogout,
+} from '@tabler/icons-react';
 import { useSettings } from '../store/use-settings';
+import { useAuth } from '../store/use-auth';
 import { resizeImageToDataUrl, ACCEPTED_IMAGE_TYPES } from '../lib/image';
 import { UserAvatar } from './user-avatar';
 import styles from './sidebar-drawer.module.css';
@@ -25,14 +27,14 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { path: '/',          label: 'داشبورد',   icon: <LayoutDashboard size={20} strokeWidth={1.8} /> },
-  { path: '/services',  label: 'سرویس‌ها',  icon: <Layers          size={20} strokeWidth={1.8} /> },
-  { path: '/renewals',  label: 'تمدیدها',   icon: <CalendarClock   size={20} strokeWidth={1.8} /> },
-  { path: '/analytics', label: 'تحلیل',     icon: <ChartPie        size={20} strokeWidth={1.8} /> },
-  { path: '/expenses',  label: 'هزینه‌ها',  icon: <Wallet          size={20} strokeWidth={1.8} /> },
-  { path: '/goals',     label: 'اهداف',     icon: <Target          size={20} strokeWidth={1.8} /> },
-  { path: '/reports',   label: 'گزارش‌ها',  icon: <FileBarChart2   size={20} strokeWidth={1.8} /> },
-  { path: '/settings',  label: 'تنظیمات',   icon: <Settings2       size={20} strokeWidth={1.8} /> },
+  { path: '/',          label: 'داشبورد',   icon: <IconLayoutDashboard size={20} strokeWidth={1.8} /> },
+  { path: '/services',  label: 'سرویس‌ها',  icon: <IconStack2          size={20} strokeWidth={1.8} /> },
+  { path: '/renewals',  label: 'تمدیدها',   icon: <IconCalendarStats   size={20} strokeWidth={1.8} /> },
+  { path: '/analytics', label: 'تحلیل',     icon: <IconChartPie        size={20} strokeWidth={1.8} /> },
+  { path: '/expenses',  label: 'هزینه‌ها',  icon: <IconWallet          size={20} strokeWidth={1.8} /> },
+  { path: '/goals',     label: 'اهداف',     icon: <IconTarget          size={20} strokeWidth={1.8} /> },
+  { path: '/reports',   label: 'گزارش‌ها',  icon: <IconReportAnalytics size={20} strokeWidth={1.8} /> },
+  { path: '/settings',  label: 'تنظیمات',   icon: <IconSettings        size={20} strokeWidth={1.8} /> },
 ];
 
 /**
