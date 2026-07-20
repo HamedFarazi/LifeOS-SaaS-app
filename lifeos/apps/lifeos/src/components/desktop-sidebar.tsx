@@ -33,9 +33,6 @@ export function DesktopSidebar(): React.JSX.Element {
   const setAvatarImage = useSettings((s) => s.setAvatarImage);
   const services     = useServices((s) => s.services);
   const logout       = useAuth((s) => s.logout);
-  const setUserEmail = useSettings((s) => s.setUserEmail);
-  const setAvatarImage = useSettings((s) => s.setAvatarImage);
-  const services     = useServices((s) => s.services);
 
   const fileRef      = useRef<HTMLInputElement>(null);
   const avatarRef    = useRef<HTMLButtonElement>(null);

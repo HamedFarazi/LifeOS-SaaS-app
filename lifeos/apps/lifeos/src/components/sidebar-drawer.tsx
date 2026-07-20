@@ -48,11 +48,12 @@ const NAV_ITEMS: NavItem[] = [
 export function SidebarDrawer({ open, onClose }: SidebarDrawerProps): React.JSX.Element {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const userName = useSettings((s) => s.userName);
-  const userEmail = useSettings((s) => s.userEmail);
-  const setUserName = useSettings((s) => s.setUserName);
+  const userName     = useSettings((s) => s.userName);
+  const userEmail    = useSettings((s) => s.userEmail);
+  const setUserName  = useSettings((s) => s.setUserName);
   const setUserEmail = useSettings((s) => s.setUserEmail);
   const setAvatarImage = useSettings((s) => s.setAvatarImage);
+  const logout = useAuth((s) => s.logout);
   const fileRef = useRef<HTMLInputElement>(null);
   const [editing, setEditing] = useState(false);
   const [nameDraft, setNameDraft] = useState(userName);
@@ -111,7 +112,7 @@ export function SidebarDrawer({ open, onClose }: SidebarDrawerProps): React.JSX.
                   setEditing(true);
                 }}
               >
-                <Pencil size={14} strokeWidth={1.8} /> ویرایش پروفایل
+                <IconPencil size={14} stroke={1.8} /> ویرایش پروفایل
               </button>
             </>
           ) : (
@@ -130,7 +131,7 @@ export function SidebarDrawer({ open, onClose }: SidebarDrawerProps): React.JSX.
                 inputMode="email"
               />
               <button type="button" className={styles.changePhoto} onClick={() => fileRef.current?.click()}>
-                <Camera size={14} strokeWidth={1.8} /> تغییر تصویر پروفایل
+                <IconCamera size={14} stroke={1.8} /> تغییر تصویر پروفایل
               </button>
               <div className={styles.editActions}>
                 <button type="button" className={styles.cancelBtn} onClick={() => setEditing(false)}>انصراف</button>
@@ -163,6 +164,15 @@ export function SidebarDrawer({ open, onClose }: SidebarDrawerProps): React.JSX.
             );
           })}
         </nav>
+
+        <button
+          type="button"
+          className={styles.logoutBtn}
+          onClick={() => { logout(); navigate('/login'); onClose(); }}
+        >
+          <IconLogout size={16} stroke={1.8} />
+          خروج از حساب
+        </button>
 
         <p className={styles.footer}>LifeOS v1.0</p>
       </aside>
