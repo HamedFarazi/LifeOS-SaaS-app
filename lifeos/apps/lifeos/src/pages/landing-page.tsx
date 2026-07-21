@@ -10,6 +10,7 @@ import { BackgroundBoxes } from '../components/background-boxes';
 import { ContainerScroll } from '../components/container-scroll';
 import PixelCard from '../components/pixel-card';
 import BorderGlow from '../components/border-glow';
+import { InstallButton } from '../components/pwa-update-toast';
 
 // ── animation variants ────────────────────────────────────────────────────────
 const fadeUp = {
@@ -188,6 +189,7 @@ function HeroSection({ onStart }: { onStart: () => void }) {
             <button className={styles.btnGhost} onClick={onStart}>
               مشاهده داشبورد
             </button>
+            <InstallButton variant="hero" />
           </motion.div>
 
           <motion.div variants={fadeUp} className={styles.heroTrust}>

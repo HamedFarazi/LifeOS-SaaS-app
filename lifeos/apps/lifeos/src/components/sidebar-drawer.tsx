@@ -9,6 +9,7 @@ import { useSettings } from '../store/use-settings';
 import { useAuth } from '../store/use-auth';
 import { resizeImageToDataUrl, ACCEPTED_IMAGE_TYPES } from '../lib/image';
 import { UserAvatar } from './user-avatar';
+import { InstallButton } from './pwa-update-toast';
 import styles from './sidebar-drawer.module.css';
 
 /**
@@ -164,6 +165,8 @@ export function SidebarDrawer({ open, onClose }: SidebarDrawerProps): React.JSX.
             );
           })}
         </nav>
+
+        <InstallButton variant="sidebar" />
 
         <button
           type="button"

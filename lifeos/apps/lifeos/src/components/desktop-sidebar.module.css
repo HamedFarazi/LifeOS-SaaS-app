@@ -130,3 +130,10 @@
 .cancelBtn, .saveBtn { flex: 1; padding: 7px; border-radius: 7px; font-family: inherit; font-size: 11px; font-weight: 700; cursor: pointer; border: none; }
 .cancelBtn { background: rgba(255,255,255,0.05); color: var(--text-2); border: 1px solid var(--border); }
 .saveBtn   { background: var(--accent); color: #fff; }
+
+/* PWA install button wrapper in sidebar */
+.installBtnWrap {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  flex-shrink: 0;
+}

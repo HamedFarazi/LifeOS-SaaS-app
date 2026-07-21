@@ -17,5 +17,5 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "lifeos.tsx"]
+  "include": ["src", "lifeos.tsx", "vite-env.d.ts"]
 }

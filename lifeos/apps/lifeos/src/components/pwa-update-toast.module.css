@@ -1,0 +1,120 @@
+/* PWA Update Toast */
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #1A2236;
+  border: 1px solid rgba(59,130,246,0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  white-space: nowrap;
+  animation: slideUp 0.3s ease;
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+  direction: rtl;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@media (min-width: 1024px) {
+  .toast {
+    bottom: 24px;
+    left: auto;
+    right: 24px;
+    transform: none;
+    animation: slideIn 0.3s ease;
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(12px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+}
+
+.toastIcon {
+  color: #3B82F6;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.toastText {
+  font-size: 13px;
+  font-weight: 500;
+  color: #E2E8F0;
+  flex: 1;
+}
+
+.toastBtn {
+  padding: 6px 14px;
+  border-radius: 7px;
+  border: none;
+  background: #2563EB;
+  color: #fff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.toastBtn:hover { background: #1D4ED8; }
+
+/* Install Button variants */
+.installBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+.installBtn:disabled { opacity: 0.6; cursor: default; }
+
+/* sidebar variant */
+.installBtn_sidebar {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: rgba(37,99,235,0.12);
+  border: 1px solid rgba(37,99,235,0.25);
+  color: #93C5FD;
+  font-size: 12px;
+  justify-content: center;
+}
+.installBtn_sidebar:hover:not(:disabled) {
+  background: rgba(37,99,235,0.2);
+  border-color: rgba(37,99,235,0.4);
+}
+
+/* hero variant */
+.installBtn_hero {
+  padding: 11px 22px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #E2E8F0;
+  font-size: 14px;
+}
+.installBtn_hero:hover:not(:disabled) {
+  background: rgba(255,255,255,0.14);
+}
+
+/* inline variant */
+.installBtn_inline {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #2563EB;
+  color: #fff;
+  font-size: 13px;
+}
+.installBtn_inline:hover:not(:disabled) { background: #1D4ED8; }

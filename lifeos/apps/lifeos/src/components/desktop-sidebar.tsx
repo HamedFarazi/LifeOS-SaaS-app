@@ -16,6 +16,7 @@ import { useT } from '../hooks/use-t';
 import { UserAvatar } from './user-avatar';
 import { QuickActionsSheet } from './quick-actions-sheet';
 import { GlobalSearch } from './global-search';
+import { InstallButton } from './pwa-update-toast';
 import styles from './desktop-sidebar.module.css';
 
 interface NavItem { path: string; labelKey: string; icon: React.ReactNode; }
@@ -158,6 +159,9 @@ export function DesktopSidebar(): React.JSX.Element {
             </>
           )}
         </div>
+
+        {/* Install PWA */}
+        <InstallButton variant="sidebar" className={styles.installBtnWrap} />
 
         {/* Profile */}
         <div className={styles.profile}>

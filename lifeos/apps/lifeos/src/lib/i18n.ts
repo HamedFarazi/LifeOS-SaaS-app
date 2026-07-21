@@ -75,8 +75,14 @@ export const translations = {
     resetApp:        'بازنشانی برنامه',
     resetConfirm:    'بازنشانی کامل؟ همه داده‌ها حذف می‌شوند.',
     version:         'LifeOS · نسخه ۱.۰.۰',
-
-    // Auth
+    bgSection:       'بکگراند سامانه',
+    bgSectionHint:   'پس‌زمینه متحرک یا تصویری برای کل اپلیکیشن',
+    bgChange:        'تغییر بکگراند',
+    bgDefault:       'پیشفرض',
+    bgImage:         'تصویر',
+    bgBallpit:       'توپ‌های شناور',
+    bgHyperspeed:    'سرعت نور',
+    bgGalaxy:        'کهکشان',
     authTitle:   'LifeOS',
     authTagline: 'مدیریت هوشمند سرویس‌ها و هزینه‌ها',
     loginGoogle: 'ورود با Google',
@@ -204,6 +210,14 @@ export const translations = {
     resetApp:        'Reset app',
     resetConfirm:    'Full reset? All data will be deleted.',
     version:         'LifeOS · Version 1.0.0',
+    bgSection:       'App Background',
+    bgSectionHint:   'Animated or image background for the entire app',
+    bgChange:        'Change Background',
+    bgDefault:       'Default',
+    bgImage:         'Image',
+    bgBallpit:       'Floating Balls',
+    bgHyperspeed:    'Hyperspeed',
+    bgGalaxy:        'Galaxy',
 
     // Auth
     authTitle:   'LifeOS',

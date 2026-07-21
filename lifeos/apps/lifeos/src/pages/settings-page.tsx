@@ -29,11 +29,11 @@ export function SettingsPage(): React.JSX.Element {
   const { type: bgType } = useBackground();
 
   const bgTypeLabel: Record<string, string> = {
-    default: 'پیشفرض',
-    image: 'تصویر',
-    ballpit: 'توپ‌های شناور',
-    hyperspeed: 'سرعت نور',
-    galaxy: 'کهکشان',
+    default:    t('bgDefault'),
+    image:      t('bgImage'),
+    ballpit:    t('bgBallpit'),
+    hyperspeed: t('bgHyperspeed'),
+    galaxy:     t('bgGalaxy'),
   };
 
   /* Apply theme to <html data-theme="dark|light"> */
@@ -158,16 +158,16 @@ export function SettingsPage(): React.JSX.Element {
 
         {/* Background */}
         <div className={styles.section}>
-          <p className={styles.sectionTitle}>بکگراند سامانه</p>
-          <p className={styles.sectionHint}>پس‌زمینه متحرک یا تصویری برای کل اپلیکیشن</p>
+          <p className={styles.sectionTitle}>{t('bgSection')}</p>
+          <p className={styles.sectionHint}>{t('bgSectionHint')}</p>
           <button
             className={styles.bgPickerBtn}
             type="button"
             onClick={() => setBgPickerOpen(true)}
           >
             <IconColorSwatch size={16} stroke={1.8} />
-            <span>تغییر بکگراند</span>
-            <span className={styles.bgCurrentLabel}>{bgTypeLabel[bgType] ?? 'پیشفرض'}</span>
+            <span>{t('bgChange')}</span>
+            <span className={styles.bgCurrentLabel}>{bgTypeLabel[bgType] ?? t('bgDefault')}</span>
           </button>
           <BackgroundPicker open={bgPickerOpen} onClose={() => setBgPickerOpen(false)} />
         </div>
