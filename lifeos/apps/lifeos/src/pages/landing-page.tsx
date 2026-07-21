@@ -55,7 +55,7 @@ function Navbar({ onLogin }: { onLogin: () => void }) {
     >
       <div className={styles.navInner}>
         <div className={styles.navLogo}>
-          <div className={styles.navLogoMark}>L</div>
+          <img src="/mainLogo.png" alt="LifeOS" className={styles.navLogoImg} />
           <span className={styles.navLogoText}>LifeOS</span>
         </div>
         <div className={styles.navLinks}>
@@ -684,7 +684,7 @@ function Footer({ onStart }: { onStart: () => void }) {
         {/* Right col — brand + CTA */}
         <div className={styles.footerRight}>
           <div className={styles.navLogo}>
-            <div className={styles.navLogoMark}>L</div>
+            <img src="/mainLogo.png" alt="LifeOS" className={styles.navLogoImg} />
             <span className={styles.navLogoText}>LifeOS</span>
           </div>
           <p className={styles.footerTagline}>

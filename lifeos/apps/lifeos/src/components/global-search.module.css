@@ -1,7 +1,7 @@
 @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 .backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 500; display: flex; align-items: flex-start; justify-content: center; padding: 64px 16px 0; animation: fadeIn 0.15s ease; }
-.modal { width: 100%; max-width: 520px; border-radius: 12px; background: #1C2333; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.55); overflow: hidden; animation: slideDown 0.18s ease; }
+.modal { width: 100%; max-width: 520px; border-radius: 12px; background: var(--glass); backdrop-filter: var(--glass-blur); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.55); overflow: hidden; animation: slideDown 0.18s ease; }
 .inputRow { display: flex; align-items: center; gap: 10px; padding: 14px; border-bottom: 1px solid rgba(255,255,255,0.07); }
 .searchIcon { color: rgba(230,237,243,0.3); flex-shrink: 0; }
 .input { flex: 1; background: none; border: none; outline: none; font-family: inherit; font-size: 15px; color: #E6EDF3; text-align: right; }

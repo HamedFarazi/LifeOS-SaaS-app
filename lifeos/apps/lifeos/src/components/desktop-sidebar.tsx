@@ -94,7 +94,7 @@ export function DesktopSidebar(): React.JSX.Element {
 
         {/* Logo */}
         <div className={styles.logo}>
-          <div className={styles.logoMark}><IconCreditCard size={14} stroke={2} /></div>
+          <img src="/mainLogo.png" alt="LifeOS" className={styles.logoImg} />
           <span className={styles.logoText}>LifeOS</span>
         </div>
 

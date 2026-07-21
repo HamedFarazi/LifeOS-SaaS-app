@@ -9,6 +9,7 @@ import {
   BarChart,
   Bar,
   CartesianGrid,
+  Cell,
 } from "recharts";
 import {
   Download,
@@ -251,7 +252,7 @@ export function ReportsPage(): React.JSX.Element {
                 />
                 <Bar dataKey="value" radius={[6, 6, 0, 0]}>
                   {byCat.map((slice) => (
-                    <rect key={slice.category} fill={slice.color} />
+                    <Cell key={slice.category} fill={slice.color} />
                   ))}
                 </Bar>
               </BarChart>

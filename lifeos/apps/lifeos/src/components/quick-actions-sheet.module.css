@@ -11,7 +11,7 @@
 .handle  { width: 36px; height: 3px; border-radius: 999px; background: rgba(255,255,255,0.15); margin: 0 auto 12px; }
 .root    { position: fixed; inset: 0; z-index: 200; pointer-events: none; }
 .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0); transition: background 0.3s; }
-.sheet   { position: fixed; left: 0; right: 0; bottom: 0; padding: 12px 16px 26px; border-radius: 16px 16px 0 0; background: #1C2333; border-top: 1px solid rgba(255,255,255,0.09); box-shadow: 0 -12px 40px rgba(0,0,0,0.4); transform: translateY(105%); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); }
+.sheet   { position: fixed; left: 0; right: 0; bottom: 0; padding: 12px 16px 26px; border-radius: 16px 16px 0 0; background: var(--glass); backdrop-filter: var(--glass-blur); border-top: 1px solid rgba(255,255,255,0.09); box-shadow: 0 -12px 40px rgba(0,0,0,0.4); transform: translateY(105%); transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); }
 .open .overlay { background: rgba(0,0,0,0.5); }
 .open .sheet   { transform: translateY(0); }
 .open          { pointer-events: auto; }
@@ -22,7 +22,7 @@
 @media (min-width: 1024px) {
   .dropdownBackdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 399; display: none; }
   .dropdownBackdropOpen { display: block; }
-  .dropdown { display: block; position: fixed; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%) scale(0.96); width: 300px; z-index: 400; padding: 14px 12px 16px; border-radius: 12px; background: #1C2333; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.55); opacity: 0; pointer-events: none; transition: opacity 0.15s, transform 0.15s; }
+  .dropdown { display: block; position: fixed; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%) scale(0.96); width: 300px; z-index: 400; padding: 14px 12px 16px; border-radius: 12px; background: var(--glass); backdrop-filter: var(--glass-blur); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.55); opacity: 0; pointer-events: none; transition: opacity 0.15s, transform 0.15s; }
   .dropdownOpen { opacity: 1; transform: translateY(-50%) translateX(-50%) scale(1); pointer-events: auto; }
   .dropdownGrid  { display: grid; grid-template-columns: repeat(3,1fr); gap: 7px; }
   .dropdownTile  { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 5px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.03); cursor: pointer; font-family: inherit; transition: background 0.12s; }

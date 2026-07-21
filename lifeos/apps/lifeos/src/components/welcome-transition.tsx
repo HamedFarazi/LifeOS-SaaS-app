@@ -40,7 +40,7 @@ export function WelcomeTransition({ userName, onDone, language = 'fa' }: Welcome
       {/* Logo */}
       <div className={`${styles.logo} ${phase >= 1 ? styles.logoVisible : ''}`}>
         <div className={styles.logoMark}>
-          <IconCreditCard size={26} stroke={2} />
+          <img src="/mainLogo.png" alt="LifeOS" style={{ width: 26, height: 26, objectFit: 'contain' }} />
         </div>
         <span className={styles.logoText}>LifeOS</span>
       </div>

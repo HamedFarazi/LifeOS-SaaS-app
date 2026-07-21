@@ -1,6 +1,6 @@
-﻿.settingsGrid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 4px; }
+.settingsGrid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 4px; }
 @media (min-width: 1024px) { .settingsGrid { grid-template-columns: 1fr 1fr; } }
-.section { padding: 16px; border-radius: 10px; background: #1C2333; border: 1px solid rgba(255,255,255,0.06); }
+.section { padding: 16px; border-radius: 10px; background: var(--glass); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border); }
 .sectionTitle { font-size: 12px; font-weight: 600; color: rgba(230,237,243,0.5); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
 .sectionHint  { font-size: 12px; color: rgba(230,237,243,0.3); margin-bottom: 12px; }
 .themeRow { display: flex; gap: 7px; margin-top: 12px; }

@@ -1,9 +1,9 @@
-﻿.hero { margin-top: 4px; padding: 22px 18px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; position: relative; overflow: hidden; margin-bottom: 16px; }
+.hero { margin-top: 4px; padding: 22px 18px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; position: relative; overflow: hidden; margin-bottom: 16px; }
 .hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.2); z-index: 0; }
 .hero > * { position: relative; z-index: 1; }
 .name { font-size: 20px; font-weight: 700; color: #fff; margin-top: 4px; }
 .plan { font-size: 13px; color: rgba(255,255,255,0.75); }
-.facts { border-radius: 10px; background: #1C2333; border: 1px solid rgba(255,255,255,0.07); overflow: hidden; }
+.facts { border-radius: 10px; background: var(--glass); backdrop-filter: var(--glass-blur); border: 1px solid rgba(255,255,255,0.07); overflow: hidden; }
 .fact { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.12s; }
 .fact:last-child { border-bottom: none; }
 .fact:hover { background: rgba(255,255,255,0.02); }

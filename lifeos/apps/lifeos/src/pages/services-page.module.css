@@ -1,14 +1,14 @@
-﻿.toolbar { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; }
-.searchBox { flex: 1; display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: #1C2333; border: 1px solid rgba(255,255,255,0.07); transition: border-color 0.12s; }
+.toolbar { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; }
+.searchBox { flex: 1; display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: var(--glass); backdrop-filter: var(--glass-blur); border: 1px solid rgba(255,255,255,0.07); transition: border-color 0.12s; }
 .searchBox:focus-within { border-color: rgba(37,99,235,0.4); }
 .searchIcon { color: rgba(230,237,243,0.3); flex-shrink: 0; }
 .searchInput { flex: 1; background: none; border: none; outline: none; font-family: inherit; font-size: 13px; color: #E6EDF3; text-align: right; }
 .searchInput::placeholder { color: rgba(230,237,243,0.25); }
 .sortWrap { position: relative; flex-shrink: 0; }
-.sortBtn { display: flex; align-items: center; gap: 5px; padding: 8px 11px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.07); background: #1C2333; color: rgba(230,237,243,0.5); font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background 0.12s; }
-.sortBtn:hover { background: #222B3A; }
+.sortBtn { display: flex; align-items: center; gap: 5px; padding: 8px 11px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.07); background: var(--glass); backdrop-filter: var(--glass-blur); color: rgba(230,237,243,0.5); font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background 0.12s; }
+.sortBtn:hover { background: var(--glass-hover); }
 .sortLabel { max-width: 80px; overflow: hidden; text-overflow: ellipsis; }
-.sortDropdown { position: absolute; top: calc(100% + 5px); left: 0; min-width: 150px; border-radius: 9px; background: #1C2333; border: 1px solid rgba(255,255,255,0.09); box-shadow: 0 10px 30px rgba(0,0,0,0.4); z-index: 200; overflow: hidden; }
+.sortDropdown { position: absolute; top: calc(100% + 5px); left: 0; min-width: 150px; border-radius: 9px; background: var(--glass); backdrop-filter: var(--glass-blur); border: 1px solid rgba(255,255,255,0.09); box-shadow: 0 10px 30px rgba(0,0,0,0.4); z-index: 200; overflow: hidden; }
 .sortOption { display: block; width: 100%; text-align: right; padding: 9px 13px; background: none; border: none; font-family: inherit; font-size: 13px; font-weight: 500; color: rgba(230,237,243,0.65); cursor: pointer; transition: background 0.12s; }
 .sortOption:hover { background: rgba(255,255,255,0.05); color: #E6EDF3; }
 .sortOptionActive { color: #BFDBFE; background: rgba(37,99,235,0.1); }

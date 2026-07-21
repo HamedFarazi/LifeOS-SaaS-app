@@ -66,7 +66,7 @@ export function RegisterPage(): React.JSX.Element {
 
       <div className={styles.card}>
         <div className={styles.brandRow}>
-          <div className={styles.logoMark}><IconCreditCard size={18} stroke={2} /></div>
+          <img src="/mainLogo.png" alt="LifeOS" style={{ width: 28, height: 28, objectFit: 'contain', borderRadius: 6 }} />
           <span className={styles.logoText}>LifeOS</span>
         </div>
 

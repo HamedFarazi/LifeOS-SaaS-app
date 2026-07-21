@@ -16,12 +16,17 @@ html {
   --cyan:      #06B6D4;
   --sidebar-bg: #0D1424;
   --sidebar-border: rgba(255,255,255,0.06);
+  /* card/panel surface */
+  --glass:        #1C2333;
+  --glass-hover:  #222B3A;
+  --glass-border: rgba(255,255,255,0.06);
+  --glass-blur:   none;
 }
 
 /* ── Light theme ── */
 html[data-theme="light"] {
-  --bg:        #F8FAFC;
-  --bg-2:      #F1F5F9;
+  --bg:        #EEF2F7;
+  --bg-2:      #E4EAF2;
   --surface:   #FFFFFF;
   --surface-2: #F8FAFC;
   --border:    rgba(15,23,42,0.09);
@@ -32,8 +37,13 @@ html[data-theme="light"] {
   --accent:    #2563EB;
   --accent-2:  #1D4ED8;
   --cyan:      #0891B2;
-  --sidebar-bg: #F1F5F9;
+  --sidebar-bg: #E4EAF2;
   --sidebar-border: rgba(15,23,42,0.08);
+  /* card/panel surface — dark gray glass in light mode */
+  --glass:        rgba(81,84,88,0.75);
+  --glass-hover:  rgba(81,84,88,0.88);
+  --glass-border: rgba(255,255,255,0.12);
+  --glass-blur:   blur(10px);
 }
 
 body {
@@ -50,3 +60,14 @@ img, svg { display: block; max-width: 100%; }
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(127,127,127,0.18); border-radius: 4px; }
+
+/* end of reset */
+
+/* ── Light mode: force dark text on all page content ─────────────────────── */
+html[data-theme="light"] * {
+  color: inherit;
+}
+
+html[data-theme="light"] body {
+  color: #0F172A;
+}

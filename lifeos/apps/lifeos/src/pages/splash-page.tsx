@@ -20,7 +20,7 @@ export function SplashPage({ onDone }: SplashPageProps): React.JSX.Element {
     <div className={`${styles.splash} ${phase === 'out' ? styles.fadeOut : styles.fadeIn}`}>
       <div className={`${styles.logo} ${phase === 'hold' || phase === 'out' ? styles.logoVisible : ''}`}>
         <div className={styles.logoMark}>
-          <IconCreditCard size={28} stroke={2} />
+          <img src="/mainLogo.png" alt="LifeOS" style={{ width: 28, height: 28, objectFit: 'contain' }} />
         </div>
         <span className={styles.logoText}>LifeOS</span>
       </div>
