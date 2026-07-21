@@ -81,7 +81,7 @@ export function ReportsPage(): React.JSX.Element {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "lifeos-report.csv";
+    a.download = "trackly-report.csv";
     a.click();
     URL.revokeObjectURL(url);
     addToast("گزارش CSV دانلود شد", "success");
@@ -94,7 +94,7 @@ export function ReportsPage(): React.JSX.Element {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "lifeos-data.json";
+    a.download = "trackly-data.json";
     a.click();
     URL.revokeObjectURL(url);
     addToast("داده‌ها به JSON دانلود شد", "success");

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { IconCreditCard } from '@tabler/icons-react';
 import styles from './splash-page.module.css';
 
@@ -20,9 +20,9 @@ export function SplashPage({ onDone }: SplashPageProps): React.JSX.Element {
     <div className={`${styles.splash} ${phase === 'out' ? styles.fadeOut : styles.fadeIn}`}>
       <div className={`${styles.logo} ${phase === 'hold' || phase === 'out' ? styles.logoVisible : ''}`}>
         <div className={styles.logoMark}>
-          <img src="/mainLogo.png" alt="LifeOS" style={{ width: 28, height: 28, objectFit: 'contain' }} />
+          <img src="/mainLogo.png" alt="Trackly" style={{ width: 28, height: 28, objectFit: 'contain' }} />
         </div>
-        <span className={styles.logoText}>LifeOS</span>
+        <span className={styles.logoText}>Trackly</span>
       </div>
       <p className={`${styles.tagline} ${phase === 'hold' || phase === 'out' ? styles.taglineVisible : ''}`}>
         Subscription &amp; Expense Manager

@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from 'react';
+﻿import React, { useState, lazy, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   IconMail, IconLock, IconBrandGoogle, IconBrandGithub,
@@ -79,8 +79,8 @@ export function LoginPage(): React.JSX.Element {
       {/* Card */}
       <div className={styles.card}>
         <div className={styles.brandRow}>
-          <img src="/mainLogo.png" alt="LifeOS" style={{ width: 28, height: 28, objectFit: 'contain', borderRadius: 6 }} />
-          <span className={styles.logoText}>LifeOS</span>
+          <img src="/mainLogo.png" alt="Trackly" style={{ width: 28, height: 28, objectFit: 'contain', borderRadius: 6 }} />
+          <span className={styles.logoText}>Trackly</span>
         </div>
 
         <h1 className={styles.title}>ورود به حساب</h1>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+﻿import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Plus, Globe, CalendarClock, CheckSquare, Wallet,
@@ -105,7 +105,7 @@ export function AvatarPopover({ open, onClose }: AvatarPopoverProps): React.JSX.
         <UserAvatar size={44} showStatus={false} />
         <div className={styles.identity}>
           <p className={styles.name}>{userName}</p>
-          <p className={styles.subtitle}>{userEmail || 'LifeOS User'}</p>
+          <p className={styles.subtitle}>{userEmail || 'Trackly User'}</p>
         </div>
         {!editing && (
           <button type="button" className={styles.editBtn} onClick={startEdit} aria-label="ویرایش">
@@ -152,7 +152,7 @@ export function AvatarPopover({ open, onClose }: AvatarPopoverProps): React.JSX.
       <div className={styles.divider} />
       <div className={styles.group}>{SECONDARY_ACTIONS.map(renderRow)}</div>
 
-      <p className={styles.footer}>LifeOS v1.0</p>
+      <p className={styles.footer}>Trackly v1.0</p>
     </div>
   );
 }

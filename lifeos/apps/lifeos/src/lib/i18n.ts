@@ -1,4 +1,4 @@
-export type Lang = 'fa' | 'en';
+﻿export type Lang = 'fa' | 'en';
 
 export const translations = {
   fa: {
@@ -56,7 +56,7 @@ export const translations = {
 
     // Settings
     settingsTitle:   'تنظیمات',
-    settingsSub:     'شخصی‌سازی LifeOS',
+    settingsSub:     'شخصی‌سازی Trackly',
     appearance:      'ظاهر',
     dark:            'تیره',
     light:           'روشن',
@@ -74,7 +74,7 @@ export const translations = {
     importData:      'وارد کردن داده‌ها',
     resetApp:        'بازنشانی برنامه',
     resetConfirm:    'بازنشانی کامل؟ همه داده‌ها حذف می‌شوند.',
-    version:         'LifeOS · نسخه ۱.۰.۰',
+    version:         'Trackly · نسخه ۱.۰.۰',
     bgSection:       'بکگراند سامانه',
     bgSectionHint:   'پس‌زمینه متحرک یا تصویری برای کل اپلیکیشن',
     bgChange:        'تغییر بکگراند',
@@ -83,7 +83,7 @@ export const translations = {
     bgBallpit:       'توپ‌های شناور',
     bgHyperspeed:    'سرعت نور',
     bgGalaxy:        'کهکشان',
-    authTitle:   'LifeOS',
+    authTitle:   'Trackly',
     authTagline: 'مدیریت هوشمند سرویس‌ها و هزینه‌ها',
     loginGoogle: 'ورود با Google',
     loginPhone:  'ورود با شماره تلفن',
@@ -132,8 +132,8 @@ export const translations = {
     confirm: 'تأیید',
     close:   'بستن',
     empty:   'موردی یافت نشد',
-    lifeosUser: 'LifeOS User',
-    version_txt: 'LifeOS v1.0',
+    lifeosUser: 'Trackly User',
+    version_txt: 'Trackly v1.0',
   },
 
   en: {
@@ -191,7 +191,7 @@ export const translations = {
 
     // Settings
     settingsTitle:   'Settings',
-    settingsSub:     'Personalize LifeOS',
+    settingsSub:     'Personalize Trackly',
     appearance:      'Appearance',
     dark:            'Dark',
     light:           'Light',
@@ -209,7 +209,7 @@ export const translations = {
     importData:      'Import data',
     resetApp:        'Reset app',
     resetConfirm:    'Full reset? All data will be deleted.',
-    version:         'LifeOS · Version 1.0.0',
+    version:         'Trackly · Version 1.0.0',
     bgSection:       'App Background',
     bgSectionHint:   'Animated or image background for the entire app',
     bgChange:        'Change Background',
@@ -220,7 +220,7 @@ export const translations = {
     bgGalaxy:        'Galaxy',
 
     // Auth
-    authTitle:   'LifeOS',
+    authTitle:   'Trackly',
     authTagline: 'Smart subscription & expense management',
     loginGoogle: 'Continue with Google',
     loginPhone:  'Continue with phone',
@@ -269,8 +269,8 @@ export const translations = {
     confirm: 'Confirm',
     close:   'Close',
     empty:   'Nothing found',
-    lifeosUser: 'LifeOS User',
-    version_txt: 'LifeOS v1.0',
+    lifeosUser: 'Trackly User',
+    version_txt: 'Trackly v1.0',
   },
 } as const;
 

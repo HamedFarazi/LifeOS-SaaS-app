@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+﻿import React, { useRef, useEffect, useState } from 'react';
 import {
   IconUpload, IconDownload, IconRefresh,
   IconMoon,
@@ -52,7 +52,7 @@ export function SettingsPage(): React.JSX.Element {
     const blob = new Blob([JSON.stringify(services, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url; a.download = 'lifeos-data.json'; a.click();
+    a.href = url; a.download = 'trackly-data.json'; a.click();
     URL.revokeObjectURL(url);
     addToast('داده‌ها با موفقیت دانلود شد', 'success');
   };
@@ -216,6 +216,12 @@ export function SettingsPage(): React.JSX.Element {
       </div>
 
       <p className={styles.version}>{t('version')}</p>
+
+      <div className={styles.credit}>
+        <span className={styles.creditHeart}>♥</span>
+        <span>Built with love by</span>
+        <span className={styles.creditName}>Hamed Farazi</span>
+      </div>
     </div>
   );
 }

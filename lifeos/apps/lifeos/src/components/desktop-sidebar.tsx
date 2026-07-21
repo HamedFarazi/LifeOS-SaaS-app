@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+﻿import React, { useRef, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import {
   IconLayoutDashboard, IconStack2, IconCalendarStats,
@@ -95,8 +95,8 @@ export function DesktopSidebar(): React.JSX.Element {
 
         {/* Logo */}
         <div className={styles.logo}>
-          <img src="/mainLogo.png" alt="LifeOS" className={styles.logoImg} />
-          <span className={styles.logoText}>LifeOS</span>
+          <img src="/mainLogo.png" alt="Trackly" className={styles.logoImg} />
+          <span className={styles.logoText}>Trackly</span>
         </div>
 
         {/* Search */}

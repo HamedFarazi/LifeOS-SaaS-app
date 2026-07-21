@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Default logo URLs for known services.
  * Key = service id (from seed.ts) OR service name (lowercase, trimmed).
  * Value = URL to an image (https or /public path).
@@ -32,7 +32,7 @@ export const SERVICE_LOGOS: Record<string, string> = {
   "github copilot": "",
   "adobe cc": "",
   "example.ir": "",
-  "lifeos.com": "",
+  "trackly.com": "",
 };
 
 /**

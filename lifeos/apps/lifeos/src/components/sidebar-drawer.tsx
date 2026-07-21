@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+﻿import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import {
   IconLayoutDashboard, IconStack2, IconCalendarStats,
@@ -103,7 +103,7 @@ export function SidebarDrawer({ open, onClose }: SidebarDrawerProps): React.JSX.
           {!editing ? (
             <>
               <p className={styles.name}>{userName}</p>
-              <p className={styles.email}>{userEmail || 'LifeOS User'}</p>
+              <p className={styles.email}>{userEmail || 'Trackly User'}</p>
               <button
                 type="button"
                 className={styles.editProfile}
@@ -177,7 +177,7 @@ export function SidebarDrawer({ open, onClose }: SidebarDrawerProps): React.JSX.
           خروج از حساب
         </button>
 
-        <p className={styles.footer}>LifeOS v1.0</p>
+        <p className={styles.footer}>Trackly v1.0</p>
       </aside>
     </div>
   );

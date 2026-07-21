@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+﻿import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
@@ -10,9 +10,9 @@ export default defineConfig({
       injectRegister: 'auto',
       includeAssets: ['mainLogo.png', 'favicon.ico', '*.jpg', '*.png'],
       manifest: {
-        name: 'LifeOS',
-        short_name: 'LifeOS',
-        description: 'مدیریت هوشمند اشتراک‌ها و هزینه‌های ماهانه',
+        name: 'Trackly',
+        short_name: 'Trackly',
+        description: 'A modern subscription management platform',
         theme_color: '#3B82F6',
         background_color: '#0B1220',
         display: 'standalone',

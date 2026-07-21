@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+﻿import React, { useRef, useState } from 'react';
 import { IconMenu2, IconSearch } from '@tabler/icons-react';
 import { useSettings } from '../store/use-settings';
 import { useT } from '../hooks/use-t';
@@ -29,7 +29,7 @@ export function AppHeader(): React.JSX.Element {
         )}
         <div className={styles.greeting}>
           <p className={styles.hi}>{t('welcomeBack')} {userName}</p>
-          {!isDesktop && <p className={styles.sub}>LifeOS</p>}
+          {!isDesktop && <p className={styles.sub}>Trackly</p>}
         </div>
         {!isDesktop && (
           <>

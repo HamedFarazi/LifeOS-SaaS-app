@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { IconCreditCard } from '@tabler/icons-react';
 import styles from './welcome-transition.module.css';
 
@@ -40,9 +40,9 @@ export function WelcomeTransition({ userName, onDone, language = 'fa' }: Welcome
       {/* Logo */}
       <div className={`${styles.logo} ${phase >= 1 ? styles.logoVisible : ''}`}>
         <div className={styles.logoMark}>
-          <img src="/mainLogo.png" alt="LifeOS" style={{ width: 26, height: 26, objectFit: 'contain' }} />
+          <img src="/mainLogo.png" alt="Trackly" style={{ width: 26, height: 26, objectFit: 'contain' }} />
         </div>
-        <span className={styles.logoText}>LifeOS</span>
+        <span className={styles.logoText}>Trackly</span>
       </div>
 
       {/* Greeting */}

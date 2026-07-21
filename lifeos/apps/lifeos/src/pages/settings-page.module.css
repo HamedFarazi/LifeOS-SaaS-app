@@ -58,3 +58,20 @@
   border-radius: 4px;
   padding: 2px 7px;
 }
+
+/* ── Creator credit ── */
+.credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 4px;
+  font-size: 11px;
+  color: rgba(226,232,240,0.2);
+  font-family: inherit;
+}
+.creditHeart { color: #F87171; font-size: 11px; }
+.creditName {
+  color: rgba(226,232,240,0.35);
+  font-weight: 600;
+}

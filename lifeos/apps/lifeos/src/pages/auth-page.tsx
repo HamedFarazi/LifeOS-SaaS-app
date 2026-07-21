@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Phone, Mail } from 'lucide-react';
 import { useSettings } from '../store/use-settings';
@@ -37,7 +37,7 @@ export function AuthPage(): React.JSX.Element {
         <div className={styles.logoBox}>
           <span className={styles.logoText}>L</span>
         </div>
-        <h1 className={styles.appName}>LifeOS</h1>
+        <h1 className={styles.appName}>Trackly</h1>
         <p className={styles.tagline}>مدیریت هوشمند سرویس‌ها و هزینه‌ها</p>
 
         <div className={styles.methods}>

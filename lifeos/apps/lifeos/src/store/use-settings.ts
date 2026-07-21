@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+﻿import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Settings } from '../types/index';
 
@@ -18,7 +18,7 @@ export const useSettings = create<SettingsState>()(
       currency: 'IRT',
       language: 'fa',
       userName: 'علی',
-      userEmail: 'ali@lifeos.app',
+      userEmail: 'ali@trackly.app',
       avatarImage: undefined,
       themeMode: 'dark',
       monthlyBudget: undefined,
