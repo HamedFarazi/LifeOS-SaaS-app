@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import {
   IconUpload, IconDownload, IconRefresh,
-  IconMoon, IconSun, IconDeviceDesktop,
+  IconMoon,
   IconColorSwatch,
 } from '@tabler/icons-react';
 import { useServices } from '../store/use-services';
@@ -36,12 +36,9 @@ export function SettingsPage(): React.JSX.Element {
     galaxy:     t('bgGalaxy'),
   };
 
-  /* Apply theme to <html data-theme="dark|light"> */
+  /* Apply theme to <html data-theme="..."> */
   useEffect(() => {
-    const effective =
-      themeMode === 'system'
-        ? window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-        : (themeMode ?? 'dark');
+    const effective = themeMode ?? 'dark';
     document.documentElement.setAttribute('data-theme', effective);
   }, [themeMode]);
 
@@ -79,9 +76,18 @@ export function SettingsPage(): React.JSX.Element {
   };
 
   const themes: { value: ThemeMode; label: string; icon: React.ReactNode }[] = [
-    { value: 'dark',   label: t('dark'),   icon: <IconMoon          size={15} stroke={1.8} /> },
-    { value: 'light',  label: t('light'),  icon: <IconSun           size={15} stroke={1.8} /> },
-    { value: 'system', label: t('system'), icon: <IconDeviceDesktop size={15} stroke={1.8} /> },
+    { value: 'dark',   label: t('dark'),  icon: <IconMoon size={15} stroke={1.8} /> },
+    { value: 'slate',  label: 'Slate',    icon: (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <circle cx="12" cy="12" r="9"/><path d="M12 3v9l4 2"/>
+      </svg>
+    )},
+    { value: 'arctic', label: 'Arctic',   icon: (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/>
+        <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/>
+      </svg>
+    )},
   ];
 
   return (

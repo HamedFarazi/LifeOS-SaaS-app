@@ -21,6 +21,7 @@ html {
   --glass-hover:  #222B3A;
   --glass-border: rgba(255,255,255,0.06);
   --glass-blur:   none;
+  --card-shadow:  none;
 }
 
 /* ── Light theme ── */
@@ -46,6 +47,54 @@ html[data-theme="light"] {
   --glass-blur:   blur(10px);
 }
 
+/* ── Slate theme ── */
+html[data-theme="slate"] {
+  --bg:        #0F1117;
+  --bg-2:      #151923;
+  --surface:   #1B2230;
+  --surface-2: #1F2937;
+  --border:    rgba(255,255,255,0.07);
+  --border-2:  rgba(255,255,255,0.04);
+  --text:      #F8FAFC;
+  --text-2:    #94A3B8;
+  --text-3:    rgba(148,163,184,0.5);
+  --accent:    #60A5FA;
+  --accent-2:  #3B82F6;
+  --cyan:      #22D3EE;
+  --sidebar-bg:     #151923;
+  --sidebar-border: rgba(255,255,255,0.06);
+  --glass:        #1B2230;
+  --glass-hover:  #222d40;
+  --glass-border: rgba(255,255,255,0.07);
+  --glass-blur:   none;
+  --card-shadow:  none;
+}
+
+/* ── Arctic theme — Premium SaaS Light (Notion/Linear inspired) ── */
+html[data-theme="arctic"] {
+  --bg:        #F4F7FB;
+  --bg-2:      #EEF2F7;
+  --surface:   #FFFFFF;
+  --surface-2: #F8FAFC;
+  --border:    rgba(15,23,42,0.08);
+  --border-2:  rgba(15,23,42,0.05);
+  --text:      #0F172A;
+  --text-2:    #475569;
+  --text-3:    #64748B;
+  --accent:    #2563EB;
+  --accent-2:  #1D4ED8;
+  --cyan:      #0891B2;
+  --sidebar-bg:     #F8FAFC;
+  --sidebar-border: rgba(15,23,42,0.08);
+  /* cards — white with subtle shadow, no glass blur */
+  --glass:        #FFFFFF;
+  --glass-hover:  #F8FAFC;
+  --glass-border: rgba(15,23,42,0.08);
+  --glass-blur:   none;
+  /* card shadow */
+  --card-shadow: 0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04);
+}
+
 body {
   background: var(--bg);
   font-family: 'Vazirmatn', system-ui, sans-serif;
@@ -64,11 +113,12 @@ img, svg { display: block; max-width: 100%; }
 /* end of reset */
 
 /* ── Light mode: force dark text on all page content ─────────────────────── */
-html[data-theme="light"] body {
+html[data-theme="light"] body,
+html[data-theme="arctic"] body {
   color: #0F172A;
 }
 
-/* Override hardcoded white/light text colors in light mode */
+/* Override hardcoded white/light text colors in light/arctic mode */
 html[data-theme="light"] p,
 html[data-theme="light"] span,
 html[data-theme="light"] h1,
@@ -76,22 +126,235 @@ html[data-theme="light"] h2,
 html[data-theme="light"] h3,
 html[data-theme="light"] h4,
 html[data-theme="light"] label,
-html[data-theme="light"] div {
+html[data-theme="light"] div,
+html[data-theme="arctic"] p,
+html[data-theme="arctic"] span,
+html[data-theme="arctic"] h1,
+html[data-theme="arctic"] h2,
+html[data-theme="arctic"] h3,
+html[data-theme="arctic"] h4,
+html[data-theme="arctic"] label,
+html[data-theme="arctic"] div {
   color: #0F172A;
 }
 
 /* Keep accent colors intact */
 html[data-theme="light"] a,
+html[data-theme="arctic"] a,
 html[data-theme="light"] [style*="color: #3B82F6"],
-html[data-theme="light"] [style*="color: #2563EB"],
-html[data-theme="light"] [style*="color: rgb(59"],
+html[data-theme="arctic"] [style*="color: #3B82F6"],
 html[data-theme="light"] [style*="color: #F87171"],
+html[data-theme="arctic"] [style*="color: #F87171"],
 html[data-theme="light"] [style*="color: #34D399"],
-html[data-theme="light"] [style*="color: #FBBF24"] {
+html[data-theme="arctic"] [style*="color: #34D399"],
+html[data-theme="light"] [style*="color: #FBBF24"],
+html[data-theme="arctic"] [style*="color: #FBBF24"] {
   color: inherit !important;
 }
 
 /* Keep SVG icons visible */
-html[data-theme="light"] svg {
+html[data-theme="light"] svg,
+html[data-theme="arctic"] svg {
   color: currentColor;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ARCTIC THEME — Premium SaaS light overrides
+   Applied on top of component CSS modules via cascade.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Page body ── */
+html[data-theme="arctic"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ── Force dark text everywhere (override hardcoded light-theme colors) ── */
+html[data-theme="arctic"] p,
+html[data-theme="arctic"] span:not([class*="badge"]):not([class*="dot"]):not([class*="chip"]):not([class*="tag"]),
+html[data-theme="arctic"] h1,
+html[data-theme="arctic"] h2,
+html[data-theme="arctic"] h3,
+html[data-theme="arctic"] h4,
+html[data-theme="arctic"] h5,
+html[data-theme="arctic"] label,
+html[data-theme="arctic"] li,
+html[data-theme="arctic"] td,
+html[data-theme="arctic"] th {
+  color: var(--text);
+}
+
+/* ── Cards / panels — white with shadow ── */
+html[data-theme="arctic"] [class*="card"],
+html[data-theme="arctic"] [class*="Card"],
+html[data-theme="arctic"] [class*="panel"],
+html[data-theme="arctic"] [class*="Panel"],
+html[data-theme="arctic"] [class*="trendPanel"],
+html[data-theme="arctic"] [class*="section"]:not([class*="sectionInner"]):not([class*="sectionTag"]):not([class*="sectionH"]):not([class*="sectionSub"]),
+html[data-theme="arctic"] [class*="kpi"],
+html[data-theme="arctic"] [class*="widget"],
+html[data-theme="arctic"] [class*="fact"] {
+  background: var(--glass) !important;
+  border-color: var(--glass-border) !important;
+  box-shadow: var(--card-shadow) !important;
+  backdrop-filter: none !important;
+}
+
+/* ── Sidebar ── */
+html[data-theme="arctic"] [class*="sidebar"],
+html[data-theme="arctic"] [class*="Sidebar"] {
+  background: var(--sidebar-bg) !important;
+  border-color: var(--sidebar-border) !important;
+}
+
+/* Active nav item */
+html[data-theme="arctic"] [class*="navActive"],
+html[data-theme="arctic"] [class*="activeItem"] {
+  background: rgba(37,99,235,0.08) !important;
+  border-right: 2px solid #2563EB !important;
+  color: #2563EB !important;
+}
+
+html[data-theme="arctic"] [class*="navActive"] span,
+html[data-theme="arctic"] [class*="activeItem"] span {
+  color: #2563EB !important;
+}
+
+/* ── Inputs ── */
+html[data-theme="arctic"] input,
+html[data-theme="arctic"] select,
+html[data-theme="arctic"] textarea {
+  background: #FFFFFF !important;
+  border-color: rgba(15,23,42,0.15) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="arctic"] input::placeholder,
+html[data-theme="arctic"] textarea::placeholder {
+  color: var(--text-3) !important;
+}
+
+html[data-theme="arctic"] input:focus,
+html[data-theme="arctic"] select:focus,
+html[data-theme="arctic"] textarea:focus {
+  border-color: #2563EB !important;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.12) !important;
+  outline: none !important;
+}
+
+/* ── Primary buttons ── */
+html[data-theme="arctic"] [class*="addBtn"],
+html[data-theme="arctic"] [class*="saveBtn"],
+html[data-theme="arctic"] [class*="ctaBtn"],
+html[data-theme="arctic"] [class*="btnPrimary"] {
+  background: #2563EB !important;
+  color: #FFFFFF !important;
+  border-color: #2563EB !important;
+}
+
+html[data-theme="arctic"] [class*="addBtn"]:hover,
+html[data-theme="arctic"] [class*="saveBtn"]:hover,
+html[data-theme="arctic"] [class*="ctaBtn"]:hover,
+html[data-theme="arctic"] [class*="btnPrimary"]:hover {
+  background: #1D4ED8 !important;
+  border-color: #1D4ED8 !important;
+}
+
+/* ── Secondary / ghost buttons ── */
+html[data-theme="arctic"] [class*="action"],
+html[data-theme="arctic"] [class*="sortBtn"],
+html[data-theme="arctic"] [class*="searchBox"],
+html[data-theme="arctic"] [class*="chip"] {
+  background: #FFFFFF !important;
+  border-color: rgba(15,23,42,0.12) !important;
+  color: var(--text) !important;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04) !important;
+}
+
+html[data-theme="arctic"] [class*="action"]:hover,
+html[data-theme="arctic"] [class*="sortBtn"]:hover,
+html[data-theme="arctic"] [class*="chip"]:hover {
+  background: #F1F5F9 !important;
+  border-color: rgba(15,23,42,0.18) !important;
+}
+
+html[data-theme="arctic"] [class*="activeChip"] {
+  background: rgba(37,99,235,0.1) !important;
+  border-color: rgba(37,99,235,0.3) !important;
+  color: #2563EB !important;
+}
+
+/* ── Dropdowns ── */
+html[data-theme="arctic"] [class*="Dropdown"],
+html[data-theme="arctic"] [class*="dropdown"],
+html[data-theme="arctic"] [class*="sortDropdown"],
+html[data-theme="arctic"] [class*="modal"] {
+  background: #FFFFFF !important;
+  border-color: rgba(15,23,42,0.1) !important;
+  box-shadow: 0 4px 24px rgba(15,23,42,0.12), 0 1px 4px rgba(15,23,42,0.06) !important;
+}
+
+html[data-theme="arctic"] [class*="sortOption"]:hover,
+html[data-theme="arctic"] [class*="option"]:hover {
+  background: #F4F7FB !important;
+  color: var(--text) !important;
+}
+
+/* ── Section titles (settings, etc.) ── */
+html[data-theme="arctic"] [class*="sectionTitle"],
+html[data-theme="arctic"] [class*="panelTitle"],
+html[data-theme="arctic"] [class*="groupLabel"] {
+  color: var(--text-3) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* ── Segment / toggle buttons ── */
+html[data-theme="arctic"] [class*="segment"],
+html[data-theme="arctic"] [class*="toggle"] {
+  background: #EEF2F7 !important;
+  border-color: rgba(15,23,42,0.1) !important;
+}
+
+html[data-theme="arctic"] [class*="segActive"],
+html[data-theme="arctic"] [class*="optActive"],
+html[data-theme="arctic"] [class*="themeBtnActive"] {
+  background: #FFFFFF !important;
+  color: #2563EB !important;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.1) !important;
+}
+
+html[data-theme="arctic"] [class*="segBtn"],
+html[data-theme="arctic"] [class*="themeBtn"] {
+  color: var(--text-2) !important;
+}
+
+/* ── SVG and icons inherit correctly ── */
+html[data-theme="arctic"] svg {
+  color: currentColor;
+}
+
+/* ── Search inputs in toolbar ── */
+html[data-theme="arctic"] [class*="searchInput"] {
+  color: var(--text) !important;
+  background: transparent !important;
+}
+
+/* ── Accent links and active states ── */
+html[data-theme="arctic"] [class*="trendLink"],
+html[data-theme="arctic"] a {
+  color: #2563EB !important;
+}
+
+/* ── Bottom nav (mobile) ── */
+html[data-theme="arctic"] [class*="bottomNav"],
+html[data-theme="arctic"] [class*="bar"] {
+  background: rgba(248,250,252,0.92) !important;
+  border-color: rgba(15,23,42,0.08) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* ── Scrollbar ── */
+html[data-theme="arctic"] ::-webkit-scrollbar-thumb {
+  background: rgba(15,23,42,0.14);
 }

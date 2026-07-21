@@ -36,7 +36,7 @@ export interface Insight {
 
 export type Currency = 'IRT' | 'USD';
 export type Language = 'fa' | 'en';
-export type ThemeMode = 'dark' | 'light' | 'system';
+export type ThemeMode = 'dark' | 'slate' | 'arctic';
 
 export interface Settings {
   currency: Currency;
